@@ -120,5 +120,6 @@ but kept readable. Newest entries at the bottom.
   Dillon's **live** Stripe keys go into Netlify env. `.env` confirmed gitignored — no secret committed.
 - **Honest limit (documented):** unlock is per-browser (localStorage); clears on new device / cleared
   storage. True enforcement = the accounts/subscriptions phase (Phase 2).
-- **Not deployed:** all payments commits are LOCAL. Built + verified end-to-end locally in Stripe test
-  mode (test card `4242 4242 4242 4242`); live keys swapped in at the single handoff deploy.
+- **Not deployed:** all payments commits are LOCAL. Code complete + unit-tested; the full browser
+  end-to-end run (Stripe test card `4242 4242 4242 4242`) happens once Jack drops a Stripe test key
+  into `.env`. Live keys swapped in at the single handoff deploy.
