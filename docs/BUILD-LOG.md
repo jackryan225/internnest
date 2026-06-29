@@ -81,3 +81,20 @@ but kept readable. Newest entries at the bottom.
   cross-industry fallback covers thin industries at match time.
 - A few listings carry a "Summer 2026" term (verified live, likely late/rolling) — flagged for refresh.
 - Refresh process = re-run the workflows (Jack/Claude), since Dillon is non-technical.
+
+## 2026-06-29 — Matcher built (Milestone 3) — LOCAL ONLY, not yet deployed
+
+- Built the AI matcher per plan: `netlify/functions/match.js` + `netlify/lib/{matcher,claude,ratelimit}.js`,
+  wired into the existing card UI in `script.js`. 11 unit tests (node:test), all green.
+- Verified end-to-end locally via `netlify dev`: form → function → real internships in the existing cards;
+  Free shows 3 + an "unlock" CTA; "Apply Now" → the real listing. Confirmed both fallback mode (no key) and
+  **AI mode** (with a key): personalized score / why / missing-skills / tip in ~7s.
+- **Latency lesson:** per-listing AI generation blew past Netlify's ~10s function limit (~13–18s). Fix: cap
+  output (8 candidates, 750 max_tokens), a real 9s abort that falls back, and a salvage parser for truncated
+  JSON. AI outreach was the biggest token hog → moved off the matcher; outreach is templated client-side for
+  now (true AI outreach = a fast-follow, generated per-card on click).
+- **Key handling (decision):** dev/testing uses **Jack's own** Anthropic key in a local gitignored `.env`
+  (his credits). At handoff, **Dillon creates his own key** and adds it to Netlify env (his billing) — clean
+  ownership + cost separation.
+- **Not deployed:** all matcher commits are LOCAL (not pushed). Live internnest.ai still serves the old demo
+  until the single handoff deploy (Dillon's key + Stripe live keys → push → verify).
