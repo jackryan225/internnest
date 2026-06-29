@@ -10,3 +10,6 @@
 
 # Local dev tooling
 .claude/launch.json
+
+# Dependencies
+node_modules/
