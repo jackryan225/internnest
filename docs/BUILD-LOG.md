@@ -63,3 +63,21 @@ but kept readable. Newest entries at the bottom.
   Netlify to re-read the repo as public and the build passed. Auto-deploy on push now works.
 - ✅ Verified live at **https://internnest.ai** (HTTP 200, valid SSL, 0 "InternPilot" refs;
   InternNest wordmark + favicon + menu fix all present).
+
+## 2026-06-29 — Dataset built (Milestone 2 complete)
+
+- Built `internships.json` via two background multi-agent workflows (researcher → adversarial URL
+  verifier → curator), then merged + cleaned:
+  - Main sweep (31 agents, ~55 min): 47 verified + 36 backfill = 83 listings across all 8 industries.
+  - Targeted top-up (8 agents, ~13 min) for the under-covered priority industries (Finance,
+    Consulting, Real Estate, Marketing): 11 new verified listings.
+  - Merge/cleanup: HTML-entity decode, dedupe by company+role, dropped one FOX Sports URL that
+    returned 500 and a redundant Bain "Deadline #2" entry.
+- **Final: 88 real, verified internships**, every one with a live https application_url
+  (independent spot-checks: 17/18 sampled URLs returned 200; the one 500 was dropped).
+- Coverage: Technology 15, Sports Business 17, Marketing 14, Media & Ent. 12, Healthcare 10,
+  Real Estate 8, Consulting 7, **Finance 5**. Finance + Real Estate are the structural late-June
+  ceiling (2026 roles filled, 2027 not yet posted) — improvable in a fall refresh; the matcher's
+  cross-industry fallback covers thin industries at match time.
+- A few listings carry a "Summer 2026" term (verified live, likely late/rolling) — flagged for refresh.
+- Refresh process = re-run the workflows (Jack/Claude), since Dillon is non-technical.

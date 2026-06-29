@@ -49,4 +49,5 @@ A full walkthrough + lessons come at handoff.
 - ✅ Code on GitHub (**public** repo `jackryan225/internnest`), live on Netlify, auto-deploys on every push
 - ✅ Domain **internnest.ai** live with SSL
 - ✅ Rebranded to InternNest (logo, favicon, wordmark)
-- 🔜 Real AI matcher, Stripe payments
+- ✅ Internship dataset built — 88 real, verified listings in `internships.json`
+- 🔜 Real AI matcher (needs the Anthropic API key), then Stripe payments

@@ -1,0 +1,1577 @@
+[
+  {
+    "company": "BlackRock",
+    "role": "2027 Summer Internship Program - AMERS",
+    "industry": "Finance",
+    "location": "New York, NY (also Atlanta, Boston, Chicago, Miami, San Francisco, Seattle, and more)",
+    "work_type": "In-Person",
+    "short_description": "Nine-week program replicating a full-time BlackRock Analyst role with on-the-job training, mentorship, and networking across investment, risk, operations, and technology functions.",
+    "required_skills": [
+      "Financial analysis",
+      "Quantitative reasoning",
+      "Excel / data modeling",
+      "Communication",
+      "Teamwork"
+    ],
+    "application_url": "https://careers.blackrock.com/job/new-york/2027-summer-internship-program-amers/45831/90628276544",
+    "source_url": "https://careers.blackrock.com/job/new-york/2027-summer-internship-program-amers/45831/90628276544",
+    "term": "Summer 2027"
+  },
+  {
+    "company": "SpaceX",
+    "role": "Fall 2026 Business Operations Internship / Co-op",
+    "industry": "Finance",
+    "location": "Multiple SpaceX sites (Hawthorne CA, Cape Canaveral FL, Bastrop TX, Redmond WA, Starbase TX)",
+    "work_type": "In-Person",
+    "short_description": "Finance-track business operations interns own accounting and finance work for SpaceX operations, automating processes and tracking manufacturing and supply chain performance.",
+    "required_skills": [
+      "Financial analysis",
+      "Data analysis",
+      "Excel",
+      "Cross-functional collaboration",
+      "Attention to detail"
+    ],
+    "application_url": "https://job-boards.greenhouse.io/spacex/jobs/8403205002",
+    "source_url": "https://job-boards.greenhouse.io/spacex/jobs/8403205002",
+    "term": "Fall 2026"
+  },
+  {
+    "company": "SpaceX",
+    "role": "Fall 2026 Software Engineering Internship/Co-op",
+    "industry": "Technology",
+    "location": "Multiple US Sites (CA, TX, FL, WA)",
+    "work_type": "In-Person",
+    "short_description": "Build impactful software across SpaceX teams including Starship, Starshield, and launch systems at various US sites.",
+    "required_skills": [
+      "Software Engineering",
+      "Embedded Systems",
+      "Computer Networking",
+      "Operating Systems",
+      "Web Application Development"
+    ],
+    "application_url": "https://job-boards.greenhouse.io/spacex/jobs/8403219002",
+    "source_url": "https://job-boards.greenhouse.io/spacex/jobs/8403219002",
+    "term": "Fall 2026"
+  },
+  {
+    "company": "Verkada",
+    "role": "Frontend Software Engineering Intern - Fall 2026",
+    "industry": "Technology",
+    "location": "San Mateo, CA",
+    "work_type": "In-Person",
+    "short_description": "Build reusable frontend components and pixel-perfect UIs for Verkada's physical security platform at HQ (Aug 31 - Dec 18).",
+    "required_skills": [
+      "JavaScript",
+      "TypeScript",
+      "React",
+      "CSS",
+      "Frontend Development"
+    ],
+    "application_url": "https://job-boards.greenhouse.io/verkada/jobs/5099529007",
+    "source_url": "https://job-boards.greenhouse.io/verkada/jobs/5099529007",
+    "term": "Fall 2026"
+  },
+  {
+    "company": "Verkada",
+    "role": "Backend Software Engineering Intern - Fall 2026",
+    "industry": "Technology",
+    "location": "San Mateo, CA",
+    "work_type": "In-Person",
+    "short_description": "Develop and launch backend products for Verkada's security infrastructure using Python or Golang at HQ (Aug 31 - Dec 18).",
+    "required_skills": [
+      "Python",
+      "Golang",
+      "Distributed Systems",
+      "AWS",
+      "Docker"
+    ],
+    "application_url": "https://job-boards.greenhouse.io/verkada/jobs/5099422007",
+    "source_url": "https://job-boards.greenhouse.io/verkada/jobs/5099422007",
+    "term": "Fall 2026"
+  },
+  {
+    "company": "Gemini",
+    "role": "Software Engineering Intern (Fall 2026)",
+    "industry": "Technology",
+    "location": "New York, NY",
+    "work_type": "Hybrid",
+    "short_description": "Contribute to Gemini's crypto and Web3 engineering platform across security, blockchain, and high-performance API systems ($50/hr, 16 weeks).",
+    "required_skills": [
+      "Software Engineering",
+      "Computer Science",
+      "Algorithms",
+      "Blockchain",
+      "System Design"
+    ],
+    "application_url": "https://job-boards.greenhouse.io/gemini/jobs/7875125",
+    "source_url": "https://job-boards.greenhouse.io/gemini/jobs/7875125",
+    "term": "Fall 2026"
+  },
+  {
+    "company": "Palantir Technologies",
+    "role": "Software Engineer, Internship",
+    "industry": "Technology",
+    "location": "New York, NY",
+    "work_type": "In-Person",
+    "short_description": "Build production-grade software on Palantir's Foundry or Gotham platforms; requires graduating in 2027 as final internship ($10,500/mo).",
+    "required_skills": [
+      "Software Engineering",
+      "Data Structures",
+      "Algorithms",
+      "Computer Science",
+      "Coding Proficiency"
+    ],
+    "application_url": "https://jobs.lever.co/palantir/7d69cf8a-06fd-4f05-bd84-27149db29c4d",
+    "source_url": "https://jobs.lever.co/palantir/7d69cf8a-06fd-4f05-bd84-27149db29c4d",
+    "term": "Rolling"
+  },
+  {
+    "company": "Palantir Technologies",
+    "role": "Software Engineer, Internship - Defense Tech",
+    "industry": "Technology",
+    "location": "Washington, D.C.",
+    "work_type": "In-Person",
+    "short_description": "Contribute high-quality code to Palantir's Gotham defense product, building mission-critical data visualization and ML-driven tools for military customers ($10,500/mo).",
+    "required_skills": [
+      "Software Engineering",
+      "Java",
+      "TypeScript",
+      "Distributed Systems",
+      "Full-Stack Development"
+    ],
+    "application_url": "https://jobs.lever.co/palantir/f17e98d0-046a-4e6e-9d65-ed0b12dd0ff7",
+    "source_url": "https://jobs.lever.co/palantir/f17e98d0-046a-4e6e-9d65-ed0b12dd0ff7",
+    "term": "Rolling"
+  },
+  {
+    "company": "Anduril Industries",
+    "role": "2027 Software Engineer Intern",
+    "industry": "Technology",
+    "location": "Multiple US Sites (CA, GA, MA, VA, WA)",
+    "work_type": "In-Person",
+    "short_description": "12-week paid summer internship building AI-powered defense systems using C++, Go, Rust, or Python; apply now, review begins August 2026.",
+    "required_skills": [
+      "C++",
+      "Go",
+      "Rust",
+      "Python",
+      "Algorithms"
+    ],
+    "application_url": "https://job-boards.greenhouse.io/andurilindustries/jobs/5148079007",
+    "source_url": "https://job-boards.greenhouse.io/andurilindustries/jobs/5148079007",
+    "term": "Summer 2027"
+  },
+  {
+    "company": "Aquatic Capital Management",
+    "role": "Software Engineer, Intern (Summer 2027)",
+    "industry": "Technology",
+    "location": "Chicago, IL",
+    "work_type": "In-Person",
+    "short_description": "Build high-performance, low-latency distributed systems powering quantitative trading research and infrastructure alongside experienced engineers and quants.",
+    "required_skills": [
+      "Python",
+      "C++",
+      "Algorithms",
+      "Distributed Systems",
+      "Computer Architecture"
+    ],
+    "application_url": "https://job-boards.greenhouse.io/aquaticcapitalmanagement/jobs/8489233002",
+    "source_url": "https://job-boards.greenhouse.io/aquaticcapitalmanagement/jobs/8489233002",
+    "term": "Summer 2027"
+  },
+  {
+    "company": "Walleye Capital",
+    "role": "Technology Intern (Summer 2027)",
+    "industry": "Technology",
+    "location": "New York, NY",
+    "work_type": "In-Person",
+    "short_description": "10-week technology internship at a $16B+ multi-strategy hedge fund; build internal tools and systems with strong CS or engineering foundation ($14,000/mo + housing stipend; apply by July 31).",
+    "required_skills": [
+      "Python",
+      "Software Engineering",
+      "Data Systems",
+      "APIs",
+      "Problem Solving"
+    ],
+    "application_url": "https://job-boards.greenhouse.io/walleyecapital-external-students/jobs/4681002006",
+    "source_url": "https://job-boards.greenhouse.io/walleyecapital-external-students/jobs/4681002006",
+    "term": "Summer 2027"
+  },
+  {
+    "company": "Walleye Capital",
+    "role": "Risk Technology Analyst Intern (Summer 2027)",
+    "industry": "Technology",
+    "location": "New York, NY",
+    "work_type": "In-Person",
+    "short_description": "10-week internship building real-time risk analytics data pipelines and monitoring tools at a major multi-strategy hedge fund ($14,000/mo + housing; apply by July 31).",
+    "required_skills": [
+      "Python",
+      "Java",
+      "C++",
+      "Data Pipelines",
+      "Distributed Computing"
+    ],
+    "application_url": "https://job-boards.greenhouse.io/walleyecapital-external-students/jobs/4679224006",
+    "source_url": "https://job-boards.greenhouse.io/walleyecapital-external-students/jobs/4679224006",
+    "term": "Summer 2027"
+  },
+  {
+    "company": "Layup Parts",
+    "role": "Software Engineering Intern",
+    "industry": "Technology",
+    "location": "Huntington Beach, CA",
+    "work_type": "In-Person",
+    "short_description": "Rolling-admission internship at an aerospace composite manufacturing startup; build factory operating systems, customer portals, and automation tools using Go, React TS, or Rust.",
+    "required_skills": [
+      "Go",
+      "React",
+      "TypeScript",
+      "Rust",
+      "Software Engineering"
+    ],
+    "application_url": "https://jobs.lever.co/layup/0b42f7ad-ebdc-4b4a-8fe6-47640f6dba53",
+    "source_url": "https://jobs.lever.co/layup/0b42f7ad-ebdc-4b4a-8fe6-47640f6dba53",
+    "term": "Rolling"
+  },
+  {
+    "company": "Bain & Company",
+    "role": "Associate Consultant Intern (Summer 2027, Round 2)",
+    "industry": "Consulting",
+    "location": "Multiple US offices (Boston, Chicago, Dallas, New York, San Francisco, Washington DC)",
+    "work_type": "In-Person",
+    "short_description": "Join a Bain case team for 10 weeks doing real client work; Round 2 deadline is August 31, 2026 — the last open MBB window this cycle.",
+    "required_skills": [
+      "Structured problem solving",
+      "Quantitative analysis",
+      "Business communication",
+      "Excel modeling",
+      "Case interview skills"
+    ],
+    "application_url": "https://careers.bain.com/recruits/ApplicationMethods?folderId=10403&from=signin",
+    "source_url": "https://www.bain.com/careers/work-with-us/internships-programs/associate-consultant-internship/",
+    "term": "Summer 2027"
+  },
+  {
+    "company": "West Monroe",
+    "role": "Product & Experience Consulting Intern",
+    "industry": "Consulting",
+    "location": "Chicago, IL / San Francisco, CA (multiple offices)",
+    "work_type": "Hybrid",
+    "short_description": "Shape human-centered digital products for clients within West Monroe's Technology & Experience practice; pay is $39/hr for this 10-week program.",
+    "required_skills": [
+      "UX or product thinking",
+      "Digital product development",
+      "Client communication",
+      "Data analysis",
+      "Agile / design thinking methodology"
+    ],
+    "application_url": "https://www.westmonroe.com/careers/job-search-students",
+    "source_url": "https://www.linkedin.com/jobs/view/2026-product-experience-consulting-intern-at-west-monroe-4375758390",
+    "term": "Summer 2026"
+  },
+  {
+    "company": "NERA Economic Consulting",
+    "role": "Summer Intern (2027 Graduates)",
+    "industry": "Consulting",
+    "location": "Multiple US offices (New York, Washington DC, Chicago, and others)",
+    "work_type": "Hybrid",
+    "short_description": "Build quantitative models, conduct econometric analysis, and support expert report preparation across NERA's litigation and regulatory consulting practices.",
+    "required_skills": [
+      "Econometrics / statistics",
+      "Financial modeling",
+      "Programming (Python, Stata, or R)",
+      "Economic analysis",
+      "Writing and research skills"
+    ],
+    "application_url": "https://careers.marsh.com/global/en/nera-search",
+    "source_url": "https://www.nera.com/open-roles.html",
+    "term": "Summer 2027"
+  },
+  {
+    "company": "Whitney Museum of American Art",
+    "role": "Marketing Internship",
+    "industry": "Marketing",
+    "location": "New York, NY",
+    "work_type": "Hybrid",
+    "short_description": "Semester-long paid internship (Sept 15 - Dec 5, 2026) with the Whitney's marketing team, supporting audience strategy, brand voice, and channel planning; $3,000 stipend for full participation.",
+    "required_skills": [
+      "Marketing strategy",
+      "Brand communications",
+      "Content creation",
+      "Channel strategy",
+      "Written communication"
+    ],
+    "application_url": "https://jobs.whitney.org/apply/TVtRvadPoe/Fall-2026-Marketing-Internship",
+    "source_url": "https://jobs.whitney.org/apply/TVtRvadPoe/Fall-2026-Marketing-Internship",
+    "term": "Fall 2026"
+  },
+  {
+    "company": "ESPN / Disney",
+    "role": "Product Marketing Intern",
+    "industry": "Marketing",
+    "location": "New York, NY",
+    "work_type": "In-Person",
+    "short_description": "Join ESPN's Product Marketing & Subscriber Strategy team (Sept-Dec 2026) to support direct-to-consumer growth strategies, subscriber testing roadmaps, and engagement campaigns at $22.50/hr.",
+    "required_skills": [
+      "Marketing strategy",
+      "Consumer insights",
+      "Data analysis",
+      "Written communication",
+      "Project coordination"
+    ],
+    "application_url": "https://jobs.disneycareers.com/job/new-york/espn-product-marketing-intern-new-york-city-fall-2026/391/96853307568",
+    "source_url": "https://jobs.disneycareers.com/job/new-york/espn-product-marketing-intern-new-york-city-fall-2026/391/96853307568",
+    "term": "Fall 2026"
+  },
+  {
+    "company": "RF-SMART",
+    "role": "Digital Marketing Intern (SEO and AI Focus)",
+    "industry": "Marketing",
+    "location": "Jacksonville, FL",
+    "work_type": "In-Person",
+    "short_description": "Fall 2026 internship (Aug 17 - Dec 11) with RF-SMART's inbound marketing team, focused on AIEO/SEO optimization, AI-driven content strategy, keyword research, and digital presence; $20/hr, 20-25 hrs/week.",
+    "required_skills": [
+      "SEO / AEO",
+      "Content optimization",
+      "Data analytics",
+      "Digital marketing",
+      "Marketing strategy"
+    ],
+    "application_url": "https://job-boards.greenhouse.io/rfsmart/jobs/5248299008",
+    "source_url": "https://job-boards.greenhouse.io/rfsmart/jobs/5248299008",
+    "term": "Fall 2026"
+  },
+  {
+    "company": "RF-SMART",
+    "role": "Business Development Intern",
+    "industry": "Marketing",
+    "location": "Jacksonville, FL",
+    "work_type": "In-Person",
+    "short_description": "Fall 2026 internship (Aug 17 - Dec 11) supporting RF-SMART's demand generation efforts through lead nurturing, email marketing, and CRM management alongside the marketing team; $20/hr, 20-25 hrs/week.",
+    "required_skills": [
+      "Lead generation",
+      "Email marketing",
+      "CRM tools",
+      "Written communication",
+      "Data analysis"
+    ],
+    "application_url": "https://job-boards.greenhouse.io/rfsmart/jobs/5230703008",
+    "source_url": "https://job-boards.greenhouse.io/rfsmart/jobs/5230703008",
+    "term": "Fall 2026"
+  },
+  {
+    "company": "Vivrelle",
+    "role": "Fall Internship - Marketing Track",
+    "industry": "Marketing",
+    "location": "New York, NY",
+    "work_type": "In-Person",
+    "short_description": "Three-month paid internship (Sept-Dec 2026) at Vivrelle's Park Ave Showroom with hands-on exposure to social media, administrative marketing tasks, and brand operations; $17/hr, 20 hrs/week.",
+    "required_skills": [
+      "Social media",
+      "Marketing administration",
+      "Customer focus",
+      "Organization",
+      "Brand awareness"
+    ],
+    "application_url": "https://jobs.lever.co/vivrelle/98e3982c-e84e-48ec-971a-4fa79ec7d298",
+    "source_url": "https://jobs.lever.co/vivrelle/98e3982c-e84e-48ec-971a-4fa79ec7d298",
+    "term": "Fall 2026"
+  },
+  {
+    "company": "Texas Department of State Health Services (DSHS)",
+    "role": "Public Health Intern - Fall 2026",
+    "industry": "Healthcare",
+    "location": "Austin, TX",
+    "work_type": "Hybrid",
+    "short_description": "Paid semester-long internship with Texas DSHS across public health, epidemiology, health informatics, communications, and healthcare administration; Fall 2026 applications open on a rolling basis.",
+    "required_skills": [
+      "Public health concepts",
+      "Research and data analysis",
+      "Written communication",
+      "Microsoft Office"
+    ],
+    "application_url": "https://www.dshs.texas.gov/internships-at-dshs/internship-applications",
+    "source_url": "https://www.dshs.texas.gov/internships-at-dshs/internship-opportunities",
+    "term": "Fall 2026"
+  },
+  {
+    "company": "Essential Access Health",
+    "role": "Clinical Informatics & Evaluation Intern",
+    "industry": "Healthcare",
+    "location": "Los Angeles, CA",
+    "work_type": "In-Person",
+    "short_description": "Paid, year-round internship supporting data analysis, survey evaluation, EHR testing, and public health data dashboard development for a statewide family planning network.",
+    "required_skills": [
+      "Advanced Excel",
+      "Data analysis",
+      "Public health or informatics background",
+      "Database management",
+      "Attention to detail"
+    ],
+    "application_url": "https://www.essentialaccess.org/jobs/clinical-informatics-evaluation-intern-los-angeles",
+    "source_url": "https://www.essentialaccess.org/about/career-center/interns/available-internships",
+    "term": "Rolling"
+  },
+  {
+    "company": "Children's Hospital of Philadelphia (CHOP)",
+    "role": "Child Life Intern - Spring 2027",
+    "industry": "Healthcare",
+    "location": "Philadelphia, PA",
+    "work_type": "In-Person",
+    "short_description": "Paid 4-month clinical internship (Jan 4 - Apr 23, 2027) providing 600 supervised hours toward child life specialist certification; application deadline is September 5, 2026.",
+    "required_skills": [
+      "Child development coursework (ACLP-required)",
+      "Pediatric patient communication",
+      "Observation and documentation",
+      "Child life theory"
+    ],
+    "application_url": "https://careers.chop.edu",
+    "source_url": "https://www.chop.edu/centers-programs/child-life-education-and-creative-arts-therapy/child-life-internship",
+    "term": "Spring 2027"
+  },
+  {
+    "company": "Cook Children's Medical Center",
+    "role": "Child Life Intern - Spring 2027",
+    "industry": "Healthcare",
+    "location": "Fort Worth, TX",
+    "work_type": "In-Person",
+    "short_description": "Paid 16-week clinical child life internship (Spring 2027); the application portal opens July 13, 2026 at 12 p.m. CST and accepts only the first 60 completed applications received.",
+    "required_skills": [
+      "ACLP eligibility requirements",
+      "Child development coursework",
+      "Pediatric care communication",
+      "Documentation skills"
+    ],
+    "application_url": "https://www.cookchildrens.org/careers/education/child-life-internship/",
+    "source_url": "https://www.cookchildrens.org/careers/education/child-life-internship/",
+    "term": "Spring 2027"
+  },
+  {
+    "company": "Northwell Health (Cohen Children's Medical Center)",
+    "role": "Child Life Intern - September 2026 Cohort",
+    "industry": "Healthcare",
+    "location": "New Hyde Park, NY",
+    "work_type": "In-Person",
+    "short_description": "Full-time 17-week, 600-hour child life internship starting in September 2026; one of two annual cohorts (January and September) at Cohen Children's Medical Center.",
+    "required_skills": [
+      "ACLP child life internship eligibility",
+      "Child development knowledge",
+      "Pediatric patient and family communication",
+      "Teamwork in clinical settings"
+    ],
+    "application_url": "https://childrenshospital.northwell.edu/for-professionals/child-life-internship-program",
+    "source_url": "https://childrenshospital.northwell.edu/for-professionals/child-life-internship-program",
+    "term": "Fall 2026"
+  },
+  {
+    "company": "Mayo Clinic",
+    "role": "Administrative Internship Program (Undergraduate)",
+    "industry": "Healthcare",
+    "location": "Rochester, MN / Jacksonville, FL / Scottsdale, AZ / Wisconsin sites",
+    "work_type": "In-Person",
+    "short_description": "Competitive paid summer administrative internship (May/June 2027 start) at Mayo Clinic across multiple campuses; applications open early October 2026 and close early December 2026.",
+    "required_skills": [
+      "Healthcare administration or business/public health coursework",
+      "Analytical thinking",
+      "Project management basics",
+      "Written and verbal communication"
+    ],
+    "application_url": "https://jobs.mayoclinic.org/AIP",
+    "source_url": "https://jobs.mayoclinic.org/AIP",
+    "term": "Summer 2027"
+  },
+  {
+    "company": "Texas Health Resources (Texas Health Dallas)",
+    "role": "Healthcare Management Academic Intern",
+    "industry": "Healthcare",
+    "location": "Dallas, TX",
+    "work_type": "In-Person",
+    "short_description": "Rolling, unpaid academic internship at Texas Health Dallas offering hands-on experience in healthcare management departments including operations, finance, HR, and clinical services.",
+    "required_skills": [
+      "Healthcare administration interest",
+      "Professional communication",
+      "Organizational skills",
+      "Academic enrollment requirement"
+    ],
+    "application_url": "https://www.texashealth.org/Volunteer/Academic-Programs/Academic-Internship",
+    "source_url": "https://www.texashealth.org/Volunteer/Academic-Programs/Academic-Internship",
+    "term": "Rolling"
+  },
+  {
+    "company": "Cleveland Clinic",
+    "role": "Leadership in Healthcare Undergraduate Administrative Intern",
+    "industry": "Healthcare",
+    "location": "Cleveland, OH",
+    "work_type": "In-Person",
+    "short_description": "Competitive paid 10-week summer internship for rising juniors and seniors in healthcare administration, public health, or related fields; Summer 2027 applications are expected to open October-November 2026.",
+    "required_skills": [
+      "Healthcare or business coursework",
+      "Analytical problem-solving",
+      "Project management",
+      "Professional communication"
+    ],
+    "application_url": "https://my.clevelandclinic.org/departments/education/health-management-education/undergraduate-internship",
+    "source_url": "https://my.clevelandclinic.org/departments/education/health-management-education/undergraduate-internship",
+    "term": "Summer 2027"
+  },
+  {
+    "company": "Emory Healthcare",
+    "role": "Administrative Intern",
+    "industry": "Healthcare",
+    "location": "Atlanta, GA",
+    "work_type": "In-Person",
+    "short_description": "Paid 10-week full-time summer administrative internship for undergrad or graduate students; Summer 2027 applications expected to open in late 2026.",
+    "required_skills": [
+      "Healthcare administration or business/public health enrollment",
+      "Project management basics",
+      "Analytical skills",
+      "Professional written and verbal communication"
+    ],
+    "application_url": "https://www.emoryhealthcare.org/careers/career-areas/residencies-fellowships/administrative-internship",
+    "source_url": "https://www.emoryhealthcare.org/careers/career-areas/residencies-fellowships/administrative-internship",
+    "term": "Summer 2027"
+  },
+  {
+    "company": "Health Career Connection (HCC)",
+    "role": "Public Health & Healthcare Intern - Summer 2027",
+    "industry": "Healthcare",
+    "location": "Multiple cities across the US (varies by placement)",
+    "work_type": "Hybrid",
+    "short_description": "Paid summer internship program placing students at healthcare, public health, and biopharma organizations nationwide; Summer 2027 applications open fall 2026.",
+    "required_skills": [
+      "Interest in health professions",
+      "Communication and interpersonal skills",
+      "Professional adaptability",
+      "Resume and interview readiness"
+    ],
+    "application_url": "https://healthcareerconnection.org/students-aspiring-health-professionals/",
+    "source_url": "https://healthcareerconnection.org/students-aspiring-health-professionals/",
+    "term": "Summer 2027"
+  },
+  {
+    "company": "Los Angeles Lakers",
+    "role": "2026-27 Seasonal Internship Program",
+    "industry": "Sports Business",
+    "location": "El Segundo, CA",
+    "work_type": "In-Person",
+    "short_description": "Season-long paid internship (September through June) where interns are assigned to a specific Lakers business department and gain experience through projects, special events, and professional development.",
+    "required_skills": [
+      "Communication",
+      "Microsoft Office",
+      "Sports business knowledge",
+      "Event support",
+      "Teamwork"
+    ],
+    "application_url": "https://www.teamworkonline.com/basketball-jobs/los-angeles-lakers/los-angeles-lakers-jobs/2026-27-seasonal-internship-program-2173597",
+    "source_url": "https://sportsbusinessventures.com/jobs/2026-27-seasonal-internship-program/",
+    "term": "Rolling (Sept 2026 - June 2027)"
+  },
+  {
+    "company": "PrizePicks",
+    "role": "Customer Insights Intern - Fall 2026",
+    "industry": "Sports Business",
+    "location": "Atlanta, GA",
+    "work_type": "In-Person",
+    "short_description": "Paid internship ($30/hr) on the Insights team uncovering member behavior through market research, trend monitoring, and data-driven storytelling at America's leading daily fantasy sports platform.",
+    "required_skills": [
+      "Market research",
+      "Excel / Google Sheets",
+      "Consumer behavior analysis",
+      "Data visualization (Tableau a plus)",
+      "Written communication"
+    ],
+    "application_url": "https://www.teamworkonline.com/sports-technology-jobs/prize-picks/prizepicks-jobs/customer-insights-intern-fall-2026-2170203",
+    "source_url": "https://www.linkedin.com/jobs/view/customer-insights-intern-fall-2026-at-prizepicks-4410407592",
+    "term": "Fall 2026"
+  },
+  {
+    "company": "Orange Bowl Committee",
+    "role": "Partnerships Activation & Fulfillment Internship (Fall 2026)",
+    "industry": "Sports Business",
+    "location": "Miami Lakes, FL",
+    "work_type": "In-Person",
+    "short_description": "Unpaid internship (credit eligible) supporting implementation and fulfillment of sponsorship benefits for Orange Bowl Festival Events and the Capital One Orange Bowl Game.",
+    "required_skills": [
+      "Sponsorship activation",
+      "Communication",
+      "Event coordination",
+      "Microsoft Office",
+      "Organizational skills"
+    ],
+    "application_url": "https://www.teamworkonline.com/college-jobs/collegesportsjobs/orange-bowl/2026-2027-partnerships-activation-fulfillment-internship-fall-2026-2167863",
+    "source_url": "https://www.teamworkonline.com/college-jobs/collegesportsjobs/orange-bowl/2026-2027-partnerships-activation-fulfillment-internship-fall-2026-2167863",
+    "term": "Fall 2026"
+  },
+  {
+    "company": "Orange Bowl Committee",
+    "role": "Marketing & Promotions Internship (Fall 2026)",
+    "industry": "Sports Business",
+    "location": "Miami Lakes, FL",
+    "work_type": "In-Person",
+    "short_description": "Unpaid internship (credit eligible) supporting advertising, grassroots promotions, game-day activations, and in-arena entertainment for the Capital One Orange Bowl; minimum 20 hours/week commitment.",
+    "required_skills": [
+      "Marketing",
+      "Event management",
+      "Copywriting / content creation",
+      "Promotions",
+      "Communication"
+    ],
+    "application_url": "https://www.teamworkonline.com/college-jobs/collegesportsjobs/orange-bowl/2026-2027-marketing-promotions-internship-fall-2026-2164566",
+    "source_url": "https://www.teamworkonline.com/college-jobs/collegesportsjobs/orange-bowl/2026-2027-marketing-promotions-internship-fall-2026-2164566",
+    "term": "Fall 2026"
+  },
+  {
+    "company": "Orange Bowl Committee",
+    "role": "Game Operations Internship (Fall 2026)",
+    "industry": "Sports Business",
+    "location": "Miami Lakes, FL",
+    "work_type": "In-Person",
+    "short_description": "Unpaid internship (credit eligible) providing hands-on game operations experience for the Capital One Orange Bowl, including the AutoNation Basketball Classic, cheer championships, and frequency coordination logistics.",
+    "required_skills": [
+      "Event operations",
+      "Logistics coordination",
+      "Communication",
+      "Organizational skills",
+      "Sports industry interest"
+    ],
+    "application_url": "https://www.teamworkonline.com/college-jobs/collegesportsjobs/orange-bowl/2026-2027-game-operations-internship-fall-2026-2167861",
+    "source_url": "https://www.teamworkonline.com/college-jobs/collegesportsjobs/orange-bowl/2026-2027-game-operations-internship-fall-2026-2167861",
+    "term": "Fall 2026"
+  },
+  {
+    "company": "Greensboro Gargoyles (ECHL)",
+    "role": "Season Operation and Sales Internship Program",
+    "industry": "Sports Business",
+    "location": "Greensboro, NC",
+    "work_type": "In-Person",
+    "short_description": "Rolling-application internship (credit eligible) covering sales, game operations, and merchandising across an ECHL professional hockey season, with interns working all home games alongside the full front office.",
+    "required_skills": [
+      "Sales",
+      "Game operations",
+      "Microsoft Office",
+      "Communication",
+      "Flexibility for nights and weekends"
+    ],
+    "application_url": "https://www.teamworkonline.com/multiple-properties/zawyer-sports/greensboro-pro-hockey/greensboro-gargoyles-season-operation-and-sales-internship-program-2173154",
+    "source_url": "https://www.teamworkonline.com/multiple-properties/zawyer-sports/greensboro-pro-hockey/greensboro-gargoyles-season-operation-and-sales-internship-program-2173154",
+    "term": "Rolling (Sept 2026 - April 2027)"
+  },
+  {
+    "company": "Washington Commanders (NFL)",
+    "role": "2026 Training Camp Internship",
+    "industry": "Sports Business",
+    "location": "Ashburn, VA",
+    "work_type": "In-Person",
+    "short_description": "4-5 week seasonal internship supporting the Marketing and Operations Department during NFL Training Camp, including fan events, sponsor activations, VIP management, and autograph sessions on open practice days.",
+    "required_skills": [
+      "Fan experience / event operations",
+      "Customer service",
+      "Sponsorship activation",
+      "Communication",
+      "Adaptability"
+    ],
+    "application_url": "https://www.teamworkonline.com/football-jobs/washington-commanders-jobs/washington-commanders-jobs/2026-training-camp-internship-2162194",
+    "source_url": "https://www.teamworkonline.com/football-jobs/washington-commanders-jobs/washington-commanders-jobs/2026-training-camp-internship-2162194",
+    "term": "Summer 2026 (late July - August)"
+  },
+  {
+    "company": "ESPN / The Walt Disney Company",
+    "role": "ESPN Marketing Intern, Charlotte, Summer/Fall 2026",
+    "industry": "Sports Business",
+    "location": "Charlotte, NC",
+    "work_type": "In-Person",
+    "short_description": "Full-time paid internship ($22.50/hr, June-December 2026) on the Sports Marketing College Networks team supporting cross-platform campaigns for ACC and SEC Networks, including fan activations and creative project coordination.",
+    "required_skills": [
+      "Marketing campaigns",
+      "Project coordination",
+      "Stakeholder communication",
+      "Research and planning",
+      "Written communication (cover letter required)"
+    ],
+    "application_url": "https://disney.wd5.myworkdayjobs.com/en-US/disneycareer/job/Charlotte-NC-USA/ESPN-Marketing-Intern--Charlotte--Summer-Fall-2026_10143727-2",
+    "source_url": "https://www.disneycareers.com/en/job/charlotte/espn-marketing-intern-charlotte-summer-fall-2026/391/92108773360",
+    "term": "Summer/Fall 2026 (June - December)"
+  },
+  {
+    "company": "FOX Entertainment",
+    "role": "Fall 2026 FOX Entertainment Internship Program - New York",
+    "industry": "Media & Entertainment",
+    "location": "New York, NY",
+    "work_type": "In-Person",
+    "short_description": "Work with FOX Entertainment's broadcast and streaming teams across departments including Publicity, Research, and Experiences & Design at the network behind The Simpsons and The Masked Singer.",
+    "required_skills": [
+      "Entertainment media industry knowledge",
+      "Written & verbal communication",
+      "Microsoft Office Suite",
+      "Adobe Premiere (preferred)",
+      "Organizational skills"
+    ],
+    "application_url": "https://www.foxcareers.com/Search/JobDetail/R50032642/fall-2026-fox-entertainment-internship-program-new-york-fox-entertainment",
+    "source_url": "https://www.foxcareers.com/Search/JobDetail/R50032642/fall-2026-fox-entertainment-internship-program-new-york-fox-entertainment",
+    "term": "Fall 2026"
+  },
+  {
+    "company": "FOX Corporation",
+    "role": "Fall 2026 FOX Corporation Internship Program - Los Angeles",
+    "industry": "Media & Entertainment",
+    "location": "Los Angeles, CA",
+    "work_type": "In-Person",
+    "short_description": "Rotational corporate internship at FOX Corporation spanning departments such as Corporate Communications, Distribution Marketing, Graphic Design, and Talent Acquisition.",
+    "required_skills": [
+      "Media industry awareness",
+      "Written & verbal communication",
+      "Attention to detail",
+      "Microsoft Office Suite",
+      "Ability to work in deadline-driven environments"
+    ],
+    "application_url": "https://www.foxcareers.com/Search/JobDetail/R50032636/fall-2026-fox-corporation-internship-program-los-angeles-ca-fox-corporation",
+    "source_url": "https://www.foxcareers.com/Search/JobDetail/R50032636/fall-2026-fox-corporation-internship-program-los-angeles-ca-fox-corporation",
+    "term": "Fall 2026"
+  },
+  {
+    "company": "FOX Corporation",
+    "role": "Fall 2026 FOX Corporation Internship Program - Ad Sales",
+    "industry": "Media & Entertainment",
+    "location": "New York, NY",
+    "work_type": "In-Person",
+    "short_description": "Join FOX's Ad Sales division in New York across areas including Digital Ad Sales, Programmatic, Sales Pricing & Planning, and Strategic Initiatives at a major broadcast media company.",
+    "required_skills": [
+      "Media & advertising industry knowledge",
+      "Analytical thinking",
+      "Written & verbal communication",
+      "Microsoft Office Suite",
+      "Attention to detail"
+    ],
+    "application_url": "https://www.foxcareers.com/Search/JobDetail/R50032572/fall-2026-fox-corporation-internship-program-ad-sales-fox-corporation",
+    "source_url": "https://www.foxcareers.com/Search/JobDetail/R50032572/fall-2026-fox-corporation-internship-program-ad-sales-fox-corporation",
+    "term": "Fall 2026"
+  },
+  {
+    "company": "FOX News Media",
+    "role": "Fall 2026 FOX News Media Internship Program - Washington, DC",
+    "industry": "Media & Entertainment",
+    "location": "Washington, DC",
+    "work_type": "In-Person",
+    "short_description": "Intern at FOX News Channel or FOX Business Network in Washington DC, placed in broadcast journalism and production roles including assignment desk, booking, and live show support.",
+    "required_skills": [
+      "Knowledge of current events and business news",
+      "Broadcast journalism fundamentals",
+      "Written & verbal communication",
+      "Ability to work in a 24/7 news environment",
+      "Microsoft Office Suite"
+    ],
+    "application_url": "https://www.foxcareers.com/Search/JobDetail/R50032635/fall-2026-fox-news-media-internship-program-washington-dc-fox-news-media",
+    "source_url": "https://www.foxcareers.com/Search/JobDetail/R50032635/fall-2026-fox-news-media-internship-program-washington-dc-fox-news-media",
+    "term": "Fall 2026"
+  },
+  {
+    "company": "Brio Real Estate (Blackstone Portfolio Company)",
+    "role": "Real Estate Credit Intern",
+    "industry": "Real Estate",
+    "location": "Atlanta, GA or Dallas, TX",
+    "work_type": "In-Person",
+    "short_description": "10-week internship supporting Blackstone's Real Estate Debt Strategies (BREDS) across asset management, private investments, and structured credit; gaining hands-on exposure to real estate finance and credit transactions.",
+    "required_skills": [
+      "Financial Modeling",
+      "Credit Analysis",
+      "Real Estate Finance",
+      "Excel",
+      "Due Diligence"
+    ],
+    "application_url": "https://revantage.wd1.myworkdayjobs.com/en-US/Brio_Real_Estate/job/Brio-Real-Estate-Credit-Intern---Summer-2027_JR102810",
+    "source_url": "https://blackstone.wd1.myworkdayjobs.com/en-US/Blackstone_Campus_Careers",
+    "term": "Summer 2027"
+  },
+  {
+    "company": "Marcus & Millichap",
+    "role": "Sales Internship Program",
+    "industry": "Real Estate",
+    "location": "Multiple US Cities (Atlanta, Boston, Chicago, Dallas, Houston, Los Angeles, Miami, NYC, Philadelphia, Phoenix, Washington DC, and more)",
+    "work_type": "In-Person",
+    "short_description": "Paid 8-week commercial real estate sales internship for rising juniors/seniors; working directly with experienced agents on BOVs, offering memorandums, cold calling, underwriting, and financing workshops.",
+    "required_skills": [
+      "Commercial Real Estate",
+      "Sales",
+      "Financial Analysis",
+      "Communication",
+      "Market Research"
+    ],
+    "application_url": "https://www.marcusmillichap.com/careers/new-to-the-industry/internship",
+    "source_url": "https://www.marcusmillichap.com/careers/new-to-the-industry/internship",
+    "term": "Rolling"
+  },
+  {
+    "company": "CBRE",
+    "role": "Sales & Brokerage Internship",
+    "industry": "Real Estate",
+    "location": "Multiple US Cities (Atlanta, Chicago, Dallas, Denver, and others)",
+    "work_type": "In-Person",
+    "short_description": "Structured commercial real estate internship for college juniors, seniors, and graduate students; gaining brokerage, leasing, and capital markets experience alongside CBRE's top-producing professionals.",
+    "required_skills": [
+      "Commercial Real Estate",
+      "Sales",
+      "Market Analysis",
+      "Communication",
+      "Microsoft Office"
+    ],
+    "application_url": "https://www.cbre.com/careers/students-and-graduates/sales-and-brokerage-internship-program",
+    "source_url": "https://www.cbre.com/careers/students-and-graduates",
+    "term": "Rolling"
+  },
+  {
+    "company": "HCVT",
+    "role": "Tax Internship - Summer 2027",
+    "industry": "Finance",
+    "location": "Fort Worth, TX (multiple CA, UT, TX, AZ locations available)",
+    "work_type": "Hybrid",
+    "short_description": "Join HCVT's 10-week hybrid tax internship serving private equity, real estate, and high-net-worth clients; positions open now across multiple offices for Summer 2027.",
+    "required_skills": [
+      "Tax compliance",
+      "Accounting coursework",
+      "Microsoft Excel",
+      "Attention to detail",
+      "Client communication"
+    ],
+    "application_url": "https://jobs.lever.co/hcvt/cedf0491-2eb1-4393-842f-b15415d89948/apply",
+    "source_url": "https://jobs.lever.co/hcvt/cedf0491-2eb1-4393-842f-b15415d89948",
+    "term": "Summer 2027"
+  },
+  {
+    "company": "HCVT",
+    "role": "Tax Internship - Winter 2027",
+    "industry": "Finance",
+    "location": "Phoenix, AZ (multiple CA, TX, UT, AZ locations available)",
+    "work_type": "Hybrid",
+    "short_description": "HCVT's 10-12 week winter tax internship (mid-January through mid-April 2027) working alongside experienced CPAs serving diverse client industries.",
+    "required_skills": [
+      "Tax compliance",
+      "Accounting coursework",
+      "Microsoft Excel",
+      "Analytical skills",
+      "Written communication"
+    ],
+    "application_url": "https://jobs.lever.co/hcvt/bb7f9497-7cc5-49ea-9425-193d3a696733/apply",
+    "source_url": "https://jobs.lever.co/hcvt/bb7f9497-7cc5-49ea-9425-193d3a696733",
+    "term": "Winter 2027"
+  },
+  {
+    "company": "Center for AI Safety (CAIS)",
+    "role": "Research Engineer Intern - Fall 2026",
+    "industry": "Technology",
+    "location": "San Francisco, CA",
+    "work_type": "Hybrid",
+    "short_description": "Collaborate closely with CAIS researchers on AI safety projects — running experiments on large language models, writing code for alignment benchmarks, and co-authoring publications with outsized real-world impact.",
+    "required_skills": [
+      "Python",
+      "Machine Learning / Deep Learning",
+      "Large language models (LLMs)",
+      "Research experiment design",
+      "Scientific communication"
+    ],
+    "application_url": "https://jobs.lever.co/aisafety/e011814b-9a80-43d6-bb0c-cc153ea4bec4/apply",
+    "source_url": "https://jobs.lever.co/aisafety/e011814b-9a80-43d6-bb0c-cc153ea4bec4",
+    "term": "Fall 2026"
+  },
+  {
+    "company": "Toyota Research Institute (TRI)",
+    "role": "Human-Centered AI Intern: Human-Computer Interaction",
+    "industry": "Technology",
+    "location": "Los Altos, CA",
+    "work_type": "Hybrid",
+    "short_description": "Drive an end-to-end HCI research project within TRI's Harmonious Communities group, prototyping conversational AI solutions and producing work aimed at publication in top academic venues.",
+    "required_skills": [
+      "Human-Computer Interaction (HCI)",
+      "Conversational AI or NLP",
+      "User research / UX methods",
+      "Python or research programming",
+      "Scientific writing and presentation"
+    ],
+    "application_url": "https://jobs.lever.co/tri/000be2f3-b77c-4719-8476-0718c4c49a19/apply",
+    "source_url": "https://jobs.lever.co/tri/000be2f3-b77c-4719-8476-0718c4c49a19",
+    "term": "Fall 2026"
+  },
+  {
+    "company": "Together AI",
+    "role": "Research Intern, Model Shaping (Fall 2026)",
+    "industry": "Technology",
+    "location": "San Francisco, CA",
+    "work_type": "In-Person",
+    "short_description": "Work on advanced post-training methods for large foundation models — including RLHF, RLAIF, constitutional AI, and data curation — at a leading open-source AI research company.",
+    "required_skills": [
+      "Machine Learning and Deep Learning fundamentals",
+      "PyTorch or JAX",
+      "Transformer architecture",
+      "Python",
+      "Foundation model post-training (RLHF, SFT, etc.)"
+    ],
+    "application_url": "https://job-boards.greenhouse.io/togetherai/jobs/5157661007",
+    "source_url": "https://job-boards.greenhouse.io/togetherai/jobs/5157661007",
+    "term": "Fall 2026"
+  },
+  {
+    "company": "Samsung Research America",
+    "role": "2026 Fall Intern, Computer Vision/AI",
+    "industry": "Technology",
+    "location": "Mountain View, CA",
+    "work_type": "In-Person",
+    "short_description": "Conduct cutting-edge research in multimodal understanding and generation (image, video, 3D, text) within Samsung's Vision Intelligence lab, targeting publication at top-tier AI/CV conferences.",
+    "required_skills": [
+      "Python, PyTorch, and Transformers",
+      "Computer Vision (VLMs, object detection, scene understanding)",
+      "Machine Learning research",
+      "Deep neural network design",
+      "Academic writing for publication"
+    ],
+    "application_url": "https://job-boards.greenhouse.io/samsungresearchamericainternship/jobs/8560657002",
+    "source_url": "https://job-boards.greenhouse.io/samsungresearchamericainternship/jobs/8560657002",
+    "term": "Fall 2026"
+  },
+  {
+    "company": "Qvest US",
+    "role": "Consulting Internship, Summer 2026",
+    "industry": "Consulting",
+    "location": "Anywhere in the USA (preferred: New York, NY or Los Angeles, CA)",
+    "work_type": "Hybrid",
+    "short_description": "Join this global technology and business consulting firm serving Media & Entertainment and CPG/Retail clients on real project teams delivering digital and AI-driven solutions.",
+    "required_skills": [
+      "Analytical thinking",
+      "PowerPoint / Google Slides",
+      "Excel / Google Sheets",
+      "Strong communication",
+      "Interest in Media & Entertainment or CPG/Retail industries"
+    ],
+    "application_url": "https://jobs.lever.co/qvest.us/562f1eb0-369d-410a-8b5b-5a4e3d7d4e5b/apply",
+    "source_url": "https://jobs.lever.co/qvest.us/562f1eb0-369d-410a-8b5b-5a4e3d7d4e5b",
+    "term": "Summer 2026"
+  },
+  {
+    "company": "Power Digital Marketing",
+    "role": "Organic Search (SEO & Content Marketing) Intern",
+    "industry": "Marketing",
+    "location": "Remote - United States",
+    "work_type": "Remote",
+    "short_description": "Learn SEO best practices hands-on at a full-service digital growth agency, executing keyword research, content calendars, and on-page optimizations for real client accounts.",
+    "required_skills": [
+      "SEO",
+      "Content Writing",
+      "Keyword Research",
+      "Google Analytics",
+      "Communication"
+    ],
+    "application_url": "https://job-boards.greenhouse.io/powerdigitalmarketing/jobs/4346855007",
+    "source_url": "https://job-boards.greenhouse.io/powerdigitalmarketing/jobs/4346855007",
+    "term": "Summer 2026"
+  },
+  {
+    "company": "Power Digital Marketing",
+    "role": "Retail Marketplace (Ecommerce) Internship",
+    "industry": "Marketing",
+    "location": "Remote - United States",
+    "work_type": "Remote",
+    "short_description": "Support retail marketing strategists on Amazon, Walmart, and other marketplace accounts, developing strategy and production skills in a cross-channel agency environment.",
+    "required_skills": [
+      "eCommerce",
+      "Digital Advertising",
+      "Analytical Thinking",
+      "Communication",
+      "Attention to Detail"
+    ],
+    "application_url": "https://job-boards.greenhouse.io/powerdigitalmarketing/jobs/4692915007",
+    "source_url": "https://job-boards.greenhouse.io/powerdigitalmarketing/jobs/4692915007",
+    "term": "Summer 2026"
+  },
+  {
+    "company": "Power Digital Marketing",
+    "role": "Retail Marketplace Search Ads Intern",
+    "industry": "Marketing",
+    "location": "Remote - United States",
+    "work_type": "Remote",
+    "short_description": "Assist the retail advertising team in building and executing paid search campaigns on Amazon and other major retail platforms, attending client calls and analyzing campaign data.",
+    "required_skills": [
+      "Paid Search / PPC",
+      "Amazon Advertising",
+      "Data Analysis",
+      "eCommerce",
+      "Digital Marketing"
+    ],
+    "application_url": "https://job-boards.greenhouse.io/powerdigitalmarketing/jobs/4346901007",
+    "source_url": "https://job-boards.greenhouse.io/powerdigitalmarketing/jobs/4346901007",
+    "term": "Summer 2026"
+  },
+  {
+    "company": "Vivrelle",
+    "role": "2026 Fall Internship (Marketing / Operations / Showroom)",
+    "industry": "Marketing",
+    "location": "New York, NY",
+    "work_type": "In-Person",
+    "short_description": "In-person rotation-based internship at a luxury fashion membership startup on Park Ave, with exposure to social media, customer experience, logistics, and marketing; 20 hrs/week.",
+    "required_skills": [
+      "Social Media",
+      "Customer Service",
+      "Organization",
+      "Sales Support",
+      "Marketing Communications"
+    ],
+    "application_url": "https://jobs.lever.co/vivrelle/98e3982c-e84e-48ec-971a-4fa79ec7d298",
+    "source_url": "https://jobs.lever.co/vivrelle/98e3982c-e84e-48ec-971a-4fa79ec7d298",
+    "term": "Fall 2026"
+  },
+  {
+    "company": "D.C. United",
+    "role": "Brand Marketing Intern – Fall 2026",
+    "industry": "Sports Business",
+    "location": "Washington, DC",
+    "work_type": "Hybrid",
+    "short_description": "Support D.C. United's marketing team on brand awareness, fan engagement, and promotional campaigns at Audi Field during the fall semester.",
+    "required_skills": [
+      "Marketing",
+      "Microsoft Office 365",
+      "Communication",
+      "Brand Awareness",
+      "Event Promotion"
+    ],
+    "application_url": "https://www.teamworkonline.com/soccer-jobs/dc-united/d-c--united/intern-d-c-united-brand-marketing-fall-2026-internship-2177167",
+    "source_url": "https://www.justsoccerjobs.com/jobs/intern-d-c-united-brand-marketing-fall-2026-internship-1ab5f886",
+    "term": "Fall 2026"
+  },
+  {
+    "company": "D.C. United",
+    "role": "Ticket Sales & Service Intern – Fall 2026",
+    "industry": "Sports Business",
+    "location": "Washington, DC",
+    "work_type": "Hybrid",
+    "short_description": "Gain hands-on experience in professional soccer ticket sales and fan services under D.C. United's sales team at Audi Field.",
+    "required_skills": [
+      "Sales",
+      "Customer Service",
+      "Microsoft Office",
+      "Communication",
+      "Sports Industry Knowledge"
+    ],
+    "application_url": "https://www.teamworkonline.com/soccer-jobs/dc-united/d-c--united/intern-ticket-sales-service-intern-fall-2026-2177163",
+    "source_url": "https://www.justsoccerjobs.com/jobs/intern-ticket-sales-service-intern-fall-2026-667d3e90",
+    "term": "Fall 2026"
+  },
+  {
+    "company": "Philadelphia Union",
+    "role": "Fall 2026 Student Internship (September–December)",
+    "industry": "Sports Business",
+    "location": "Chester, PA",
+    "work_type": "In-Person",
+    "short_description": "Rotate through front-office departments of MLS club Philadelphia Union, gaining exposure to all facets of a professional soccer organization.",
+    "required_skills": [
+      "Microsoft Office",
+      "Communication",
+      "Organization",
+      "Sports Management",
+      "Adaptability"
+    ],
+    "application_url": "https://www.teamworkonline.com/soccer-jobs/mls/philadelphia-union",
+    "source_url": "https://jobsinfootball.com/job/128225/fall-2026-student-internship-september-december/",
+    "term": "Fall 2026"
+  },
+  {
+    "company": "Legends Global",
+    "role": "Fall 2026 Undergraduate Student Internship",
+    "industry": "Sports Business",
+    "location": "Las Vegas, NV",
+    "work_type": "In-Person",
+    "short_description": "Work inside Allegiant Stadium (home of the Las Vegas Raiders) across departments including Marketing, Sales, and Sports & Live Events.",
+    "required_skills": [
+      "Marketing",
+      "Sales",
+      "Event Operations",
+      "Communication",
+      "Microsoft Office"
+    ],
+    "application_url": "https://www.teamworkonline.com/arenas-facilities-jobs/asm-global-jobs/asm-global-jobs/fall-2026-undergraduate-student-internship-2169243",
+    "source_url": "https://www.teamworkonline.com/arenas-facilities-jobs/asm-global-jobs/asm-global-jobs/fall-2026-undergraduate-student-internship-2169243",
+    "term": "Fall 2026"
+  },
+  {
+    "company": "Legends Global",
+    "role": "Partnership Strategy Intern",
+    "industry": "Sports Business",
+    "location": "Frisco, TX",
+    "work_type": "In-Person",
+    "short_description": "Support Legends Global's partnerships team by building pitch decks, researching sponsorship trends, and developing sales enablement assets for major venue clients.",
+    "required_skills": [
+      "PowerPoint",
+      "Excel",
+      "Market Research",
+      "Written Communication",
+      "Brand Partnerships"
+    ],
+    "application_url": "https://www.teamworkonline.com/arenas-facilities-jobs/asm-global-jobs/asm-global-jobs/partnership-strategy-intern-2164997",
+    "source_url": "https://www.teamworkonline.com/arenas-facilities-jobs/asm-global-jobs/asm-global-jobs/partnership-strategy-intern-2164997",
+    "term": "Rolling"
+  },
+  {
+    "company": "Harris County – Houston Sports Authority",
+    "role": "Social Media Marketing Intern – Fall 2026",
+    "industry": "Sports Business",
+    "location": "Houston, TX",
+    "work_type": "In-Person",
+    "short_description": "Assist the HCHSA marketing team with social media content creation, event coverage, and campaign support across major Houston sports events.",
+    "required_skills": [
+      "Social Media Management",
+      "Photography/Videography",
+      "Content Creation",
+      "Marketing Strategy",
+      "Microsoft Office"
+    ],
+    "application_url": "https://www.teamworkonline.com/live-event-jobs/liveeventjobs/houston-sports-authority/social-media-marketing-intern-fall-2026-2171737",
+    "source_url": "https://www.teamworkonline.com/live-event-jobs/liveeventjobs/houston-sports-authority/social-media-marketing-intern-fall-2026-2171737",
+    "term": "Fall 2026"
+  },
+  {
+    "company": "Indiana Pacers (Pacers Sports & Entertainment)",
+    "role": "Basketball Operations Intern – Fall 2026",
+    "industry": "Sports Business",
+    "location": "Indianapolis, IN",
+    "work_type": "In-Person",
+    "short_description": "Provide administrative and operational support to the Indiana Pacers basketball division, assisting with scouting databases, daily briefings, and game-day preparation.",
+    "required_skills": [
+      "Microsoft Office",
+      "Database Management",
+      "Organization",
+      "Attention to Detail",
+      "Communication"
+    ],
+    "application_url": "https://www.teamworkonline.com/basketball-jobs/pacers/pacers-sports-entertainment/indiana-pacers-basketball-operations-intern-fall-2026-2175864",
+    "source_url": "https://www.teamworkonline.com/basketball-jobs/pacers/pacers-sports-entertainment/indiana-pacers-basketball-operations-intern-fall-2026-2175864",
+    "term": "Fall 2026"
+  },
+  {
+    "company": "Springfield Sports Commission",
+    "role": "Sports Commission Intern – Fall 2026",
+    "industry": "Sports Business",
+    "location": "Springfield, MO",
+    "work_type": "In-Person",
+    "short_description": "Paid internship supporting sports tourism, event planning, and marketing for the Springfield Sports Commission; open to junior/senior undergrads in business or sports management.",
+    "required_skills": [
+      "Event Planning",
+      "Marketing",
+      "Sports Tourism",
+      "Communication",
+      "Organization"
+    ],
+    "application_url": "https://blogs.missouristate.edu/marketingnews/2026/05/05/sports-commission-internship-springfield-mo/",
+    "source_url": "https://blogs.missouristate.edu/marketingnews/2026/05/05/sports-commission-internship-springfield-mo/",
+    "term": "Fall 2026"
+  },
+  {
+    "company": "Connecticut Sports Management Group",
+    "role": "Fall Part-Time Intern (Event Management & Marketing)",
+    "industry": "Sports Business",
+    "location": "Connecticut (Hybrid)",
+    "work_type": "Hybrid",
+    "short_description": "Manage and market fall sports events across Connecticut as part of a 150–200 hour semester-long internship; multiple positions available for credit.",
+    "required_skills": [
+      "Event Management",
+      "Marketing",
+      "Communication",
+      "Organization",
+      "Sports Administration"
+    ],
+    "application_url": "https://csmg.org/internships/",
+    "source_url": "https://csmg.org/internships/",
+    "term": "Fall 2026"
+  },
+  {
+    "company": "ESPN / Disney",
+    "role": "ESPN Creative Studio Production Assistant Intern, Fall 2026",
+    "industry": "Media & Entertainment",
+    "location": "New York, NY",
+    "work_type": "In-Person",
+    "short_description": "Assist with footage pulls, scriptwriting, and post-production for ESPN marketing's TV, radio, and social tune-in campaigns promoting sports properties.",
+    "required_skills": [
+      "Adobe Creative Suite (Premiere, Photoshop, Illustrator, InDesign)",
+      "Creative writing and concept development",
+      "TV production and marketing coursework",
+      "Sports knowledge",
+      "Attention to detail in a fast-paced environment"
+    ],
+    "application_url": "https://www.disneycareers.com/en/job/new-york/espn-creative-studio-production-assistant-intern-new-york-city-fall-2026/391/96954567440",
+    "source_url": "https://www.disneycareers.com/en/internships-united-states",
+    "term": "Fall 2026"
+  },
+  {
+    "company": "ESPN / Disney",
+    "role": "ESPN Digital Video Newsroom Intern, Fall 2026 (Remote)",
+    "industry": "Media & Entertainment",
+    "location": "Bristol, CT (Remote)",
+    "work_type": "Remote",
+    "short_description": "Edit trending sports video content for ESPN-branded digital channels globally, including custom highlights and digital shows for YouTube and social platforms.",
+    "required_skills": [
+      "Non-linear video editing (Premiere, Final Cut, Avid, After Effects)",
+      "Sports knowledge (teams, players, cultural moments)",
+      "Social media trend tracking",
+      "Headline writing and content packaging",
+      "Digital content management systems"
+    ],
+    "application_url": "https://www.disneycareers.com/en/job/bristol/espn-digital-video-newsroom-intern-remote-fall-2026/391/96963727488",
+    "source_url": "https://www.disneycareers.com/en/internships-united-states",
+    "term": "Fall 2026"
+  },
+  {
+    "company": "ESPN / Disney",
+    "role": "ESPN Social Intern, Fall 2026 (Remote)",
+    "industry": "Media & Entertainment",
+    "location": "Bristol, CT (Remote)",
+    "work_type": "Remote",
+    "short_description": "Plan, create, and optimize content across ESPN's social platforms (Instagram, TikTok, X, YouTube, Snapchat) covering live sports events and ESPN shows.",
+    "required_skills": [
+      "Social media platform expertise (TikTok, Instagram, YouTube, Snapchat)",
+      "Sports knowledge across leagues and athletes",
+      "Video editing (Premiere Pro, Final Cut, After Effects)",
+      "Social copywriting",
+      "Editorial judgment and content packaging"
+    ],
+    "application_url": "https://www.disneycareers.com/en/job/bristol/espn-social-intern-remote-fall-2026/391/96897952096",
+    "source_url": "https://www.disneycareers.com/en/internships-united-states",
+    "term": "Fall 2026"
+  },
+  {
+    "company": "KTRK-TV ABC13 / Disney",
+    "role": "KTRK-TV (ABC13) News Intern, Fall 2026",
+    "industry": "Media & Entertainment",
+    "location": "Houston, TX",
+    "work_type": "In-Person",
+    "short_description": "Shadow reporters and photojournalists in the field, write copy, edit video for newscasts, and learn broadcast news production at Houston's top-rated local news station.",
+    "required_skills": [
+      "Video editing in Adobe Premiere",
+      "Broadcast or new media production experience",
+      "Social media proficiency",
+      "News writing and script writing",
+      "Portfolio of prior work required"
+    ],
+    "application_url": "https://www.disneycareers.com/en/job/houston/ktrk-tv-abc13-news-intern-fall-2026/391/96928863728",
+    "source_url": "https://www.disneycareers.com/en/internships-united-states",
+    "term": "Fall 2026"
+  },
+  {
+    "company": "FOX Entertainment",
+    "role": "Fall 2026 FOX Entertainment Internship Program – Los Angeles",
+    "industry": "Media & Entertainment",
+    "location": "Los Angeles, CA",
+    "work_type": "In-Person",
+    "short_description": "Rotational internship across FOX Entertainment departments including Scripted/Unscripted Development, Casting, Publicity, Marketing, and Social Media; deadline July 5, 2026.",
+    "required_skills": [
+      "Microsoft Office Suite",
+      "Adobe Premiere / Final Cut Pro (for production tracks)",
+      "Written and verbal communication",
+      "Knowledge of FOX Entertainment programming",
+      "Self-starter attitude in deadline-driven environments"
+    ],
+    "application_url": "https://www.foxcareers.com/Search/JobDetail/R50032606/fall-2026-fox-entertainment-internship-program-los-angeles-fox-entertainment",
+    "source_url": "https://www.foxcareers.com/Search/SearchResults?jobFunction=Internships&language=en",
+    "term": "Fall 2026"
+  },
+  {
+    "company": "FOX Sports",
+    "role": "Fall 2026 FOX Internship Program – Sports Production, New York",
+    "industry": "Media & Entertainment",
+    "location": "New York, NY",
+    "work_type": "In-Person",
+    "short_description": "Hands-on sports production internship at FOX Sports NY with placement in FS1 Original Programming or OutKick; deadline July 5, 2026, program runs September 14 – November 20.",
+    "required_skills": [
+      "Adobe Premiere / Avid / Final Cut Pro",
+      "Knowledge of FOX Sports and OutKick programming",
+      "Written and verbal communication",
+      "Sports knowledge across multiple leagues",
+      "Microsoft Office Suite"
+    ],
+    "application_url": "https://www.foxcareers.com/Search/JobDetail/R50032643/fall-2026-fox-internship-program-sports-production-new-york-fox-sports",
+    "source_url": "https://www.foxcareers.com/Search/SearchResults?jobFunction=Internships&language=en",
+    "term": "Fall 2026"
+  },
+  {
+    "company": "SiriusXM",
+    "role": "Fall Internship Program – Music/Talk Programming, Podcast, Talent Relations",
+    "industry": "Media & Entertainment",
+    "location": "New York, NY / Multiple Locations",
+    "work_type": "Hybrid",
+    "short_description": "SiriusXM's fall intern cohort (September–December) places students across Music Programming, Talk Programming, Podcast Production, Talent Relations, and Video Programming tracks; applications open in June.",
+    "required_skills": [
+      "Audio editing or production knowledge",
+      "Music or media industry passion",
+      "Excellent communication skills",
+      "Social media and digital platform familiarity",
+      "Organizational skills in a fast-paced broadcast environment"
+    ],
+    "application_url": "https://careers.siriusxm.com/earlycareer",
+    "source_url": "https://careers.siriusxm.com/earlycareer",
+    "term": "Fall 2026"
+  },
+  {
+    "company": "Hearst Television",
+    "role": "Paid News Intern – Broadcast Television (Fall 2026)",
+    "industry": "Media & Entertainment",
+    "location": "Multiple Stations (Nationwide, e.g., Orlando FL, Baltimore MD, Houston TX)",
+    "work_type": "In-Person",
+    "short_description": "Paid 10–12 week internship at a Hearst Television station covering news writing, video editing, digital publishing, producing, and on-scene field reporting; fall session runs August 31 – November 20, 2026, deadline July 10, 2026.",
+    "required_skills": [
+      "News writing and script writing",
+      "Video editing",
+      "Digital media publishing",
+      "Broadcast production fundamentals",
+      "Strong communication and journalism interest"
+    ],
+    "application_url": "https://joinhearsttelevision.com/paid-internships/",
+    "source_url": "https://joinhearsttelevision.com/paid-internships/",
+    "term": "Fall 2026"
+  },
+  {
+    "company": "Revantage / Brio Real Estate",
+    "role": "Real Estate Credit Intern",
+    "industry": "Real Estate",
+    "location": "Atlanta, GA or Dallas, TX",
+    "work_type": "In-Person",
+    "short_description": "10-week paid summer program for rising juniors (class of 2028) gaining hands-on CRE credit analysis experience within Blackstone's corporate services platform.",
+    "required_skills": [
+      "Excel",
+      "PowerPoint",
+      "Financial analysis",
+      "Real estate or finance coursework",
+      "3.5+ GPA preferred"
+    ],
+    "application_url": "https://revantage.wd1.myworkdayjobs.com/en-US/Brio_Real_Estate/job/Brio-Real-Estate-Credit-Intern---Summer-2027_JR102810",
+    "source_url": "https://revantage.wd1.myworkdayjobs.com/en-US/Brio_Real_Estate",
+    "term": "Summer 2027"
+  },
+  {
+    "company": "JLL (Jones Lang LaSalle)",
+    "role": "Environmental Design Intern",
+    "industry": "Real Estate",
+    "location": "Columbus, OH",
+    "work_type": "Hybrid",
+    "short_description": "Fall 2026 internship supporting retail and commercial tenant design projects, including brand activation and space planning for JLL's retail clients.",
+    "required_skills": [
+      "Interior design",
+      "Architecture or retail design background",
+      "Creative collaboration",
+      "CAD or design software",
+      "Brand activation concepts"
+    ],
+    "application_url": "https://jll.wd1.myworkdayjobs.com/en-US/jllcareers/job/Columbus-OH/Environmental-Design-Internship---Fall-2026_REQ510010",
+    "source_url": "https://jll.wd1.myworkdayjobs.com/en-US/jllcareers",
+    "term": "Fall 2026"
+  },
+  {
+    "company": "Colliers International",
+    "role": "Intern – Brokerage, Property Management, Project Management & Construction",
+    "industry": "Real Estate",
+    "location": "Columbus, OH",
+    "work_type": "In-Person",
+    "short_description": "Rolling, perpetually-open internship with a leading commercial real estate firm covering brokerage, property management, and construction project management tracks.",
+    "required_skills": [
+      "Interest in commercial real estate",
+      "Communication skills",
+      "Entrepreneurial mindset",
+      "Drive and initiative",
+      "Microsoft Office"
+    ],
+    "application_url": "https://recruiting.paylocity.com/recruiting/jobs/Details/290178/Colliers-International/Intern---Brokerage-Property-Management-Project-Management-Construction",
+    "source_url": "https://recruiting.paylocity.com/recruiting/jobs/Details/290178/Colliers-International/Intern---Brokerage-Property-Management-Project-Management-Construction",
+    "term": "Rolling"
+  },
+  {
+    "company": "Starwood Capital Group",
+    "role": "2027 SREIT Operations Summer Analyst",
+    "industry": "Real Estate",
+    "location": "Greenwich, CT / New York, NY",
+    "work_type": "In-Person",
+    "short_description": "Summer analyst role on the SREIT (Starwood Real Estate Income Trust) Operations team, supporting investor relations and non-traded REIT operations for undergrads graduating Fall 2027 or Spring 2028.",
+    "required_skills": [
+      "Salesforce CRM",
+      "Financial acumen",
+      "Sales and client communication",
+      "Organizational skills",
+      "Attention to detail"
+    ],
+    "application_url": "https://jobs.jobvite.com/starwoodcapitalgroup/job/oetmzfwm",
+    "source_url": "https://jobs.jobvite.com/starwoodcapitalgroup/job/oetmzfwm",
+    "term": "Summer 2027"
+  },
+  {
+    "company": "JPMorgan Chase",
+    "role": "2027 Commercial Real Estate Summer Analyst",
+    "industry": "Real Estate",
+    "location": "Various US locations",
+    "work_type": "In-Person",
+    "short_description": "Highly competitive 10-week CRE summer analyst program within JPMC's Commercial Banking division; application deadline approximately June 30, 2026.",
+    "required_skills": [
+      "Financial analysis",
+      "Commercial real estate knowledge",
+      "Excel and financial modeling",
+      "Strong communication",
+      "Analytical thinking"
+    ],
+    "application_url": "https://jpmc.fa.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1001/job/210693588",
+    "source_url": "https://jpmc.fa.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1001/job/210693588",
+    "term": "Summer 2027"
+  },
+  {
+    "company": "Baird",
+    "role": "Internship – Equity Research Analyst (Summer 2027)",
+    "industry": "Finance",
+    "location": "Milwaukee, WI",
+    "work_type": "In-Person",
+    "short_description": "10-week equity research internship at Baird conducting fundamental industry and company analysis, building financial models, and supporting published research notes for a top-ranked middle-market firm.",
+    "required_skills": [
+      "Financial statement analysis",
+      "Equity research",
+      "Financial modeling",
+      "Excel",
+      "Written communication"
+    ],
+    "application_url": "https://baird.wd1.myworkdayjobs.com/en-US/Careers/job/WI-Milwaukee/Internship---Equity-Research-Analyst--Summer-2027-_R20251244-2",
+    "source_url": "https://www.bairdcareers.com/internships/",
+    "term": "Summer 2027"
+  },
+  {
+    "company": "PwC",
+    "role": "Business Process Consulting Intern – Summer 2027",
+    "industry": "Consulting",
+    "location": "Multiple US Locations",
+    "work_type": "Hybrid",
+    "short_description": "Entry-level consulting internship supporting internal audit and business controls evaluations, with exposure to accounting standards and data modeling.",
+    "required_skills": [
+      "Business process analysis",
+      "Accounting",
+      "Data modeling",
+      "Stakeholder management",
+      "Microsoft Office"
+    ],
+    "application_url": "https://pwc.wd3.myworkdayjobs.com/en-US/US_Entry_Level_Careers/job/Business-Process-Consulting-Intern---Summer-2027_666811WD-2",
+    "source_url": "https://pwc.wd3.myworkdayjobs.com/en-US/US_Entry_Level_Careers/job/Business-Process-Consulting-Intern---Summer-2027_666811WD-2",
+    "term": "Summer 2027"
+  },
+  {
+    "company": "ClearView Healthcare Partners",
+    "role": "Life Sciences Summer Analyst Intern – Summer 2027",
+    "industry": "Consulting",
+    "location": "Boston, MA; New York, NY; San Francisco, CA",
+    "work_type": "In-Person",
+    "short_description": "9-week immersive life sciences strategy consulting internship at a premier biopharma consultancy; interns join live project teams serving pharmaceutical and biotech clients from day one.",
+    "required_skills": [
+      "Life sciences knowledge",
+      "Microsoft Excel",
+      "PowerPoint",
+      "Analytical research",
+      "Client communication"
+    ],
+    "application_url": "https://job-boards.greenhouse.io/clearviewhealthcarepartners/jobs/5228193008",
+    "source_url": "https://job-boards.greenhouse.io/clearviewhealthcarepartners/jobs/5228193008",
+    "term": "Summer 2027"
+  },
+  {
+    "company": "Bain & Company",
+    "role": "ADvantage Program – Associate Consultant Intern Pipeline",
+    "industry": "Consulting",
+    "location": "Multiple US Offices",
+    "work_type": "In-Person",
+    "short_description": "Bain's diversity-focused consulting program designed to increase access for underrepresented students; leads to direct consideration for the Associate Consultant Intern role.",
+    "required_skills": [
+      "Case problem-solving",
+      "Leadership",
+      "Quantitative reasoning",
+      "Communication",
+      "Teamwork"
+    ],
+    "application_url": "https://www.bain.com/careers/work-with-us/internships-programs/advantage/",
+    "source_url": "https://www.bain.com/careers/work-with-us/internships-programs/advantage/",
+    "term": "Rolling"
+  },
+  {
+    "company": "Kao USA (Bioré)",
+    "role": "Social Media / Agile Content Intern",
+    "industry": "Marketing",
+    "location": "Cincinnati, OH",
+    "work_type": "Hybrid",
+    "short_description": "Create and manage TikTok content for the Bioré skincare brand, including filming, editing, trendspotting, and weekly performance reporting, under the Brand Director.",
+    "required_skills": [
+      "TikTok content creation",
+      "Social media marketing",
+      "Video editing",
+      "Trend analysis",
+      "Brand communication"
+    ],
+    "application_url": "https://kao.voyse.io/en/jobs/4692021006-social-media-agile-content-intern",
+    "source_url": "https://kao.voyse.io/en/jobs/4692021006-social-media-agile-content-intern",
+    "term": "Fall 2026"
+  },
+  {
+    "company": "RF-SMART",
+    "role": "Digital Marketing Intern (SEO and AI Focus) - Fall 2026",
+    "industry": "Marketing",
+    "location": "Jacksonville, FL",
+    "work_type": "In-Person",
+    "short_description": "Support the Business Development Inbound Team with AIEO/SEO optimization, AI-driven marketing initiatives, content optimization, and marketing analytics at a global software company.",
+    "required_skills": [
+      "SEO / AIEO",
+      "Content optimization",
+      "Marketing analytics",
+      "Digital marketing strategy",
+      "Data analysis"
+    ],
+    "application_url": "https://job-boards.greenhouse.io/rfsmart/jobs/5248299008",
+    "source_url": "https://job-boards.greenhouse.io/rfsmart/jobs/5248299008",
+    "term": "Fall 2026"
+  },
+  {
+    "company": "Magnet Media, Inc.",
+    "role": "Social Media Intern (Fall 2026)",
+    "industry": "Marketing",
+    "location": "New York, NY",
+    "work_type": "Hybrid",
+    "short_description": "Assist the SVP of Marketing at a leading creative studio (clients include Google, Airbnb, and Goldman Sachs) with digital campaigns, social content creation, market research, and event coordination.",
+    "required_skills": [
+      "Social media content creation",
+      "Digital marketing campaigns",
+      "Market research",
+      "Written communication",
+      "Campaign analytics"
+    ],
+    "application_url": "https://job-boards.greenhouse.io/embed/job_app?for=magnetmediafilms&token=8009987",
+    "source_url": "https://boards.greenhouse.io/magnetmediafilms",
+    "term": "Fall 2026"
+  },
+  {
+    "company": "FamFluence Talent Management",
+    "role": "Influencer Marketing Intern | Fall 2026",
+    "industry": "Marketing",
+    "location": "Remote (US)",
+    "work_type": "Remote",
+    "short_description": "Help a top mom/family influencer management agency secure brand campaign activations, research influencers, analyze campaign data, and conduct outreach to brands — 100% virtual.",
+    "required_skills": [
+      "Influencer marketing",
+      "Campaign data analysis",
+      "Brand outreach",
+      "Social media platforms",
+      "Written communication"
+    ],
+    "application_url": "https://famfluence.applytojob.com/apply/Or5gfUwP2F/Influencer-Marketing-Intern-Fall-2026",
+    "source_url": "https://www.builtinnyc.com/job/influencer-marketing-intern-fall-2026/9757446",
+    "term": "Fall 2026"
+  },
+  {
+    "company": "Saltwater Advertising, LLC",
+    "role": "Digital Experience Intern",
+    "industry": "Marketing",
+    "location": "Portsmouth, NH",
+    "work_type": "Hybrid",
+    "short_description": "Gain hands-on SEO and analytics experience at a marketing agency, assisting with keyword research, content optimization, and performance measurement across diverse client accounts.",
+    "required_skills": [
+      "SEO fundamentals",
+      "Keyword research",
+      "Google Analytics",
+      "Content optimization",
+      "Organizational skills"
+    ],
+    "application_url": "https://job-boards.greenhouse.io/saltwateradvertisingllc/jobs/4246174009",
+    "source_url": "https://job-boards.greenhouse.io/saltwateradvertisingllc/jobs/4246174009",
+    "term": "Summer 2026"
+  }
+]
