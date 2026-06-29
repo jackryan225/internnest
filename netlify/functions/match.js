@@ -32,15 +32,17 @@ exports.handler = async (event) => {
 
   const apiKey = process.env.ANTHROPIC_API_KEY;
   if (apiKey) {
+    const aiCandidates = candidates.slice(0, 8);
+    const controller = new AbortController();
+    const timer = setTimeout(() => controller.abort(), 9000);
     try {
-      const { system, user } = buildMatchPrompt(profile, candidates);
-      const controller = new AbortController();
-      const timer = setTimeout(() => controller.abort(), 22000);
-      const text = await callClaude({ apiKey, system, user });
+      const { system, user } = buildMatchPrompt(profile, aiCandidates);
+      const text = await callClaude({ apiKey, system, user, signal: controller.signal });
+      const matches = parseMatchResponse(text, aiCandidates);
       clearTimeout(timer);
-      const matches = parseMatchResponse(text, candidates);
       return json(200, { matches, mode: 'ai' });
     } catch (e) {
+      clearTimeout(timer);
       // fall through to deterministic ranking
     }
   }

@@ -3,12 +3,11 @@ const { toCard } = require('./matcher');
 
 const SYSTEM = `You are an expert internship-matching assistant for college students.
 You will be given a student's profile and a numbered list of REAL internships.
-Score how well EACH internship fits the student (0-100), and for each return a short reason,
-2-3 concrete missing skills the student should build, a one-line application tip, and a short,
-ready-to-send outreach message written in the student's voice.
-Only use the internships provided - never invent companies, roles, or URLs.
+Score how well EACH internship fits the student (0-100), and for each return a short reason
+(1 sentence), 2-3 concrete missing skills the student should build, and a one-line application tip.
+Be concise. Only use the internships provided - never invent companies, roles, or URLs.
 Return ONLY a JSON array, one object per internship you were given, each:
-{"index": <number>, "score": <0-100>, "why": "...", "missing": ["...","..."], "tip": "...", "outreach": "..."}`;
+{"index": <number>, "score": <0-100>, "why": "...", "missing": ["...","..."], "tip": "..."}`;
 
 function buildMatchPrompt(profile, candidates) {
   const list = candidates.map((c, i) =>
@@ -32,10 +31,18 @@ ${list}`;
 }
 
 function parseMatchResponse(text, candidates) {
-  const m = String(text).match(/\[[\s\S]*\]/);
-  if (!m) throw new Error('no JSON array in model output');
+  const start = String(text).indexOf('[');
+  if (start < 0) throw new Error('no JSON array in model output');
+  const raw = String(text).slice(start);
   let arr;
-  try { arr = JSON.parse(m[0]); } catch (e) { throw new Error('bad JSON: ' + e.message); }
+  try {
+    arr = JSON.parse(raw.slice(0, raw.lastIndexOf(']') + 1));
+  } catch (e) {
+    // Salvage complete top-level objects if the array was truncated.
+    arr = [];
+    const objRe = /\{[^{}]*\}/g; let mm;
+    while ((mm = objRe.exec(raw))) { try { arr.push(JSON.parse(mm[0])); } catch (e2) { /* skip partial */ } }
+  }
   if (!Array.isArray(arr) || arr.length === 0) throw new Error('empty model output');
   const cards = [];
   for (const item of arr) {
@@ -46,16 +53,16 @@ function parseMatchResponse(text, candidates) {
       why: String(item.why || '').slice(0, 400),
       missing: Array.isArray(item.missing) ? item.missing.slice(0, 3).map(String) : [],
       tip: String(item.tip || '').slice(0, 300),
-      outreach: String(item.outreach || '').slice(0, 1200),
     }));
   }
   if (cards.length === 0) throw new Error('no candidates matched model indices');
   return cards.sort((a, b) => b.score - a.score);
 }
 
-async function callClaude({ apiKey, system, user, model = 'claude-haiku-4-5-20251001', maxTokens = 2000 }) {
+async function callClaude({ apiKey, system, user, model = 'claude-haiku-4-5-20251001', maxTokens = 750, signal }) {
   const res = await fetch('https://api.anthropic.com/v1/messages', {
     method: 'POST',
+    signal,
     headers: {
       'x-api-key': apiKey,
       'anthropic-version': '2023-06-01',
