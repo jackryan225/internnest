@@ -44,10 +44,30 @@ A full walkthrough + lessons come at handoff.
 - AI usage: pay-as-you-go, scales with how many people use the matcher
 - Everything else: free tier to start
 
+## Getting paid (Stripe)
+
+When a student buys **Premium ($9.99)** or the **Match Report ($29)**, the money flows
+straight into **your Stripe account → your bank**. We never touch it.
+
+- **How it works:** the student clicks a buy button → Stripe's own secure checkout page
+  takes the card → on success they come back to the site and the premium features unlock
+  for that browser. The unlock is confirmed by the server against Stripe, so it can't be faked.
+- **Right now it's in TEST mode.** That means real cards don't work yet — only Stripe's
+  test card (`4242 4242 4242 4242`). No real money moves. This lets us prove the whole flow
+  works safely before going live.
+- **Going live (a handoff step):** in your Stripe dashboard you flip from Test to Live,
+  copy your **Live secret key**, and paste it into Netlify's environment settings
+  (same place as the AI key). I'll walk you through this screen-by-screen at handoff.
+- **Honest limit (v1):** the unlock is remembered per-browser. If someone clears their
+  browser data or switches devices, they'd need to buy again. Real accounts/logins are a
+  later upgrade if you want them.
+
 ## Current status
 
 - ✅ Code on GitHub (**public** repo `jackryan225/internnest`), live on Netlify, auto-deploys on every push
 - ✅ Domain **internnest.ai** live with SSL
 - ✅ Rebranded to InternNest (logo, favicon, wordmark)
 - ✅ Internship dataset built — 88 real, verified listings in `internships.json`
-- 🔜 Real AI matcher (needs the Anthropic API key), then Stripe payments
+- ✅ Real AI matcher built + working (runs locally on Jack's key during the build)
+- ✅ Payments built (Stripe Checkout, $9.99 unlock + $29 report) — in test mode, not yet live
+- 🔜 Handoff: your Anthropic key + Stripe **live** keys into Netlify → single deploy → live

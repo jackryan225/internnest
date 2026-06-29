@@ -98,3 +98,27 @@ but kept readable. Newest entries at the bottom.
   ownership + cost separation.
 - **Not deployed:** all matcher commits are LOCAL (not pushed). Live internnest.ai still serves the old demo
   until the single handoff deploy (Dillon's key + Stripe live keys → push → verify).
+
+## 2026-06-29 — Payments built (Milestone 4) — LOCAL ONLY, Stripe TEST mode
+
+- Built real Stripe payments per plan: two Netlify Functions (`create-checkout`, `verify-unlock`) +
+  two libs (`netlify/lib/stripe.js` REST wrapper, `netlify/lib/unlock.js` HMAC token). 11 new unit
+  tests (node:test), all green (22 total in the suite).
+- **Flow:** buy button → `create-checkout` builds a Stripe Checkout Session (secret key server-side
+  only) → Stripe-hosted checkout → redirect back to `/?paid=…&session_id=…` → `verify-unlock`
+  retrieves the session, confirms `payment_status === 'paid'`, returns an **HMAC-signed unlock token**
+  → browser stores it in `localStorage` → premium unlocks. The signature means the success URL can't
+  be forged into a valid unlock without a real paid session.
+- **Two products**, both wired to the existing pricing buttons (design-freeze-safe — same as making
+  "Apply Now" real): **$9.99 Premium** (unlocks all matches + full reasoning) and **$29 Match Report**
+  (same unlock **plus** a print-optimized report page → browser Print → Save as PDF). Dropped "/mo"
+  from the Premium button to match the v1 one-time unlock.
+- **Token design:** `{product, iat, exp}` signed with `UNLOCK_SIGNING_SECRET` (HMAC-SHA256,
+  constant-time compare, 1-year expiry). Server is the only issuer; client just stores + checks expiry.
+- **Key handling:** `STRIPE_SECRET_KEY` is a Stripe **test** key in the local gitignored `.env`
+  (Jack's, for building). `UNLOCK_SIGNING_SECRET` generated locally (random 32-byte hex). At handoff,
+  Dillon's **live** Stripe keys go into Netlify env. `.env` confirmed gitignored — no secret committed.
+- **Honest limit (documented):** unlock is per-browser (localStorage); clears on new device / cleared
+  storage. True enforcement = the accounts/subscriptions phase (Phase 2).
+- **Not deployed:** all payments commits are LOCAL. Built + verified end-to-end locally in Stripe test
+  mode (test card `4242 4242 4242 4242`); live keys swapped in at the single handoff deploy.
