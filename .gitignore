@@ -4,3 +4,6 @@
 # Logs / editor cruft
 *.log
 .vscode/
+
+# Local secrets (Netlify functions)
+.env
