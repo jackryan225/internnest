@@ -12,6 +12,7 @@ module.exports = async (req, res) => {
   const body = readBody(req);
   if (body === null) return res.status(400).json({ error: 'bad JSON' });
   const product = (body.product || '').toString();
+  const userId = body.user_id ? String(body.user_id).slice(0, 64) : undefined;
   if (!PRODUCTS[product]) return res.status(400).json({ error: 'unknown product' });
 
   const secretKey = process.env.STRIPE_SECRET_KEY;
@@ -22,7 +23,7 @@ module.exports = async (req, res) => {
   const origin = req.headers.origin || `${proto}://${host}`;
 
   try {
-    const { url } = await createCheckoutSession({ secretKey, product, origin });
+    const { url } = await createCheckoutSession({ secretKey, product, origin, userId });
     return res.status(200).json({ url });
   } catch (e) {
     return res.status(502).json({ error: 'stripe error' });

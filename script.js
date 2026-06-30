@@ -11,6 +11,9 @@ const STAGES = ['saved', 'applied', 'interviewing', 'offer', 'rejected'];
 let cardCounter = 200;
 let lastResults = null;
 
+/* Auth state (Supabase) — populated by initAuth() */
+let sbClient = null, authUser = null, authPremium = false, authProduct = null;
+
 /* Tracker persists across pages (form page saves; tracker page reads) */
 function saveTracker() { try { localStorage.setItem('inn_tracker', JSON.stringify(trackerCards)); } catch (e) {} }
 try { const _t = localStorage.getItem('inn_tracker'); if (_t) trackerCards = JSON.parse(_t); } catch (e) {}
@@ -25,14 +28,17 @@ function readUnlock() {
     return body;
   } catch (e) { return null; }
 }
-function isUnlocked() { return readUnlock() !== null; }
-function hasReport() { return localStorage.getItem('inn_report') === '1'; }
+/* Unlocked if the signed-in account has premium, OR a valid per-browser token (guest fallback). */
+function isUnlocked() { return authPremium || readUnlock() !== null; }
+function hasReport() { return authProduct === 'report' || localStorage.getItem('inn_report') === '1'; }
 
 async function startCheckout(product) {
   try {
+    const payload = { product };
+    if (authUser) payload.user_id = authUser.id; // tie the purchase to the signed-in account
     const res = await fetch('/api/create-checkout', {
       method: 'POST', headers: { 'content-type': 'application/json' },
-      body: JSON.stringify({ product }),
+      body: JSON.stringify(payload),
     });
     const data = await res.json();
     if (data.url) { window.location.href = data.url; return; }
@@ -646,3 +652,124 @@ function capitalize(s) { return s.charAt(0).toUpperCase() + s.slice(1); }
    INIT
    ==================================================== */
 renderTracker();
+
+/* ====================================================
+   AUTH / ACCOUNTS (Supabase) — Google + email magic link
+   Premium is account-based: profiles.premium drives isUnlocked()
+   ==================================================== */
+const SUPABASE_URL = 'https://wupynvbrmbpzibwkobui.supabase.co';
+const SUPABASE_ANON_KEY = 'sb_publishable_G3jRiHKjPP3GJWz2Wgf8gg_RbjbnskK';
+
+function loadSupabase() {
+  return new Promise((resolve, reject) => {
+    if (window.supabase && window.supabase.createClient) return resolve();
+    const s = document.createElement('script');
+    s.src = 'https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.js';
+    s.onload = resolve; s.onerror = reject;
+    document.head.appendChild(s);
+  });
+}
+
+async function refreshPremium() {
+  authPremium = false; authProduct = null;
+  if (!sbClient || !authUser) return;
+  try {
+    const { data } = await sbClient.from('profiles').select('premium, premium_product').eq('id', authUser.id).single();
+    if (data) { authPremium = !!data.premium; authProduct = data.premium_product || null; }
+  } catch (e) { /* ignore */ }
+}
+
+function renderAuthNav() {
+  const right = document.querySelector('.nav-right');
+  if (!right) return;
+  let el = document.getElementById('authNav');
+  if (!el) {
+    el = document.createElement('div');
+    el.id = 'authNav';
+    right.insertBefore(el, right.firstChild);
+  }
+  if (authUser) {
+    const email = (authUser.email || 'Account');
+    el.innerHTML = `<span class="auth-email" title="${email}">${email}</span><a href="#" class="auth-link" onclick="signOut();return false;">Log out</a>`;
+  } else {
+    el.innerHTML = `<a href="#" class="auth-link" onclick="openLogin();return false;">Log in</a>`;
+  }
+}
+
+async function initAuth() {
+  try {
+    await loadSupabase();
+    sbClient = window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
+    const { data: { session } } = await sbClient.auth.getSession();
+    authUser = session ? session.user : null;
+    await refreshPremium();
+    renderAuthNav();
+    if (lastResults) renderResults(lastResults.matches, lastResults.user); // re-gate if matches already on screen
+    sbClient.auth.onAuthStateChange(async (_event, sess) => {
+      authUser = sess ? sess.user : null;
+      await refreshPremium();
+      renderAuthNav();
+      closeLogin();
+      if (lastResults) renderResults(lastResults.matches, lastResults.user);
+    });
+  } catch (e) { /* auth is optional; the rest of the site works without it */ }
+}
+document.addEventListener('DOMContentLoaded', initAuth);
+
+/* ---- login modal ---- */
+function openLogin() {
+  let m = document.getElementById('loginModal');
+  if (!m) {
+    m = document.createElement('div');
+    m.id = 'loginModal';
+    m.className = 'login-overlay';
+    m.innerHTML = `
+      <div class="login-card" role="dialog" aria-modal="true">
+        <button class="login-close" onclick="closeLogin();return false;" aria-label="Close">&times;</button>
+        <h3>Log in or sign up</h3>
+        <p class="login-sub">Save your matches and keep Premium across devices.</p>
+        <button class="login-google" onclick="signInGoogle();return false;">
+          <span class="g">G</span> Continue with Google
+        </button>
+        <div class="login-or"><span>or</span></div>
+        <form id="loginForm" onsubmit="return sendMagicLink(event)">
+          <input type="email" id="loginEmail" placeholder="you@university.edu" required />
+          <button type="submit" class="btn-primary btn-xl" id="loginSubmit">Email me a login link</button>
+        </form>
+        <p class="login-status" id="loginStatus"></p>
+      </div>`;
+    document.body.appendChild(m);
+    m.addEventListener('click', (e) => { if (e.target === m) closeLogin(); });
+  }
+  m.style.display = 'flex';
+}
+function closeLogin() { const m = document.getElementById('loginModal'); if (m) m.style.display = 'none'; }
+
+async function sendMagicLink(e) {
+  e.preventDefault();
+  const email = document.getElementById('loginEmail').value.trim();
+  const status = document.getElementById('loginStatus');
+  if (!email || !sbClient) return false;
+  status.style.color = 'var(--gray-500)'; status.textContent = 'Sending…';
+  try {
+    const { error } = await sbClient.auth.signInWithOtp({ email, options: { emailRedirectTo: window.location.origin } });
+    status.style.color = error ? 'var(--red)' : 'var(--green)';
+    status.textContent = error ? error.message : 'Check your email for a login link.';
+  } catch (err) { status.style.color = 'var(--red)'; status.textContent = 'Something went wrong. Please try again.'; }
+  return false;
+}
+
+async function signInGoogle() {
+  if (!sbClient) return;
+  try {
+    const { error } = await sbClient.auth.signInWithOAuth({ provider: 'google', options: { redirectTo: window.location.origin } });
+    if (error) { const s = document.getElementById('loginStatus'); if (s) { s.style.color = 'var(--red)'; s.textContent = "Google sign-in isn't enabled yet — use email for now."; } }
+  } catch (e) { /* ignore */ }
+}
+
+async function signOut() {
+  try { if (sbClient) await sbClient.auth.signOut(); } catch (e) {}
+  authUser = null; authPremium = false; authProduct = null;
+  renderAuthNav();
+  location.reload();
+}
