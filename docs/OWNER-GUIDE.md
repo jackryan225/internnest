@@ -18,7 +18,7 @@ logins. Jack is building it for you and hands over all the keys at the end.
 | **Vercel** | Hosts the live website + runs the "behind-the-scenes" code | Pro plan | ~$20 / month |
 | **GoDaddy** | Your domain name, internnest.ai | You | ~$70–100 / year |
 | **Supabase** | User accounts + login (Google / email) and the database | Free tier | $0 until heavy use |
-| **Google Workspace** | Your business email, support@internnest.ai | You | ~$6 / month |
+| **Google Workspace** | Your business email, hello@internnest.ai | You | ~$6 / month |
 | **Stripe** | Takes card payments, deposits money to your bank | Per sale | ~2.9% + 30¢ per sale |
 | **AI API** (Anthropic / Claude) | Powers the "Find My Matches" engine | Per use | Pennies per search; grows with traffic |
 
@@ -73,5 +73,5 @@ straight into **your Stripe account → your bank**. We never touch it.
 - ✅ Real AI matcher built + working
 - ✅ User accounts — sign in with Google or email; Premium is tied to the account
 - ✅ Payments live (Stripe Checkout, $9.99 unlock + $29 report)
-- ✅ Business email **support@internnest.ai** wired across the site + legal pages
+- ✅ Business email **hello@internnest.ai** wired across the site + legal pages
 - 🔜 Handoff: move the accounts (Vercel, Supabase, Google Cloud, Stripe, AI key) into your name

@@ -2,15 +2,15 @@
 
 The contact form at **internnest.ai/contact** already works and shows a success message.
 Right now it just *logs* submissions on the server — it doesn't email them anywhere yet.
-This 3-minute setup makes each submission land in the **support@internnest.ai** inbox.
+This 3-minute setup makes each submission land in the **hello@internnest.ai** inbox.
 
-You need access to the **support@internnest.ai** inbox for the quick path below — which you have.
+You need access to the **hello@internnest.ai** inbox for the quick path below — which you have.
 
 ---
 
 ## Quick path (recommended — no DNS, ~3 min)
 
-1. Go to **resend.com** → **Sign up**, using **support@internnest.ai** as the account email
+1. Go to **resend.com** → **Sign up**, using **hello@internnest.ai** as the account email
    (check that inbox for the confirmation link). Putting the account on the business email
    keeps it in your name.
 2. In Resend, go to **API Keys → Create API Key**. Name it `internnest-contact`, permission
@@ -23,11 +23,11 @@ You need access to the **support@internnest.ai** inbox for the quick path below 
    | Name | Value |
    |------|-------|
    | `RESEND_API_KEY` | *(the `re_…` key)* |
-   | `CONTACT_TO` | `support@internnest.ai` |
+   | `CONTACT_TO` | `hello@internnest.ai` |
 4. In **Vercel → Deployments**, click the **⋯** on the latest deploy → **Redeploy**
    (env vars only take effect on a fresh deploy).
 5. Test: open **internnest.ai/contact**, send yourself a message. It should arrive in
-   **support@internnest.ai** within a few seconds. Replies go straight to the sender.
+   **hello@internnest.ai** within a few seconds. Replies go straight to the sender.
 
 With the quick path, the "from" address shows as `onboarding@resend.dev`. That's fine for
 receiving notifications. If you want it to read **contact@internnest.ai** instead, do the
