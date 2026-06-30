@@ -15,7 +15,8 @@
   --gray-300: #d1d5db;
   --gray-100: #f3f4f6;
   --white: #ffffff;
-  --surface: #f8fafc;
+  --bg: #faf8f3;
+  --surface: #f3efe7;
   --green: #16a34a;
   --green-light: #dcfce7;
   --amber: #d97706;
@@ -39,7 +40,7 @@ body {
   margin: 0;
   font-family: 'Inter', system-ui, -apple-system, sans-serif;
   color: var(--gray-900);
-  background: var(--white);
+  background: var(--bg);
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
 }
@@ -762,3 +763,15 @@ select { cursor: pointer; background-image: url("data:image/svg+xml,%3Csvg xmlns
   .footer-cols { grid-template-columns: 1fr; }
   .tracker-board { gap: 10px; }
 }
+
+/* ===== Phase 2 design refresh: warm theme + clean line icons ===== */
+.hero { background: var(--bg); }
+.nav { background: rgba(250,248,243,.92); }
+.icon-line { display: inline-flex; align-items: center; justify-content: center; }
+.icon-line svg { display: block; fill: none; stroke: currentColor; stroke-width: 1.6; stroke-linecap: round; stroke-linejoin: round; }
+.step-emoji { margin: 0 0 14px; color: var(--blue); line-height: 0; }
+.step-emoji svg { width: 34px; height: 34px; }
+.col-icon { color: var(--gray-500); line-height: 0; }
+.col-icon svg { width: 17px; height: 17px; stroke-width: 1.8; }
+.upload-icon { color: var(--gray-500); line-height: 0; }
+.upload-icon svg { width: 26px; height: 26px; }
