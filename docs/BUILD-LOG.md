@@ -127,3 +127,30 @@ but kept readable. Newest entries at the bottom.
   → re-match shows **all 5, no CTA** (`isUnlocked()` true, 365-day token). Report flag correctly drives
   the "🖨️ Print / Save as PDF" button. Test browser reset to clean free state afterward.
 - **Not deployed:** all payments commits are LOCAL. Live keys swapped in at the single handoff deploy.
+
+## 2026-06-30 — Multi-page site, design refresh & deploy (Phase 2, after Dillon's first-look call)
+
+Dillon reviewed the first live deploy and asked for (1) every nav/footer link to be a real page so he
+can promote it, (2) a less "AI" look — no emojis, off-white instead of stark white — and (3) it deployed.
+Design freeze lifted for this round.
+
+- **Design refresh:** warm off-white theme (`--bg:#faf8f3`, warm `--surface`); replaced every emoji
+  site-wide with clean monoline SVG icons (3-step process, tracker columns, match-card labels, hero
+  check/sparkle, upload, submit). Fully emoji-free now (verified by script).
+- **Multi-page architecture:** built 13+ real pages as clean folder URLs (`/how-it-works`, `/pricing`,
+  `/about`, `/contact`, `/blog` + 3 posts, `/careers`, `/privacy`, `/terms`, `/cookies`, `/get-matched`,
+  `/tracker`). Shared nav/footer chrome; generated via a one-off script (kept in scratchpad). All nav +
+  footer links wired to real pages — link audit shows zero broken internal links.
+- **Tools split out (per Dillon):** the matcher form moved to `/get-matched`, the tracker to `/tracker`;
+  homepage now shows teasers linking to them. `script.js` made multi-page-safe (every init guarded) and
+  the tracker now persists in `localStorage` so "Save to Tracker" works across the separate pages.
+- **Pricing made honest:** copy fixed from "/month" to **one-time** everywhere (Premium $9.99 one-time,
+  Report $29 one-time) to match what's actually built/charged. Subscription is a future decision.
+- **Contact:** real Netlify Forms contact form (`data-netlify`) → submissions land in Netlify.
+- **SEO:** per-page `<title>`/description/canonical/OG tags, `sitemap.xml`, `robots.txt`, custom `404.html`.
+- **Legal:** Privacy / Terms / Cookie are standard templates with clearly-bracketed placeholders for
+  Dillon's legal entity + a "have a professional review before launch" note.
+- **Theme options for the design call:** 3 homepage mockups at `/themes/` (noindex) — **Warm** (current),
+  **Liquid Glass** (frosted/gradient showpiece), **Dark** (premium high-contrast). Delete after the call.
+- **Still Dillon's to do:** Netlify billing (the account kept 503'ing on usage limits), Stripe go-live
+  (KYC done), the domain Outlook email, and the social links (footer icons are placeholders until sent).

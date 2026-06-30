@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pricing — InternNest</title>
+  <link rel="icon" type="image/png" href="/internnest-logo.png" />
+  <meta name="description" content="Simple, student-friendly pricing. Start free, unlock all your matches for a one-time $9.99, or get a full match report for $29." />
+  <link rel="canonical" href="https://internnest.ai/pricing" />
+  <meta property="og:title" content="Pricing — InternNest" />
+  <meta property="og:description" content="Simple, student-friendly pricing. Start free, unlock all your matches for a one-time $9.99, or get a full match report for $29." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://internnest.ai/pricing" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+
+  <header class="nav" id="nav">
+    <div class="nav-inner">
+      <a href="/" class="logo"><img src="/internnest-logo-h.png" alt="InternNest.ai" class="logo-img" /></a>
+      <nav class="nav-links">
+        <a href="/how-it-works">How It Works</a>
+        <a href="/get-matched">Get Matched</a>
+        <a href="/tracker">Tracker</a>
+        <a href="/pricing">Pricing</a>
+      </nav>
+      <div class="nav-right">
+        <a href="/get-matched" class="nav-cta">Start Free &rarr;</a>
+        <button class="hamburger" id="hamburger" aria-label="Open menu"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+    <div class="mobile-menu hidden" id="mobileMenu">
+      <a href="/how-it-works" onclick="closeMobileMenu()">How It Works</a>
+      <a href="/get-matched" onclick="closeMobileMenu()">Get Matched</a>
+      <a href="/tracker" onclick="closeMobileMenu()">Tracker</a>
+      <a href="/pricing" onclick="closeMobileMenu()">Pricing</a>
+      <a href="/get-matched" class="btn-primary" onclick="closeMobileMenu()">Start Free &rarr;</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-hero">
+      <div class="page-hero-inner">
+        <div class="eyebrow">Simple pricing</div>
+        <h1>Plans built for college students</h1>
+        <p class="page-hero-sub">Start free. Upgrade once when you are ready to go all-in on landing the offer. No subscriptions, no surprises.</p>
+      </div>
+    </section>    <section class="section">
+      <div class="pricing-grid">
+        <div class="price-card">
+          <div class="plan-label">Free</div>
+          <div class="plan-price-row"><span class="plan-amount">$0</span></div>
+          <p class="plan-desc">Start finding matches today with zero commitment.</p>
+          <ul class="plan-features">
+            <li class="feat-yes">Your top 3 internship matches</li>
+            <li class="feat-yes">Match score + one-line reason</li>
+            <li class="feat-yes">Application tracker</li>
+            <li class="feat-no">All matches unlocked</li>
+            <li class="feat-no">AI outreach messages</li>
+            <li class="feat-no">Skill-gap roadmap</li>
+          </ul>
+          <a href="/get-matched" class="btn-outline">Get started free</a>
+        </div>
+        <div class="price-card price-featured">
+          <div class="popular-flag">Most Popular</div>
+          <div class="plan-label">Premium Unlock</div>
+          <div class="plan-price-row"><span class="plan-amount">$9.99</span><span class="plan-period"> one-time</span></div>
+          <p class="plan-desc">Unlock everything for your whole search — pay once.</p>
+          <ul class="plan-features">
+            <li class="feat-yes">All your matches (up to 10)</li>
+            <li class="feat-yes">Full reasoning + match scores</li>
+            <li class="feat-yes">AI-generated outreach messages</li>
+            <li class="feat-yes">Skill-gap roadmap for every role</li>
+            <li class="feat-yes">Resume bullet suggestions</li>
+            <li class="feat-yes">Application tracker</li>
+          </ul>
+          <a href="#" class="btn-primary" onclick="startCheckout('premium');return false;">Unlock Premium &mdash; $9.99</a>
+        </div>
+        <div class="price-card">
+          <div class="plan-label">Match Report</div>
+          <div class="plan-price-row"><span class="plan-amount">$29</span><span class="plan-period"> one-time</span></div>
+          <p class="plan-desc">A full personalized report — perfect for one application season.</p>
+          <ul class="plan-features">
+            <li class="feat-yes">Everything in Premium</li>
+            <li class="feat-yes">Printable match report (PDF)</li>
+            <li class="feat-yes">Top 10 ranked internships</li>
+            <li class="feat-yes">Full skill-gap analysis</li>
+            <li class="feat-yes">Outreach messages included</li>
+            <li class="feat-yes">One-time, no subscription</li>
+          </ul>
+          <a href="#" class="btn-outline" onclick="startCheckout('report');return false;">Buy Report &mdash; $29</a>
+        </div>
+      </div>
+    </section>
+    <section class="section section-light">
+      <div class="section-header"><div class="eyebrow">Good to know</div><h2>Pricing FAQ</h2></div>
+      <div class="faq">
+        <div class="faq-item"><h3>Is Premium a subscription?</h3><p>No. Premium is a one-time $9.99 unlock — not a recurring charge. Pay once and your matches stay unlocked on that device.</p></div>
+        <div class="faq-item"><h3>What does Free include?</h3><p>Your top 3 matches with scores and reasons, plus the full application tracker. It is genuinely useful on its own.</p></div>
+        <div class="faq-item"><h3>What is the $29 Match Report?</h3><p>Everything in Premium, plus a polished, printable report (save it as a PDF) covering your full top-10 with skill-gap analysis and outreach drafts.</p></div>
+        <div class="faq-item"><h3>Do I need an account?</h3><p>Not to start. Fill out the form and see your matches right away. Payments are handled securely by Stripe.</p></div>
+      </div>
+    </section>    <section class="cta-band">
+      <div class="cta-band-inner">
+        <h2>See your matches first</h2>
+        <p>Run the free matcher, then decide if you want to unlock the rest.</p>
+        <a href="/get-matched" class="btn-primary btn-xl">Get matched free</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <div class="logo">Intern<span class="logo-blue">Nest</span><span class="logo-tag">.ai</span></div>
+        <p>The AI-powered internship platform built for college students who want to land their dream role.</p>
+        <div class="footer-social">
+          <a href="#" aria-label="Twitter">&#120143;</a>
+          <a href="#" aria-label="LinkedIn">in</a>
+          <a href="#" aria-label="Instagram">IG</a>
+        </div>
+      </div>
+      <div class="footer-cols">
+        <div class="footer-col"><h4>Product</h4>
+          <a href="/how-it-works">How It Works</a><a href="/get-matched">Get Matched</a><a href="/pricing">Pricing</a><a href="/tracker">App Tracker</a></div>
+        <div class="footer-col"><h4>Company</h4>
+          <a href="/about">About</a><a href="/contact">Contact</a><a href="/blog">Blog</a><a href="/careers">Careers</a></div>
+        <div class="footer-col"><h4>Legal</h4>
+          <a href="/privacy">Privacy Policy</a><a href="/terms">Terms of Service</a><a href="/cookies">Cookie Policy</a></div>
+      </div>
+    </div>
+    <div class="footer-bottom"><p>&copy; 2026 InternNest. Built by students, for students.</p></div>
+  </footer>
+
+  <script src="/script.js"></script>
+</body>
+</html>

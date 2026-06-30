@@ -11,6 +11,10 @@ const STAGES = ['saved', 'applied', 'interviewing', 'offer', 'rejected'];
 let cardCounter = 200;
 let lastResults = null;
 
+/* Tracker persists across pages (form page saves; tracker page reads) */
+function saveTracker() { try { localStorage.setItem('inn_tracker', JSON.stringify(trackerCards)); } catch (e) {} }
+try { const _t = localStorage.getItem('inn_tracker'); if (_t) trackerCards = JSON.parse(_t); } catch (e) {}
+
 /* Premium unlock — Stripe-verified token stored per browser (Milestone 4) */
 function readUnlock() {
   try {
@@ -305,7 +309,8 @@ const DATA = {
 /* ====================================================
    FORM SUBMISSION → GENERATE MATCHES
    ==================================================== */
-document.getElementById('matchForm').addEventListener('submit', async function (e) {
+const matchFormEl = document.getElementById('matchForm');
+if (matchFormEl) matchFormEl.addEventListener('submit', async function (e) {
   e.preventDefault();
 
   const user = {
@@ -332,7 +337,7 @@ document.getElementById('matchForm').addEventListener('submit', async function (
   document.getElementById('resultsHeading').textContent = 'Finding your matches…';
   document.getElementById('resultsSubheading').textContent = 'Analyzing your profile against real internships.';
   document.getElementById('matchCards').innerHTML =
-    '<div style="grid-column:1/-1;text-align:center;padding:40px;color:var(--gray-500);font-weight:600">🤖 Scoring internships for you…</div>';
+    '<div style="grid-column:1/-1;text-align:center;padding:40px;color:var(--gray-500);font-weight:600">Scoring internships for you…</div>';
   section.classList.remove('hidden');
   section.scrollIntoView({ behavior: 'smooth', block: 'start' });
 
@@ -367,7 +372,7 @@ function renderResults(matches, user) {
   const isPremium = isUnlocked();
   const shown = isPremium ? matches : matches.slice(0, 3);
   const reportBtn = hasReport()
-    ? `<div style="grid-column:1/-1;text-align:center;padding:8px 0 24px"><a class="btn-outline" href="#" onclick="printReport();return false;">🖨️ Print / Save as PDF</a></div>`
+    ? `<div style="grid-column:1/-1;text-align:center;padding:8px 0 24px"><a class="btn-outline" href="#" onclick="printReport();return false;">Print / Save as PDF</a></div>`
     : '';
   document.getElementById('matchCards').innerHTML = shown.map((job, i) => buildCard(job, user, i)).join('')
     + (!isPremium && matches.length > shown.length
@@ -382,7 +387,6 @@ function buildCard(job, user, index) {
   const scoreColor = job.score >= 90 ? '#16a34a' : job.score >= 80 ? '#2563eb' : '#d97706';
   const scoreBg   = job.score >= 90 ? '#dcfce7' : job.score >= 80 ? '#dbeafe' : '#fef3c7';
   const typeTag   = { Remote: 'tag-blue', Hybrid: 'tag-gray', 'In-Person': 'tag-gray' }[job.type] || 'tag-gray';
-  const typeIcon  = { Remote: '🌐', Hybrid: '🏢', 'In-Person': '🏙️' }[job.type] || '📍';
 
   const missingHtml = (job.missing || [])
     .map(s => `<li>${s}</li>`)
@@ -403,7 +407,7 @@ function buildCard(job, user, index) {
         <h3>${job.title}</h3>
         <p class="match-company">${job.company} &middot; ${job.location}</p>
         <div class="match-tags">
-          <span class="tag ${typeTag}">${typeIcon} ${job.type}</span>
+          <span class="tag ${typeTag}">${job.type}</span>
         </div>
       </div>
     </div>
@@ -413,29 +417,29 @@ function buildCard(job, user, index) {
   </div>
 
   <div class="match-section">
-    <div class="match-label">✓ Why it matches your profile</div>
+    <div class="match-label">Why it matches your profile</div>
     <p>${job.why}</p>
   </div>
 
   <div class="match-section">
-    <div class="match-label">📚 Missing skills to improve your odds</div>
+    <div class="match-label">Missing skills to improve your odds</div>
     <ul class="missing-skills">${missingHtml}</ul>
   </div>
 
   <div class="match-section">
-    <div class="match-label">💡 Application tip</div>
+    <div class="match-label">Application tip</div>
     <p>${job.tip}</p>
   </div>
 
   <div class="match-section outreach-section">
-    <div class="match-label">💬 AI-generated LinkedIn outreach message</div>
+    <div class="match-label">AI-generated LinkedIn outreach message</div>
     <button class="btn-outreach" onclick="toggleOutreach('${job.id}')">Show LinkedIn Message</button>
     <div id="outreach-${job.id}" class="outreach-msg hidden">${outreachText.replace(/\n/g, '<br>')}</div>
   </div>
 
   <div class="match-actions">
     <button class="btn-save" id="save-${job.id}" onclick="saveToTracker('${job.id}','${titleEsc}','${companyEsc}',${job.score})">
-      🔖 Save to Tracker
+      Save to Tracker
     </button>
     <a class="btn-primary" id="apply-${job.id}" href="${job.application_url || '#'}" target="_blank" rel="noopener" onclick="markApplied('${job.id}','${titleEsc}','${companyEsc}',${job.score})">
       Apply Now →
@@ -456,6 +460,7 @@ function toggleOutreach(id) {
    APPLICATION TRACKER
    ==================================================== */
 function renderTracker() {
+  if (!document.getElementById('col-saved')) return; // tracker board not on this page
   STAGES.forEach(stage => {
     const cards = trackerCards.filter(c => c.stage === stage);
     document.getElementById(`count-${stage}`).textContent = cards.length;
@@ -486,18 +491,19 @@ function buildTrackerCard(card) {
   </div>
   <div class="tracker-actions">
     ${prevBtn}${nextBtn}
-    <button class="tracker-btn danger" onclick="removeCard('${card.id}')">✕</button>
+    <button class="tracker-btn danger" onclick="removeCard('${card.id}')" aria-label="Remove">&times;</button>
   </div>
 </div>`;
 }
 
 function moveCard(id, stage) {
   const card = trackerCards.find(c => c.id === id);
-  if (card) { card.stage = stage; renderTracker(); }
+  if (card) { card.stage = stage; saveTracker(); renderTracker(); }
 }
 
 function removeCard(id) {
   trackerCards = trackerCards.filter(c => c.id !== id);
+  saveTracker();
   renderTracker();
 }
 
@@ -507,10 +513,11 @@ function saveToTracker(jobId, title, company, score) {
     return;
   }
   trackerCards.push({ id: `m-${jobId}`, title, company, stage: 'saved', score });
+  saveTracker();
   renderTracker();
-  markBtnDone(`save-${jobId}`, '✓ Saved!', '#f0fdf4', '#16a34a');
-  document.getElementById('tracker').scrollIntoView({ behavior: 'smooth', block: 'start' });
-  showToast(`${title} saved to tracker.`);
+  markBtnDone(`save-${jobId}`, 'Saved', '#f0fdf4', '#16a34a');
+  const trk = document.getElementById('tracker'); if (trk) trk.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  showToast(`${title} saved — view it in your tracker.`);
 }
 
 function markApplied(jobId, title, company, score) {
@@ -520,9 +527,10 @@ function markApplied(jobId, title, company, score) {
   } else {
     trackerCards.push({ id: `m-${jobId}`, title, company, stage: 'applied', score });
   }
+  saveTracker();
   renderTracker();
-  markBtnDone(`apply-${jobId}`, '✓ Marked Applied', '#dbeafe', '#1d4ed8');
-  document.getElementById('tracker').scrollIntoView({ behavior: 'smooth', block: 'start' });
+  markBtnDone(`apply-${jobId}`, 'Marked Applied', '#dbeafe', '#1d4ed8');
+  const trk2 = document.getElementById('tracker'); if (trk2) trk2.scrollIntoView({ behavior: 'smooth', block: 'start' });
 }
 
 function markBtnDone(btnId, text, bg, color) {
@@ -541,6 +549,7 @@ function promptAddCard() {
   const company = prompt('Company name:');
   if (!company) return;
   trackerCards.push({ id: `c-${cardCounter++}`, title, company, stage: 'saved', score: 0 });
+  saveTracker();
   renderTracker();
 }
 
@@ -574,7 +583,8 @@ function showToast(msg) {
 /* ====================================================
    NAV / MOBILE MENU
    ==================================================== */
-document.getElementById('hamburger').addEventListener('click', () => {
+const hamburgerEl = document.getElementById('hamburger');
+if (hamburgerEl) hamburgerEl.addEventListener('click', () => {
   document.getElementById('mobileMenu').classList.toggle('hidden');
 });
 
@@ -588,7 +598,7 @@ function closeMobileMenu() {
 function handleFileUpload(input) {
   if (!input.files || !input.files[0]) return;
   const fname = input.files[0].name;
-  document.getElementById('uploadLabel').textContent = `✓ ${fname} uploaded`;
+  document.getElementById('uploadLabel').textContent = `${fname} uploaded`;
   const zone = document.getElementById('uploadZone');
   zone.style.borderColor = '#16a34a';
   zone.style.background = '#f0fdf4';

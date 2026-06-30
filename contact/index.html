@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact — InternNest</title>
+  <link rel="icon" type="image/png" href="/internnest-logo.png" />
+  <meta name="description" content="Questions, feedback, or partnership ideas? Get in touch with the InternNest team." />
+  <link rel="canonical" href="https://internnest.ai/contact" />
+  <meta property="og:title" content="Contact — InternNest" />
+  <meta property="og:description" content="Questions, feedback, or partnership ideas? Get in touch with the InternNest team." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://internnest.ai/contact" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+
+  <header class="nav" id="nav">
+    <div class="nav-inner">
+      <a href="/" class="logo"><img src="/internnest-logo-h.png" alt="InternNest.ai" class="logo-img" /></a>
+      <nav class="nav-links">
+        <a href="/how-it-works">How It Works</a>
+        <a href="/get-matched">Get Matched</a>
+        <a href="/tracker">Tracker</a>
+        <a href="/pricing">Pricing</a>
+      </nav>
+      <div class="nav-right">
+        <a href="/get-matched" class="nav-cta">Start Free &rarr;</a>
+        <button class="hamburger" id="hamburger" aria-label="Open menu"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+    <div class="mobile-menu hidden" id="mobileMenu">
+      <a href="/how-it-works" onclick="closeMobileMenu()">How It Works</a>
+      <a href="/get-matched" onclick="closeMobileMenu()">Get Matched</a>
+      <a href="/tracker" onclick="closeMobileMenu()">Tracker</a>
+      <a href="/pricing" onclick="closeMobileMenu()">Pricing</a>
+      <a href="/get-matched" class="btn-primary" onclick="closeMobileMenu()">Start Free &rarr;</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-hero">
+      <div class="page-hero-inner">
+        <div class="eyebrow">Get in touch</div>
+        <h1>We would love to hear from you</h1>
+        <p class="page-hero-sub">Questions, feedback, press, or partnerships — send a note and we will get back to you.</p>
+      </div>
+    </section>    <section class="section">
+      <div class="contact-grid">
+        <div class="contact-info">
+          <h3>Reach us directly</h3>
+          <p>Email: <a href="mailto:hello@internnest.ai">hello@internnest.ai</a></p>
+          <p class="muted">We typically reply within 1&ndash;2 business days.</p>
+          <h3>For students</h3>
+          <p>Already using InternNest? The fastest help is right in the app — run the matcher and use the tracker to stay organized.</p>
+        </div>
+        <div class="form-card contact-card">
+          <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+            <input type="hidden" name="form-name" value="contact" />
+            <p class="hidden"><label>Don&rsquo;t fill this out: <input name="bot-field" /></label></p>
+            <div class="form-group"><label for="cname">Name <span class="req">*</span></label><input type="text" id="cname" name="name" required /></div>
+            <div class="form-group"><label for="cemail">Email <span class="req">*</span></label><input type="email" id="cemail" name="email" required /></div>
+            <div class="form-group form-full"><label for="cmsg">Message <span class="req">*</span></label><textarea id="cmsg" name="message" required></textarea></div>
+            <button type="submit" class="btn-primary btn-xl">Send message</button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <div class="logo">Intern<span class="logo-blue">Nest</span><span class="logo-tag">.ai</span></div>
+        <p>The AI-powered internship platform built for college students who want to land their dream role.</p>
+        <div class="footer-social">
+          <a href="#" aria-label="Twitter">&#120143;</a>
+          <a href="#" aria-label="LinkedIn">in</a>
+          <a href="#" aria-label="Instagram">IG</a>
+        </div>
+      </div>
+      <div class="footer-cols">
+        <div class="footer-col"><h4>Product</h4>
+          <a href="/how-it-works">How It Works</a><a href="/get-matched">Get Matched</a><a href="/pricing">Pricing</a><a href="/tracker">App Tracker</a></div>
+        <div class="footer-col"><h4>Company</h4>
+          <a href="/about">About</a><a href="/contact">Contact</a><a href="/blog">Blog</a><a href="/careers">Careers</a></div>
+        <div class="footer-col"><h4>Legal</h4>
+          <a href="/privacy">Privacy Policy</a><a href="/terms">Terms of Service</a><a href="/cookies">Cookie Policy</a></div>
+      </div>
+    </div>
+    <div class="footer-bottom"><p>&copy; 2026 InternNest. Built by students, for students.</p></div>
+  </footer>
+
+  <script src="/script.js"></script>
+</body>
+</html>
