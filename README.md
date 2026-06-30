@@ -3,7 +3,7 @@
 A landing page + interactive demo for an AI internship-matching tool for college
 students. It's a plain static website — three files, no build step, no server to run.
 
-**Live site:** https://dynamic-stardust-6be07e.netlify.app/
+**Live site:** https://internnest.ai
 
 ---
 
@@ -34,11 +34,11 @@ which file, and it can do it.
 
 ## Publishing changes (making them go live)
 
-Once this repo is connected to Netlify (continuous deploy), the loop is:
+The repo is connected to Vercel (continuous deploy), so the loop is:
 
 1. Edit the file(s) and save.
 2. In **GitHub Desktop**: type a short summary → **Commit to main** → **Push origin**.
-3. Netlify automatically rebuilds; your live site updates in ~30 seconds.
+3. Vercel automatically rebuilds; your live site updates in ~30 seconds.
 
 ## How it works right now (worth knowing)
 
@@ -55,4 +55,5 @@ site is a polished front-end demo.
 
 ## Hosting
 
-Front-end hosted on **Netlify**. Custom domain: _to be added_.
+Hosted on **Vercel** (Pro). Custom domain: **internnest.ai** (live, SSL).
+Serverless code lives in `api/` (matcher, Stripe checkout, unlock verify, contact form).

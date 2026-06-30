@@ -14,23 +14,27 @@ logins. Jack is building it for you and hands over all the keys at the end.
 
 | Service | What it's for | Who pays | Rough cost |
 |---------|---------------|----------|-----------|
-| **GitHub** | Stores the website's code (the master copy; repo is **public** so Netlify's free plan can build it) | Free | $0 |
-| **Netlify** | Hosts the live website + runs the "behind-the-scenes" code | Free tier | $0 until heavy traffic |
+| **GitHub** | Stores the website's code (the master copy) | Free | $0 |
+| **Vercel** | Hosts the live website + runs the "behind-the-scenes" code | Pro plan | ~$20 / month |
 | **GoDaddy** | Your domain name, internnest.ai | You | ~$70–100 / year |
+| **Supabase** | User accounts + login (Google / email) and the database | Free tier | $0 until heavy use |
+| **Google Workspace** | Your business email, support@internnest.ai | You | ~$6 / month |
 | **Stripe** | Takes card payments, deposits money to your bank | Per sale | ~2.9% + 30¢ per sale |
-| **AI API** (Claude or Gemini) | Powers the "Find My Matches" engine + chatbot | Per use | Pennies per search; grows with traffic |
+| **AI API** (Anthropic / Claude) | Powers the "Find My Matches" engine | Per use | Pennies per search; grows with traffic |
 
-*(As we set each one up, this guide will say exactly what it is and how to log in.)*
+*(As each one is set up, this guide says what it is and how to log in.)*
 
 ## How the site works (in plain English)
 
 - The website's files live on **GitHub**.
-- When a change is made, it's saved ("pushed") to GitHub, and **Netlify** automatically
+- When a change is made, it's saved ("pushed") to GitHub, and **Vercel** automatically
   publishes the new version within about 30 seconds.
-- Your domain **internnest.ai** points to Netlify, so visitors see your site.
-- The AI matching runs through a small piece of code on Netlify that talks to the AI
+- Your domain **internnest.ai** points to Vercel, so visitors see your site.
+- The AI matching runs through a small piece of code on Vercel that talks to the AI
   provider using your **API key** (a secret password). The key is stored safely on the
   server — never in the public website.
+- **Accounts:** students can sign in with Google or an email link. Their account (and
+  whether they've bought Premium) lives in **Supabase**, so it follows them across devices.
 
 ## How to make a change
 
@@ -40,9 +44,11 @@ A full walkthrough + lessons come at handoff.
 
 ## What it costs to run (ongoing)
 
+- Hosting: ~$20 / month (Vercel Pro)
+- Email: ~$6 / month (Google Workspace)
 - Domain: ~$70–100 / year (GoDaddy)
 - AI usage: pay-as-you-go, scales with how many people use the matcher
-- Everything else: free tier to start
+- Supabase: free tier to start
 
 ## Getting paid (Stripe)
 
@@ -50,24 +56,22 @@ When a student buys **Premium ($9.99)** or the **Match Report ($29)**, the money
 straight into **your Stripe account → your bank**. We never touch it.
 
 - **How it works:** the student clicks a buy button → Stripe's own secure checkout page
-  takes the card → on success they come back to the site and the premium features unlock
-  for that browser. The unlock is confirmed by the server against Stripe, so it can't be faked.
-- **Right now it's in TEST mode.** That means real cards don't work yet — only Stripe's
-  test card (`4242 4242 4242 4242`). No real money moves. This lets us prove the whole flow
-  works safely before going live.
-- **Going live (a handoff step):** in your Stripe dashboard you flip from Test to Live,
-  copy your **Live secret key**, and paste it into Netlify's environment settings
-  (same place as the AI key). I'll walk you through this screen-by-screen at handoff.
-- **Honest limit (v1):** the unlock is remembered per-browser. If someone clears their
-  browser data or switches devices, they'd need to buy again. Real accounts/logins are a
-  later upgrade if you want them.
+  takes the card → on success they come back and the premium features unlock **on their
+  account**, so it works on any device they sign in to. The unlock is confirmed by the
+  server against Stripe, so it can't be faked.
+- **Live mode:** Stripe is switched to **Live** — real cards work and real money moves.
+  (To test the flow without spending, you can make a real purchase and refund it from your
+  Stripe dashboard, or temporarily mark your own account Premium in Supabase.)
 
 ## Current status
 
-- ✅ Code on GitHub (**public** repo `jackryan225/internnest`), live on Netlify, auto-deploys on every push
-- ✅ Domain **internnest.ai** live with SSL
-- ✅ Rebranded to InternNest (logo, favicon, wordmark)
+- ✅ Code on GitHub (repo `jackryan225/internnest`), live on **Vercel**, auto-deploys on every push
+- ✅ Domain **internnest.ai** live with SSL (DNS moved off Netlify to Vercel)
+- ✅ Rebranded to InternNest (logo, favicon, wordmark) + Liquid Glass design site-wide
+- ✅ Full multi-page site (How It Works, Pricing, About, Contact, Blog, Careers, legal pages)
 - ✅ Internship dataset built — 88 real, verified listings in `internships.json`
-- ✅ Real AI matcher built + working (runs locally on Jack's key during the build)
-- ✅ Payments built (Stripe Checkout, $9.99 unlock + $29 report) — in test mode, not yet live
-- 🔜 Handoff: your Anthropic key + Stripe **live** keys into Netlify → single deploy → live
+- ✅ Real AI matcher built + working
+- ✅ User accounts — sign in with Google or email; Premium is tied to the account
+- ✅ Payments live (Stripe Checkout, $9.99 unlock + $29 report)
+- ✅ Business email **support@internnest.ai** wired across the site + legal pages
+- 🔜 Handoff: move the accounts (Vercel, Supabase, Google Cloud, Stripe, AI key) into your name

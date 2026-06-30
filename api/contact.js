@@ -24,8 +24,8 @@ module.exports = async (req, res) => {
         method: 'POST',
         headers: { Authorization: `Bearer ${key}`, 'content-type': 'application/json' },
         body: JSON.stringify({
-          from: 'InternNest <onboarding@resend.dev>',
-          to: [process.env.CONTACT_TO || 'hello@internnest.ai'],
+          from: process.env.CONTACT_FROM || 'InternNest <onboarding@resend.dev>',
+          to: [process.env.CONTACT_TO || 'support@internnest.ai'],
           reply_to: email,
           subject: `Contact form — ${name}`,
           text: `From: ${name} <${email}>\n\n${message}`,
