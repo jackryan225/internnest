@@ -178,3 +178,21 @@ cold start on the matcher).
 - **Cutover (Dillon, his account):** create Vercel project from the GitHub repo → add env vars
   (ANTHROPIC_API_KEY, STRIPE_SECRET_KEY, UNLOCK_SIGNING_SECRET; optional RESEND_API_KEY/CONTACT_TO)
   → verify on the *.vercel.app URL → point internnest.ai DNS at Vercel → retire the Netlify site.
+
+## 2026-06-30 — User login + account-based Premium (Supabase)
+
+Dillon asked for login (Google + email). Built on **Supabase** (project `internnest` in his org;
+auth + a `profiles` table with RLS + a signup trigger — all set up via the dashboard).
+
+- **Frontend (`script.js`):** loads `supabase-js` from CDN, reads the session, renders a "Log in"/account
+  control in the nav, and a **glass-styled login modal** — **Continue with Google** + **email magic link**
+  (passwordless). No bundler; public URL + publishable key are embedded (safe).
+- **Premium is now account-based.** `isUnlocked()` checks the signed-in account's `profiles.premium`
+  (the old per-browser HMAC token stays as a guest fallback). Checkout tags the buyer's `user_id` into
+  the Stripe session metadata; on a confirmed payment, `verify-unlock` flips `profiles.premium = true`
+  via the Supabase **service key** (server-side, in Vercel env). So Premium now persists across devices.
+- **Email login works today.** **Google** needs Google OAuth credentials (deferred) — the button is
+  present and fails gracefully ("use email for now") until the provider is enabled in Supabase.
+- Verified: 22/22 lib tests still green; login modal + magic-link send confirmed against the live
+  Supabase project; Vercel deploy healthy (`create-checkout` accepts `user_id`, supabase-js loads).
+- Supabase config: Site URL = internnest.ai; redirect allow-list for prod + vercel.app + localhost.
