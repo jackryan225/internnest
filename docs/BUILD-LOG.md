@@ -120,6 +120,10 @@ but kept readable. Newest entries at the bottom.
   Dillon's **live** Stripe keys go into Netlify env. `.env` confirmed gitignored — no secret committed.
 - **Honest limit (documented):** unlock is per-browser (localStorage); clears on new device / cleared
   storage. True enforcement = the accounts/subscriptions phase (Phase 2).
-- **Not deployed:** all payments commits are LOCAL. Code complete + unit-tested; the full browser
-  end-to-end run (Stripe test card `4242 4242 4242 4242`) happens once Jack drops a Stripe test key
-  into `.env`. Live keys swapped in at the single handoff deploy.
+- **Verified end-to-end locally (2026-06-29):** with a Stripe **restricted test key** (`rk_test_…`,
+  Checkout Sessions read+write) in `.env`, drove the full flow in a real browser — matcher → free tier
+  shows 3/5 + unlock CTA → **Start Premium $9.99** → Stripe-hosted checkout → paid with test card
+  `4242 4242 4242 4242` → redirect back → `verify-unlock` issued the signed token → `localStorage` set
+  → re-match shows **all 5, no CTA** (`isUnlocked()` true, 365-day token). Report flag correctly drives
+  the "🖨️ Print / Save as PDF" button. Test browser reset to clean free state afterward.
+- **Not deployed:** all payments commits are LOCAL. Live keys swapped in at the single handoff deploy.
