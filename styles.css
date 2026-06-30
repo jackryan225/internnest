@@ -157,11 +157,19 @@ p { margin: 0; }
   height: 66px;
 }
 .logo {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
   font-size: 22px;
   font-weight: 900;
   text-decoration: none;
   color: var(--black);
   letter-spacing: -.02em;
+}
+.logo-img {
+  height: 40px;
+  width: auto;
+  display: block;
 }
 .logo-blue { color: var(--blue); }
 .logo-tag {
