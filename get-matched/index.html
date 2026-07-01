@@ -66,6 +66,7 @@
             <div class="form-group"><label for="major">Major <span class="req">*</span></label><input type="text" id="major" placeholder="e.g. Finance, Computer Science" required /></div>
             <div class="form-group"><label for="year">Class Year <span class="req">*</span></label>
               <select id="year" required><option value="">Select year</option><option>Freshman</option><option>Sophomore</option><option>Junior</option><option>Senior</option></select></div>
+            <div class="form-group"><label for="gpa">GPA <span class="form-opt">(optional)</span></label><input type="number" id="gpa" min="0" max="4.5" step="0.01" inputmode="decimal" placeholder="e.g. 3.7 (out of 4.0)" /></div>
             <div class="form-group"><label for="industry">Dream Industry <span class="req">*</span></label>
               <select id="industry" required><option value="">Select industry</option><option>Finance</option><option>Technology</option><option>Marketing</option><option>Consulting</option><option>Healthcare</option><option>Sports Business</option><option>Media &amp; Entertainment</option><option>Real Estate</option></select></div>
             <div class="form-group"><label for="role">Dream Role <span class="req">*</span></label><input type="text" id="role" placeholder="e.g. Investment Banking Analyst, PM, SWE" required /></div>
@@ -74,6 +75,7 @@
               <select id="worktype"><option value="any">Any (Remote / Hybrid / In-Person)</option><option value="remote">Remote only</option><option value="hybrid">Hybrid preferred</option><option value="onsite">In-person only</option></select></div>
             <div class="form-group"><label for="companies">Target Companies</label><input type="text" id="companies" placeholder="e.g. Goldman Sachs, Google, McKinsey" /></div>
             <div class="form-group form-full"><label for="skills">Your Skills <span class="req">*</span></label><textarea id="skills" placeholder="e.g. Excel, Python, SQL, PowerPoint, public speaking, social media, writing..." required></textarea></div>
+            <div class="form-group form-full"><label for="experience">Prior Experience in This Field <span class="form-opt">(optional)</span></label><textarea id="experience" placeholder="e.g. Summer analyst at a boutique, treasurer of the finance club, or a relevant class project — or 'none yet'."></textarea></div>
             <div class="form-group form-full">
               <label>Resume Upload <span class="form-opt">(optional)</span></label>
               <div class="upload-zone" id="uploadZone" onclick="document.getElementById('resumeFile').click()">

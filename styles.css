@@ -342,7 +342,7 @@ p { margin: 0; }
 /* ======================== HOW IT WORKS ======================== */
 .steps-row {
   display: flex;
-  align-items: flex-start;
+  align-items: stretch;
   gap: 0;
 }
 .step-card {
@@ -365,7 +365,16 @@ p { margin: 0; }
   place-items: center;
   font-size: 24px;
   color: var(--gray-300);
-  padding-top: 70px;
+  align-self: center;
+}
+
+/* gentle float on the step cards (matches the hero preview cards), staggered so they don't move in unison */
+.steps-row > .step-card { animation: floatY 5s ease-in-out infinite; }
+.steps-row > .step-card:nth-child(3) { animation-delay: 1.6s; }
+.steps-row > .step-card:nth-child(5) { animation-delay: 3.2s; }
+
+@media (prefers-reduced-motion: reduce) {
+  .hv-main, .hv-side-1, .hv-side-2, .steps-row > .step-card { animation: none; }
 }
 
 /* ======================== FORM ======================== */
@@ -854,23 +863,39 @@ select { cursor: pointer; background-image: url("data:image/svg+xml,%3Csvg xmlns
 
 body {
   color: var(--glass-ink);
+  background: #f1eeff; /* solid fallback */
+}
+/* Paint the gradient on a real fixed layer instead of background-attachment:fixed, which seams
+   (a fractional-pixel line) against backdrop-filter elements on Retina. Behind all content;
+   glass surfaces still blur it since it sits at z-index -1. */
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
   background:
     radial-gradient(1100px 620px at 8% -12%, #cdbcff 0%, transparent 55%),
-    radial-gradient(1000px 720px at 96% -4%, #ffe7a8 0%, transparent 48%),
+    radial-gradient(680px 480px at 100% -12%, rgba(255,231,178,.34) 0%, transparent 42%),
     radial-gradient(1200px 820px at 55% 116%, #9fd8ff 0%, transparent 55%),
-    linear-gradient(150deg, #eef1ff 0%, #f6ecff 46%, #fff6e8 100%);
-  background-attachment: fixed;
+    linear-gradient(150deg, #eef1ff 0%, #f6ecff 52%, #f3eeff 100%);
 }
 
 /* let the gradient show through full-width sections */
 .hero, .section-light, .page-hero, .results-section, .tracker-section, .form-page { background: transparent; }
+/* Remove the decorative hero glow: .hero's overflow:hidden clips it at the content edge, slicing the
+   still-visible radial into a hard vertical line on the right. The bg gradients carry the ambiance. */
+.hero-glow { display: none !important; }
 .page-hero { border-bottom: 1px solid rgba(255,255,255,.5); }
 
-/* frosted-glass nav */
-.nav { background: linear-gradient(180deg, rgba(255,255,255,.55), rgba(255,255,255,.38));
-  border-bottom: 1px solid rgba(255,255,255,.55);
-  backdrop-filter: blur(22px) saturate(180%); -webkit-backdrop-filter: blur(22px) saturate(180%);
-  box-shadow: inset 0 1px 0 rgba(255,255,255,.9), 0 10px 30px rgba(54,36,140,.08); }
+/* frosted-glass nav — pure blur, no white fill/border/shadow so it blends into the hero (no seam).
+   mask feathers the bottom edge so the backdrop-filter fades out instead of hard-cutting into a line. */
+.nav { background: rgba(255,255,255,.16);
+  border-bottom: none;
+  backdrop-filter: blur(20px) saturate(160%); -webkit-backdrop-filter: blur(20px) saturate(160%);
+  box-shadow: none;
+  -webkit-mask-image: linear-gradient(to bottom, #000 82%, transparent 100%);
+  mask-image: linear-gradient(to bottom, #000 82%, transparent 100%); }
 .nav-links a { color: #2c2658; }
 .nav-cta { background: rgba(20,16,50,.88); }
 .nav-cta:hover { background: var(--glass-accent); }
@@ -924,7 +949,7 @@ body {
 .hero-badge, .reason-good .reason-icon { color: var(--glass-accent); }
 .hero-badge { background: rgba(255,255,255,.55); border: 1px solid rgba(255,255,255,.7);
   backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); }
-.logo-tag, .plan-period, .role-tag { background: var(--glass-accent); }
+.logo-tag, .role-tag { background: var(--glass-accent); }
 .nav .logo-tag { background: var(--glass-accent); }
 
 /* translucent form fields */

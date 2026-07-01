@@ -319,18 +319,21 @@ const matchFormEl = document.getElementById('matchForm');
 if (matchFormEl) matchFormEl.addEventListener('submit', async function (e) {
   e.preventDefault();
 
+  const val = (id) => { const el = document.getElementById(id); return el ? el.value.trim() : ''; };
   const user = {
-    name:      document.getElementById('name').value.trim() || 'Student',
-    email:     document.getElementById('email').value.trim(),
-    school:    document.getElementById('school').value.trim() || 'your university',
-    major:     document.getElementById('major').value.trim(),
-    year:      document.getElementById('year').value,
-    industry:  document.getElementById('industry').value,
-    role:      document.getElementById('role').value.trim(),
-    location:  document.getElementById('location').value.trim(),
-    worktype:  document.getElementById('worktype').value,
-    skills:    document.getElementById('skills').value.trim(),
-    companies: document.getElementById('companies').value.trim(),
+    name:       document.getElementById('name').value.trim() || 'Student',
+    email:      document.getElementById('email').value.trim(),
+    school:     document.getElementById('school').value.trim() || 'your university',
+    major:      document.getElementById('major').value.trim(),
+    year:       document.getElementById('year').value,
+    gpa:        val('gpa'),
+    industry:   document.getElementById('industry').value,
+    role:       document.getElementById('role').value.trim(),
+    location:   document.getElementById('location').value.trim(),
+    worktype:   document.getElementById('worktype').value,
+    skills:     document.getElementById('skills').value.trim(),
+    experience: val('experience'),
+    companies:  document.getElementById('companies').value.trim(),
   };
 
   if (!user.industry) {
@@ -352,7 +355,8 @@ if (matchFormEl) matchFormEl.addEventListener('submit', async function (e) {
     const resp = await fetch('/api/match', {
       method: 'POST',
       headers: { 'content-type': 'application/json' },
-      body: JSON.stringify({ profile: user }),
+      // Send the signed unlock token (if any) so Premium accounts get the higher-quality model.
+      body: JSON.stringify({ profile: user, token: localStorage.getItem('inn_unlock') || undefined }),
     });
     const data = await resp.json();
     matches = data.matches || [];
@@ -559,6 +563,31 @@ function promptAddCard() {
   renderTracker();
 }
 
+/* Export the tracker to a spreadsheet file that opens in Excel or Google Sheets. */
+function csvCell(v) {
+  const s = String(v == null ? '' : v);
+  return /[",\n\r]/.test(s) ? '"' + s.replace(/"/g, '""') + '"' : s;
+}
+function exportTrackerToExcel() {
+  if (!trackerCards.length) { showToast('Your tracker is empty — save some internships first.'); return; }
+  const header = ['Company', 'Role', 'Stage', 'Match Score', 'Notes'];
+  const rows = trackerCards.map(c => [
+    c.company, c.title, capitalize(c.stage), c.score > 0 ? c.score + '%' : '', '',
+  ]);
+  const csv = [header, ...rows].map(r => r.map(csvCell).join(',')).join('\r\n');
+  // Prepend a UTF-8 BOM (U+FEFF) so Excel opens accented characters correctly.
+  const blob = new Blob([String.fromCharCode(0xFEFF) + csv], { type: 'text/csv;charset=utf-8;' });
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  a.href = url;
+  a.download = 'internnest-tracker.csv';
+  document.body.appendChild(a);
+  a.click();
+  a.remove();
+  setTimeout(() => URL.revokeObjectURL(url), 1000);
+  showToast('Downloaded internnest-tracker.csv — open it in Excel or Google Sheets.');
+}
+
 /* ====================================================
    TOAST NOTIFICATION
    ==================================================== */
@@ -677,6 +706,28 @@ async function refreshPremium() {
     const { data } = await sbClient.from('profiles').select('premium, premium_product').eq('id', authUser.id).single();
     if (data) { authPremium = !!data.premium; authProduct = data.premium_product || null; }
   } catch (e) { /* ignore */ }
+  await syncPremiumToken();
+}
+
+/* If the account is Premium but this browser has no unlock token (e.g. a new device), mint one
+   from the Supabase session so /api/match can verify Premium and serve the upgraded model anywhere. */
+async function syncPremiumToken() {
+  if (!authPremium || readUnlock()) return;
+  try {
+    const { data: { session } } = await sbClient.auth.getSession();
+    const accessToken = session && session.access_token;
+    if (!accessToken) return;
+    const res = await fetch('/api/account-token', {
+      method: 'POST', headers: { 'content-type': 'application/json' },
+      body: JSON.stringify({ access_token: accessToken }),
+    });
+    const data = await res.json();
+    if (data && data.token) {
+      localStorage.setItem('inn_unlock', data.token);
+      localStorage.setItem('inn_unlock_src', 'account'); // so sign-out can clear it
+      if (data.product === 'report') localStorage.setItem('inn_report', '1');
+    }
+  } catch (e) { /* Premium still works client-side; this only upgrades the model */ }
 }
 
 function renderAuthNav() {
@@ -770,6 +821,11 @@ async function signInGoogle() {
 async function signOut() {
   try { if (sbClient) await sbClient.auth.signOut(); } catch (e) {}
   authUser = null; authPremium = false; authProduct = null;
+  // Drop an account-minted unlock token so Premium doesn't linger on a shared browser after logout.
+  if (localStorage.getItem('inn_unlock_src') === 'account') {
+    localStorage.removeItem('inn_unlock');
+    localStorage.removeItem('inn_unlock_src');
+  }
   renderAuthNav();
   location.reload();
 }
