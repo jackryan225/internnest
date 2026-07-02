@@ -172,6 +172,11 @@ p { margin: 0; }
   width: auto;
   display: block;
 }
+.tracker-demo-tag {
+  font-size: 10px; font-weight: 700; letter-spacing: .04em; text-transform: uppercase;
+  color: var(--gray-500); background: rgba(120,120,140,.12);
+  padding: 1px 7px; border-radius: 999px; vertical-align: 2px;
+}
 .logo-blue { color: var(--blue); }
 .logo-tag {
   display: inline-block;

@@ -228,14 +228,21 @@ def main():
     data = json.loads(SITE_JSON.read_text())
     by_url, by_id = fetch_jd_index()
 
-    todo = []
+    todo, wd_ok = [], 0
     for r in data:
         if r.get('enriched_at') and not args.force:
             continue
         jd = jd_for(r, by_url, by_id)
+        if not jd and 'myworkdayjobs.com' in r.get('application_url', ''):
+            try:
+                jd = strip_html(sources.fetch_workday_jd(r['application_url']) or '')
+                wd_ok += 1 if len(jd) > 200 else 0
+            except Exception:
+                jd = None
         if jd and len(jd) > 200:
             todo.append((r, jd))
-    print(f'{len(todo)} of {len(data)} listings have a fetchable JD and need enrichment')
+    print(f'{len(todo)} of {len(data)} listings have a fetchable JD and need enrichment'
+          + (f' ({wd_ok} via workday detail pages)' if wd_ok else ''))
     if args.limit:
         todo = todo[:args.limit]
     if args.dry_run or not todo:

@@ -22,6 +22,7 @@ PATTERNS = {
     'lever': re.compile(r'jobs\.(?:eu\.)?lever\.co/([A-Za-z0-9-]+)', re.I),
     'ashby': re.compile(r'jobs\.ashbyhq\.com/([A-Za-z0-9-]+)', re.I),
 }
+WORKDAY = re.compile(r'https://([a-z0-9-]+)\.(wd\d+)\.myworkdayjobs\.com/(?:[a-z]{2}-[A-Z]{2}/)?([^/?#]+)')
 
 
 def main():
@@ -35,6 +36,7 @@ def main():
     cfg = json.loads(COMPANIES.read_text()) if COMPANIES.exists() else {}
 
     known = {(ats, c['slug'].lower()) for ats in PATTERNS for c in cfg.get(ats, [])}
+    known |= {('workday', (c['tenant'], c['host'], c['site'])) for c in cfg.get('workday', [])}
     found = {}
     for r in candidates:
         url = r.get('application_url', '')
@@ -47,22 +49,30 @@ def main():
                 continue
             found[(ats, slug)] = {'slug': slug, 'name': r['company'],
                                   'industry_hint': r.get('industry', '')}
+        m = WORKDAY.match(url)
+        if m:
+            key = ('workday', m.groups())
+            if key not in known and key not in found:
+                t, h, s = m.groups()
+                found[key] = {'tenant': t, 'host': h, 'site': s, 'name': r['company'],
+                              'industry_hint': r.get('industry', '')}
 
     by_ats = {}
     for (ats, _), entry in found.items():
         by_ats.setdefault(ats, []).append(entry)
     for ats, entries in sorted(by_ats.items()):
+        names = [e.get('slug') or e.get('tenant') for e in entries[:8]]
         print(f'{ats}: +{len(entries)} new companies '
-              f'({", ".join(e["slug"] for e in entries[:8])}{"…" if len(entries) > 8 else ""})')
+              f'({", ".join(names)}{"…" if len(entries) > 8 else ""})')
     if not found:
         return print('no new slugs found')
     if args.dry_run:
         return print('(dry run — companies.json unchanged)')
 
     for ats, entries in by_ats.items():
-        cfg.setdefault(ats, []).extend(sorted(entries, key=lambda e: e['slug']))
+        cfg.setdefault(ats, []).extend(sorted(entries, key=lambda e: e.get('slug') or e.get('tenant')))
     COMPANIES.write_text(json.dumps(cfg, indent=2) + '\n')
-    total = sum(len(cfg.get(a, [])) for a in PATTERNS)
+    total = sum(len(cfg.get(a, [])) for a in list(PATTERNS) + ['workday'])
     print(f'companies.json now tracks {total} company boards — rerun scrape.py to pull them')
 
 

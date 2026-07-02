@@ -885,5 +885,560 @@
       "name": "Periodic Labs",
       "industry_hint": "Technology"
     }
+  ],
+  "workday": [
+    {
+      "tenant": "abb",
+      "host": "wd3",
+      "site": "external_career_page",
+      "name": "ABB",
+      "industry_hint": "Technology"
+    },
+    {
+      "tenant": "agilent",
+      "host": "wd5",
+      "site": "Agilent_Student_Careers",
+      "name": "Agilent Technologies",
+      "industry_hint": "Technology"
+    },
+    {
+      "tenant": "alliance",
+      "host": "wd3",
+      "site": "nissanjobs",
+      "name": "Nissan Global",
+      "industry_hint": "Technology"
+    },
+    {
+      "tenant": "altasciences",
+      "host": "wd1",
+      "site": "Careers",
+      "name": "Altasciences",
+      "industry_hint": "Technology"
+    },
+    {
+      "tenant": "ambarella",
+      "host": "wd108",
+      "site": "ambarella",
+      "name": "Ambarella",
+      "industry_hint": "Technology"
+    },
+    {
+      "tenant": "aptiv",
+      "host": "wd5",
+      "site": "aptiv_careers",
+      "name": "Aptiv",
+      "industry_hint": "Technology"
+    },
+    {
+      "tenant": "ardian",
+      "host": "wd103",
+      "site": "ArdianCareers",
+      "name": "Ardian",
+      "industry_hint": "Finance"
+    },
+    {
+      "tenant": "arlo",
+      "host": "wd12",
+      "site": "external_careers",
+      "name": "Arlo",
+      "industry_hint": "Technology"
+    },
+    {
+      "tenant": "asml",
+      "host": "wd3",
+      "site": "asmlext1",
+      "name": "ASML",
+      "industry_hint": "Technology"
+    },
+    {
+      "tenant": "avav",
+      "host": "wd1",
+      "site": "AVAV",
+      "name": "AeroVironment",
+      "industry_hint": "Technology"
+    },
+    {
+      "tenant": "baird",
+      "host": "wd1",
+      "site": "Careers",
+      "name": "Baird",
+      "industry_hint": "Finance"
+    },
+    {
+      "tenant": "barclays",
+      "host": "wd3",
+      "site": "external_career_site_barclays",
+      "name": "Barclays",
+      "industry_hint": "Finance"
+    },
+    {
+      "tenant": "bcbst",
+      "host": "wd1",
+      "site": "external",
+      "name": "BCBST",
+      "industry_hint": "Healthcare"
+    },
+    {
+      "tenant": "blackrock",
+      "host": "wd1",
+      "site": "BlackRock_Professional",
+      "name": "BlackRock",
+      "industry_hint": "Finance"
+    },
+    {
+      "tenant": "blueorigin",
+      "host": "wd5",
+      "site": "blueorigin",
+      "name": "Blue Origin",
+      "industry_hint": "Technology"
+    },
+    {
+      "tenant": "bmo",
+      "host": "wd3",
+      "site": "Campus",
+      "name": "Bank of Montreal",
+      "industry_hint": "Finance"
+    },
+    {
+      "tenant": "borgwarner",
+      "host": "wd5",
+      "site": "BorgWarner_Careers",
+      "name": "BorgWarner",
+      "industry_hint": "Technology"
+    },
+    {
+      "tenant": "boystown",
+      "host": "wd1",
+      "site": "boystowncareers",
+      "name": "Boys Town",
+      "industry_hint": "Healthcare"
+    },
+    {
+      "tenant": "bpinternational",
+      "host": "wd3",
+      "site": "bpPrivateExternalCareersSite",
+      "name": "BP",
+      "industry_hint": "Finance"
+    },
+    {
+      "tenant": "brookfield",
+      "host": "wd5",
+      "site": "brookfieldprivate",
+      "name": "Brookfield",
+      "industry_hint": "Technology"
+    },
+    {
+      "tenant": "brunswick",
+      "host": "wd1",
+      "site": "search",
+      "name": "Brunswick",
+      "industry_hint": "Technology"
+    },
+    {
+      "tenant": "cadence",
+      "host": "wd1",
+      "site": "External_Careers",
+      "name": "Cadence",
+      "industry_hint": "Technology"
+    },
+    {
+      "tenant": "cadence",
+      "host": "wd1",
+      "site": "University_Talent",
+      "name": "Cadence Design Systems",
+      "industry_hint": "Technology"
+    },
+    {
+      "tenant": "cgg",
+      "host": "wd103",
+      "site": "viridiencareers",
+      "name": "Viridien",
+      "industry_hint": "Technology"
+    },
+    {
+      "tenant": "ciena",
+      "host": "wd5",
+      "site": "Careers",
+      "name": "Ciena",
+      "industry_hint": "Technology"
+    },
+    {
+      "tenant": "copart",
+      "host": "wd12",
+      "site": "copart",
+      "name": "Copart",
+      "industry_hint": "Technology"
+    },
+    {
+      "tenant": "coreandmain",
+      "host": "wd1",
+      "site": "coreandmain",
+      "name": "Core & Main",
+      "industry_hint": "Technology"
+    },
+    {
+      "tenant": "crowdstrike",
+      "host": "wd5",
+      "site": "crowdstrikecareers",
+      "name": "Crowdstrike",
+      "industry_hint": "Technology"
+    },
+    {
+      "tenant": "cvshealth",
+      "host": "wd1",
+      "site": "CVS_Health_Careers",
+      "name": "CVS Health",
+      "industry_hint": "Healthcare"
+    },
+    {
+      "tenant": "dexcom",
+      "host": "wd1",
+      "site": "dexcom",
+      "name": "Dexcom",
+      "industry_hint": "Healthcare"
+    },
+    {
+      "tenant": "disney",
+      "host": "wd5",
+      "site": "disneycareer",
+      "name": "ESPN / The Walt Disney Company",
+      "industry_hint": "Sports Business"
+    },
+    {
+      "tenant": "disney",
+      "host": "wd5",
+      "site": "disneycareerdc",
+      "name": "The Walt Disney Company",
+      "industry_hint": "Media & Entertainment"
+    },
+    {
+      "tenant": "equifax",
+      "host": "wd5",
+      "site": "UR_External",
+      "name": "Equifax",
+      "industry_hint": "Finance"
+    },
+    {
+      "tenant": "generac",
+      "host": "wd5",
+      "site": "external",
+      "name": "Generac",
+      "industry_hint": "Technology"
+    },
+    {
+      "tenant": "generalmotors",
+      "host": "wd5",
+      "site": "Careers_GM",
+      "name": "General Motors",
+      "industry_hint": "Technology"
+    },
+    {
+      "tenant": "greystar",
+      "host": "wd1",
+      "site": "External",
+      "name": "Greystar",
+      "industry_hint": "Real Estate"
+    },
+    {
+      "tenant": "gtsgbu",
+      "host": "wd3",
+      "site": "Careers",
+      "name": "Hitachi",
+      "industry_hint": "Technology"
+    },
+    {
+      "tenant": "hendrick",
+      "host": "wd5",
+      "site": "HMSCareers",
+      "name": "Hendrick Motorsports",
+      "industry_hint": "Sports Business"
+    },
+    {
+      "tenant": "homedepot",
+      "host": "wd5",
+      "site": "CareerDepotCanada",
+      "name": "The Home Depot",
+      "industry_hint": "Technology"
+    },
+    {
+      "tenant": "intel",
+      "host": "wd1",
+      "site": "en-us",
+      "name": "Intel",
+      "industry_hint": "Technology"
+    },
+    {
+      "tenant": "interac",
+      "host": "wd3",
+      "site": "Interac",
+      "name": "Interac",
+      "industry_hint": "Technology"
+    },
+    {
+      "tenant": "interdigital",
+      "host": "wd5",
+      "site": "InterDigital_Intern",
+      "name": "Interdigital",
+      "industry_hint": "Technology"
+    },
+    {
+      "tenant": "jd",
+      "host": "wd103",
+      "site": "Campus_Career_Site",
+      "name": "JINGDONG",
+      "industry_hint": "Technology"
+    },
+    {
+      "tenant": "jll",
+      "host": "wd1",
+      "site": "jllcareers",
+      "name": "JLL (Jones Lang LaSalle)",
+      "industry_hint": "Real Estate"
+    },
+    {
+      "tenant": "kbr",
+      "host": "wd5",
+      "site": "KBR_Careers",
+      "name": "KBR",
+      "industry_hint": "Technology"
+    },
+    {
+      "tenant": "kiongroup",
+      "host": "wd3",
+      "site": "kiongroup",
+      "name": "KION Group",
+      "industry_hint": "Technology"
+    },
+    {
+      "tenant": "kla",
+      "host": "wd1",
+      "site": "search",
+      "name": "KLA",
+      "industry_hint": "Technology"
+    },
+    {
+      "tenant": "marmon",
+      "host": "wd501",
+      "site": "Marmon_MSIP_Internships",
+      "name": "Marmon Holdings",
+      "industry_hint": "Technology"
+    },
+    {
+      "tenant": "marvell",
+      "host": "wd1",
+      "site": "MarvellCareers",
+      "name": "Marvell",
+      "industry_hint": "Technology"
+    },
+    {
+      "tenant": "marvell",
+      "host": "wd1",
+      "site": "marvellcareers2",
+      "name": "Marvell",
+      "industry_hint": "Technology"
+    },
+    {
+      "tenant": "mlse",
+      "host": "wd3",
+      "site": "MLSE",
+      "name": "Maple Leaf Sports & Entertainment Partne",
+      "industry_hint": "Sports Business"
+    },
+    {
+      "tenant": "monolithicpower",
+      "host": "wd12",
+      "site": "MPS_Careers",
+      "name": "Monolithic Power Systems",
+      "industry_hint": "Technology"
+    },
+    {
+      "tenant": "nelnet",
+      "host": "wd1",
+      "site": "MyNelnet",
+      "name": "Nelnet",
+      "industry_hint": "Technology"
+    },
+    {
+      "tenant": "nio",
+      "host": "wd3",
+      "site": "NIO_Careers",
+      "name": "Nio",
+      "industry_hint": "Technology"
+    },
+    {
+      "tenant": "nvidia",
+      "host": "wd5",
+      "site": "NVIDIAExternalCareerSite",
+      "name": "NVIDIA",
+      "industry_hint": "Technology"
+    },
+    {
+      "tenant": "nwis",
+      "host": "wd12",
+      "site": "NW",
+      "name": "Nightwing Intelligence Solutions",
+      "industry_hint": "Technology"
+    },
+    {
+      "tenant": "nxp",
+      "host": "wd3",
+      "site": "careers",
+      "name": "NXP Semiconductors",
+      "industry_hint": "Technology"
+    },
+    {
+      "tenant": "paloaltonetworks",
+      "host": "wd5",
+      "site": "panwexternalcareers",
+      "name": "Palo Alto Networks",
+      "industry_hint": "Technology"
+    },
+    {
+      "tenant": "pwc",
+      "host": "wd3",
+      "site": "US_Entry_Level_Careers",
+      "name": "PwC",
+      "industry_hint": "Consulting"
+    },
+    {
+      "tenant": "revantage",
+      "host": "wd1",
+      "site": "Brio_Real_Estate",
+      "name": "Brio Real Estate (Blackstone Portfolio C",
+      "industry_hint": "Real Estate"
+    },
+    {
+      "tenant": "rfcuny",
+      "host": "wd108",
+      "site": "RFCUNY",
+      "name": "RFCUNY",
+      "industry_hint": "Technology"
+    },
+    {
+      "tenant": "rhsc",
+      "host": "wd5",
+      "site": "delta_dental_of_michigan",
+      "name": "Delta Dental",
+      "industry_hint": "Technology"
+    },
+    {
+      "tenant": "selinc",
+      "host": "wd1",
+      "site": "SEL",
+      "name": "Schweitzer Engineering Laboratories",
+      "industry_hint": "Technology"
+    },
+    {
+      "tenant": "sonyglobal",
+      "host": "wd1",
+      "site": "SonyGlobalCareers",
+      "name": "Sony",
+      "industry_hint": "Technology"
+    },
+    {
+      "tenant": "soti",
+      "host": "wd3",
+      "site": "SOTI-Next-Gen",
+      "name": "SOTI",
+      "industry_hint": "Technology"
+    },
+    {
+      "tenant": "statestreet",
+      "host": "wd1",
+      "site": "Global",
+      "name": "State Street",
+      "industry_hint": "Finance"
+    },
+    {
+      "tenant": "sunlife",
+      "host": "wd3",
+      "site": "Campus",
+      "name": "Sun Life",
+      "industry_hint": "Finance"
+    },
+    {
+      "tenant": "synchronyfinancial",
+      "host": "wd5",
+      "site": "University",
+      "name": "Synchrony Financial",
+      "industry_hint": "Technology"
+    },
+    {
+      "tenant": "tdwilliamson",
+      "host": "wd1",
+      "site": "TDWCareers",
+      "name": "T.D. Williamson",
+      "industry_hint": "Technology"
+    },
+    {
+      "tenant": "tencent",
+      "host": "wd1",
+      "site": "Lightspeed",
+      "name": "Tencent",
+      "industry_hint": "Media & Entertainment"
+    },
+    {
+      "tenant": "tencent",
+      "host": "wd1",
+      "site": "OA_Huoshui_Platform",
+      "name": "Tencent",
+      "industry_hint": "Technology"
+    },
+    {
+      "tenant": "tencent",
+      "host": "wd1",
+      "site": "Tencent_Careers",
+      "name": "Tencent",
+      "industry_hint": "Technology"
+    },
+    {
+      "tenant": "theocc",
+      "host": "wd5",
+      "site": "careers",
+      "name": "OCC",
+      "industry_hint": "Finance"
+    },
+    {
+      "tenant": "thyssenkruppmaterialsna",
+      "host": "wd12",
+      "site": "1",
+      "name": "thyssenkrupp",
+      "industry_hint": "Technology"
+    },
+    {
+      "tenant": "tmx",
+      "host": "wd3",
+      "site": "TMX_Careers",
+      "name": "TMX Group",
+      "industry_hint": "Technology"
+    },
+    {
+      "tenant": "vhr-epri",
+      "host": "wd1",
+      "site": "epricareers",
+      "name": "EPRI",
+      "industry_hint": "Technology"
+    },
+    {
+      "tenant": "volarisgroup",
+      "host": "wd3",
+      "site": "GoAssetWorks",
+      "name": "AssetWorks",
+      "industry_hint": "Technology"
+    },
+    {
+      "tenant": "warnerbros",
+      "host": "wd5",
+      "site": "global",
+      "name": "Warner Bros. Discovery",
+      "industry_hint": "Media & Entertainment"
+    },
+    {
+      "tenant": "wustl",
+      "host": "wd1",
+      "site": "external",
+      "name": "Wash U",
+      "industry_hint": "Technology"
+    }
   ]
 }

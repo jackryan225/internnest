@@ -31,11 +31,15 @@ def _ssl_context():
 SSL_CTX = _ssl_context()
 
 
-def http_get_json(url, timeout=20):
+def _request_json(url, data=None, timeout=20):
     wait = THROTTLE_S - (time.time() - _last_fetch[0])
     if wait > 0:
         time.sleep(wait)
-    req = urllib.request.Request(url, headers={'User-Agent': UA, 'Accept': 'application/json'})
+    headers = {'User-Agent': UA, 'Accept': 'application/json'}
+    if data is not None:
+        headers['Content-Type'] = 'application/json'
+        data = json.dumps(data).encode()
+    req = urllib.request.Request(url, data=data, headers=headers)
     try:
         with urllib.request.urlopen(req, timeout=timeout, context=SSL_CTX) as res:
             body = res.read().decode('utf-8', errors='replace')
@@ -46,6 +50,14 @@ def http_get_json(url, timeout=20):
         raise
     _last_fetch[0] = time.time()
     return json.loads(body)
+
+
+def http_get_json(url, timeout=20):
+    return _request_json(url, timeout=timeout)
+
+
+def http_post_json(url, payload, timeout=20):
+    return _request_json(url, data=payload, timeout=timeout)
 
 
 def _posting(company, role, location, url, term_hint='', industry_hint='', source=''):
@@ -60,36 +72,62 @@ def _posting(company, role, location, url, term_hint='', industry_hint='', sourc
     }
 
 
-# ---- ATS connectors (per-company "reps": add slugs to companies.json) ----
+# ---- ATS connectors (per-company "reps": add entries to companies.json) ----
+# Every fetcher takes the companies.json entry dict.
 
-def fetch_greenhouse(slug, name, industry_hint=''):
-    data = http_get_json(f'https://boards-api.greenhouse.io/v1/boards/{slug}/jobs')
+def fetch_greenhouse(c):
+    data = http_get_json(f"https://boards-api.greenhouse.io/v1/boards/{c['slug']}/jobs")
     out = []
     for j in data.get('jobs', []):
         loc = (j.get('location') or {}).get('name', '')
-        out.append(_posting(name, j.get('title'), loc, j.get('absolute_url'),
-                            industry_hint=industry_hint, source=f'greenhouse:{slug}'))
+        out.append(_posting(c['name'], j.get('title'), loc, j.get('absolute_url'),
+                            industry_hint=c.get('industry_hint', ''), source=f"greenhouse:{c['slug']}"))
     return out
 
 
-def fetch_lever(slug, name, industry_hint=''):
-    data = http_get_json(f'https://api.lever.co/v0/postings/{slug}?mode=json')
+def fetch_lever(c):
+    data = http_get_json(f"https://api.lever.co/v0/postings/{c['slug']}?mode=json")
     out = []
     for j in data if isinstance(data, list) else []:
         cats = j.get('categories') or {}
-        out.append(_posting(name, j.get('text'), cats.get('location', ''), j.get('hostedUrl'),
+        out.append(_posting(c['name'], j.get('text'), cats.get('location', ''), j.get('hostedUrl'),
                             term_hint=cats.get('commitment', ''),
-                            industry_hint=industry_hint, source=f'lever:{slug}'))
+                            industry_hint=c.get('industry_hint', ''), source=f"lever:{c['slug']}"))
     return out
 
 
-def fetch_ashby(slug, name, industry_hint=''):
-    data = http_get_json(f'https://api.ashbyhq.com/posting-api/job-board/{slug}')
+def fetch_ashby(c):
+    data = http_get_json(f"https://api.ashbyhq.com/posting-api/job-board/{c['slug']}")
     out = []
     for j in data.get('jobs', []):
-        out.append(_posting(name, j.get('title'), j.get('location', ''),
+        out.append(_posting(c['name'], j.get('title'), j.get('location', ''),
                             j.get('jobUrl') or j.get('applyUrl'),
-                            industry_hint=industry_hint, source=f'ashby:{slug}'))
+                            industry_hint=c.get('industry_hint', ''), source=f"ashby:{c['slug']}"))
+    return out
+
+
+def fetch_workday(c, page=20, cap=200):
+    """Workday tenants expose the same JSON endpoint their own career sites use.
+    Entry needs: tenant, host (wd1/wd5/...), site (the board name in the careers URL)."""
+    tenant, host, site = c['tenant'], c['host'], c['site']
+    base = f'https://{tenant}.{host}.myworkdayjobs.com'
+    out, offset = [], 0
+    while offset < cap:
+        data = http_post_json(f'{base}/wday/cxs/{tenant}/{site}/jobs',
+                              {'appliedFacets': {}, 'limit': page, 'offset': offset,
+                               'searchText': 'intern'})
+        jobs = data.get('jobPostings') or []
+        for j in jobs:
+            path = j.get('externalPath', '')
+            if not path:
+                continue
+            out.append(_posting(c['name'], j.get('title'), j.get('locationsText', ''),
+                                f'{base}/en-US/{site}{path}',
+                                industry_hint=c.get('industry_hint', ''),
+                                source=f'workday:{tenant}'))
+        offset += page
+        if not jobs or offset >= int(data.get('total', 0)):
+            break
     return out
 
 
@@ -130,4 +168,19 @@ def fetch_simplify(max_items=None):
     return out
 
 
-ATS_FETCHERS = {'greenhouse': fetch_greenhouse, 'lever': fetch_lever, 'ashby': fetch_ashby}
+WD_JOB_URL = re.compile(
+    r'https://([a-z0-9-]+)\.(wd\d+)\.myworkdayjobs\.com/(?:[a-z]{2}-[A-Z]{2}/)?([^/?#]+)(/job/[^?#]+)')
+
+
+def fetch_workday_jd(url):
+    """Full job description for any myworkdayjobs.com posting URL (or None)."""
+    m = WD_JOB_URL.match(url or '')
+    if not m:
+        return None
+    t, h, s, path = m.groups()
+    data = http_get_json(f'https://{t}.{h}.myworkdayjobs.com/wday/cxs/{t}/{s}{path}')
+    return (data.get('jobPostingInfo') or {}).get('jobDescription') or None
+
+
+ATS_FETCHERS = {'greenhouse': fetch_greenhouse, 'lever': fetch_lever,
+                'ashby': fetch_ashby, 'workday': fetch_workday}

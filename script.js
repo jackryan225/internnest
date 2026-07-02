@@ -1,11 +1,21 @@
 /* global variables */
-let trackerCards = [
+/* Example cards shown only to logged-out visitors with an empty tracker; they are never
+   persisted and disappear on login or on the first real save. */
+const DEMO_CARDS = [
   { id: 't1', title: 'Investment Banking Analyst', company: 'Morgan Stanley', stage: 'applied', score: 91 },
   { id: 't2', title: 'Product Manager Intern', company: 'Stripe', stage: 'interviewing', score: 94 },
   { id: 't3', title: 'Strategy Consulting Intern', company: 'Deloitte', stage: 'saved', score: 88 },
   { id: 't4', title: 'Growth Marketing Intern', company: 'BrightLabs', stage: 'rejected', score: 76 },
   { id: 't5', title: 'SWE Intern', company: 'Atlassian', stage: 'applied', score: 82 },
 ];
+let trackerCards = DEMO_CARDS.map(c => ({ ...c }));
+let demoTracker = true;
+
+function clearDemoCards() {
+  if (!demoTracker) return;
+  trackerCards = [];
+  demoTracker = false;
+}
 
 const STAGES = ['saved', 'applied', 'interviewing', 'offer', 'rejected'];
 let cardCounter = 200;
@@ -14,9 +24,15 @@ let lastResults = null;
 /* Auth state (Supabase) — populated by initAuth() */
 let sbClient = null, authUser = null, authPremium = false, authProduct = null;
 
-/* Tracker persists across pages (form page saves; tracker page reads) */
-function saveTracker() { try { localStorage.setItem('inn_tracker', JSON.stringify(trackerCards)); } catch (e) {} }
-try { const _t = localStorage.getItem('inn_tracker'); if (_t) trackerCards = JSON.parse(_t); } catch (e) {}
+/* Tracker persists across pages (form page saves; tracker page reads). Demo cards never persist. */
+function saveTracker() {
+  if (demoTracker) return;
+  try { localStorage.setItem('inn_tracker', JSON.stringify(trackerCards)); } catch (e) {}
+}
+try {
+  const _t = localStorage.getItem('inn_tracker');
+  if (_t) { trackerCards = JSON.parse(_t); demoTracker = false; }
+} catch (e) {}
 
 /* Premium unlock — Stripe-verified token stored per browser (Milestone 4) */
 function readUnlock() {
@@ -494,7 +510,7 @@ function buildTrackerCard(card) {
 <div class="tracker-card">
   <div class="tracker-card-top">
     <div>
-      <div class="tracker-title">${card.title}</div>
+      <div class="tracker-title">${card.title}${demoTracker ? ' <span class="tracker-demo-tag">example</span>' : ''}</div>
       <div class="tracker-company">${card.company}</div>
     </div>
     <div class="tracker-score" style="color:${scoreColor}">${scoreDisplay}</div>
@@ -522,6 +538,7 @@ function saveToTracker(jobId, title, company, score) {
     showToast(`${title} is already in your tracker!`);
     return;
   }
+  clearDemoCards(); // first real save replaces the examples
   trackerCards.push({ id: `m-${jobId}`, title, company, stage: 'saved', score });
   saveTracker();
   renderTracker();
@@ -535,6 +552,7 @@ function markApplied(jobId, title, company, score) {
   if (existing) {
     existing.stage = 'applied';
   } else {
+    clearDemoCards();
     trackerCards.push({ id: `m-${jobId}`, title, company, stage: 'applied', score });
   }
   saveTracker();
@@ -558,6 +576,7 @@ function promptAddCard() {
   if (!title) return;
   const company = prompt('Company name:');
   if (!company) return;
+  clearDemoCards();
   trackerCards.push({ id: `c-${cardCounter++}`, title, company, stage: 'saved', score: 0 });
   saveTracker();
   renderTracker();
@@ -755,12 +774,14 @@ async function initAuth() {
     authUser = session ? session.user : null;
     await refreshPremium();
     renderAuthNav();
+    if (authUser && demoTracker) { clearDemoCards(); renderTracker(); } // signed-in users never see example cards
     if (lastResults) renderResults(lastResults.matches, lastResults.user); // re-gate if matches already on screen
     sbClient.auth.onAuthStateChange(async (_event, sess) => {
       authUser = sess ? sess.user : null;
       await refreshPremium();
       renderAuthNav();
       closeLogin();
+      if (authUser && demoTracker) { clearDemoCards(); renderTracker(); }
       if (lastResults) renderResults(lastResults.matches, lastResults.user);
     });
   } catch (e) { /* auth is optional; the rest of the site works without it */ }

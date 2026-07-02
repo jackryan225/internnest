@@ -1,0 +1,57 @@
+# Weekly data machine: re-verify every listing, retire dead ones, pull fresh
+# postings, AI-normalize + enrich them, and deploy (a push to main deploys via
+# Vercel). Needs one repo secret: ANTHROPIC_API_KEY. Without it the refresh
+# still runs; the scrape steps are skipped so heuristic-quality data never
+# merges unattended.
+name: data-refresh
+
+on:
+  schedule:
+    - cron: '0 12 * * 1'   # Mondays 12:00 UTC
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Refresh (verify links, retire dead listings)
+        working-directory: scripts/scraper
+        run: python3 -u refresh.py
+
+      - name: Scrape + merge + enrich (only with the API key)
+        working-directory: scripts/scraper
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        run: |
+          if [ -z "$ANTHROPIC_API_KEY" ]; then
+            echo "No ANTHROPIC_API_KEY secret — skipping scrape (refresh-only run)."
+            exit 0
+          fi
+          python3 -u scrape.py
+          python3 merge.py --limit 150
+          python3 -u enrich.py
+          python3 discover.py
+
+      - name: Site tests must pass before anything ships
+        run: node --test lib/*.test.js
+
+      - name: Commit + push (deploys via Vercel)
+        run: |
+          if git diff --quiet; then
+            echo "No data changes this week."
+            exit 0
+          fi
+          git config user.name "internnest-data-bot"
+          git config user.email "hello@internnest.ai"
+          git add internships.json scripts/scraper/companies.json
+          git commit -m "data: weekly refresh $(date -u +%F)"
+          git push

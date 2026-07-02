@@ -59,10 +59,11 @@ def gather(selected, max_per_source, log=print):
         log(f'fetching {ats} ({len(entries)} companies)…')
         count_before = len(raw)
         for c in entries:
+            ident = c.get('slug') or c.get('tenant') or c.get('name')
             try:
-                raw += fetch(c['slug'], c['name'], c.get('industry_hint', ''))[:max_per_source]
+                raw += fetch(c)[:max_per_source]
             except Exception as e:
-                log(f"  ! {ats}:{c['slug']} failed ({e}) — check the slug")
+                log(f"  ! {ats}:{ident} failed ({e}) — check the entry")
         log(f'  {ats}: {len(raw) - count_before} postings')
     return raw
 
