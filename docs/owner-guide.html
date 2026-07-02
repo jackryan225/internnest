@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="robots" content="noindex, nofollow" />
-  <title>The InternNest Machine — Owner's Manual</title>
+  <title>The InternNest Machine: Owner's Manual</title>
   <link rel="icon" type="image/png" href="/internnest-logo.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -200,8 +200,8 @@
   <header class="hero wrap">
     <div class="eyebrow">Owner's manual · unlisted page · for Dillon</div>
     <h1>The InternNest <span class="grad">machine</span></h1>
-    <p>Every service you own, what it does, how the pieces talk to each other, and what to do
-    when one needs attention. No jargon — click around.</p>
+    <p>Every service, what it does, how the pieces talk to each other, and what to do
+    when one needs attention.</p>
   </header>
 
   <nav class="toc wrap" aria-label="Sections">
@@ -235,9 +235,9 @@
             <span class="flow-chip f-sky">visits &amp; gets matched →</span>
           </button>
           <button class="node glass" data-svc="dillon" data-flow="money">
-            <span class="n-name"><i class="dot" style="background:var(--money)"></i>You (Dillon)</span>
+            <span class="n-name"><i class="dot" style="background:var(--money)"></i>Dillon</span>
             <span class="n-what">The owner</span>
-            <span class="flow-chip f-money">← payouts to your bank</span>
+            <span class="flow-chip f-money">← Stripe payouts</span>
           </button>
           <button class="node glass" data-svc="claude" data-flow="violet">
             <span class="n-name"><i class="dot" style="background:var(--violet-2)"></i>Claude API</span>
@@ -254,7 +254,7 @@
         <div class="map-col mid">
           <div class="node hub glass" id="hubNode">
             <span class="n-name">internnest.ai</span>
-            <div class="hub-sub">the website — hosted &amp; run by <b>Vercel</b></div>
+            <div class="hub-sub">the website, hosted &amp; run by <b>Vercel</b></div>
             <div class="hub-fns">
               <span class="fn">match</span><span class="fn">checkout</span>
               <span class="fn">verify</span><span class="fn">contact</span>
@@ -319,7 +319,7 @@
     <div class="sec-head">
       <h2>A match, step by step</h2>
       <p>What happens in the ~8 seconds after a student clicks
-      "Find My Internship Matches" — this <em>is</em> the algorithm.</p>
+      "Find My Internship Matches". This <em>is</em> the algorithm.</p>
     </div>
     <div class="steps">
       <div class="step glass"><span class="step-n"></span><div>
@@ -329,15 +329,15 @@
       </div></div>
       <div class="step glass"><span class="step-n"></span><div>
         <h4>The site shortlists 15 from the 1,000+ database</h4>
-        <p>Instant, rule-based filtering: right industry first, then hard eligibility — if a posting
+        <p>Instant, rule-based filtering: right industry first, then hard eligibility. If a posting
         states a minimum GPA or is juniors-only, ineligible students never see it. Ultra-selective firms
         (Goldman, McKinsey…) are held back from low GPAs. Location, remote preference, and skill
         overlap rank the rest.</p>
       </div></div>
       <div class="step glass"><span class="step-n"></span><div>
         <h4>Claude reads the top 8 like a career counselor</h4>
-        <p>The AI scores each one 0–100 and writes the why, the missing skills, and an application tip
-        — personally, for that student.
+        <p>The AI scores each one 0–100 and writes the why, the missing skills, and an application tip,
+        personally, for that student.
         <span class="tag f-violet">free = Haiku (fast)</span><span class="tag f-violet">premium = Opus (smarter)</span></p>
       </div></div>
       <div class="step glass"><span class="step-n"></span><div>
@@ -356,7 +356,7 @@
   <section id="money" class="wrap">
     <div class="sec-head">
       <h2>Where the $9.99 goes</h2>
-      <p>Cards never touch your site — Stripe handles the sensitive part.</p>
+      <p>Cards never touch the site. Stripe handles the sensitive part.</p>
     </div>
     <div class="steps">
       <div class="step glass"><span class="step-n"></span><div>
@@ -366,7 +366,7 @@
       </div></div>
       <div class="step glass"><span class="step-n"></span><div>
         <h4>The site double-checks the receipt</h4>
-        <p>When they come back, the server asks Stripe directly "did they really pay?" — so unlocks
+        <p>When they come back, the server asks Stripe directly "did they really pay?", so unlocks
         can't be faked.</p>
       </div></div>
       <div class="step glass"><span class="step-n"></span><div>
@@ -375,7 +375,7 @@
         they sign in on.</p>
       </div></div>
       <div class="step glass"><span class="step-n"></span><div>
-        <h4>Money lands in your Stripe → your bank</h4>
+        <h4>Money lands in Stripe → Dillon's bank</h4>
         <p>Stripe keeps ~2.9% + 30¢ and auto-pays the rest out. ~$9.40 net per premium unlock.
         Nobody else touches it.</p>
       </div></div>
@@ -385,8 +385,8 @@
   <section id="data" class="wrap">
     <div class="sec-head">
       <h2>The data machine</h2>
-      <p>Where the 1,000+ internships come from — and why they stay real, live, and deep.
-      This is your moat.</p>
+      <p>Where the 1,000+ internships come from, and why they stay real and live.
+      This is the moat.</p>
     </div>
     <div class="pipeline">
       <div class="pipe-stage glass"><b>Fetch</b><span>public job boards<br>(1,000s of postings)</span></div>
@@ -402,26 +402,26 @@
 
     <div class="terminal" role="img" aria-label="The five commands that run the data machine">
       <div class="term-bar"><i></i><i></i><i></i></div>
-      <pre><span class="c"># the whole loop, from the project folder — takes ~20 min, costs ~$1</span>
+      <pre><span class="c"># the whole loop, from the project folder. ~20 min, ~$1 of AI</span>
 <span class="cmd">cd scripts/scraper</span>
 <span class="cmd">python3 -u scrape.py</span>      <span class="c"># pull sources → clean → verify → candidates</span>
 <span class="cmd">python3 merge.py</span>           <span class="c"># add the new ones to the live database</span>
 <span class="cmd">python3 -u enrich.py</span>       <span class="c"># AI reads each posting for GPA / visa / pay facts</span>
 <span class="cmd">python3 discover.py</span>        <span class="c"># find new company boards for next time</span>
-<span class="c"># then commit + push — the site updates itself in ~30 seconds</span></pre>
+<span class="c"># then commit + push. the site updates itself in ~30 seconds</span></pre>
     </div>
     <div class="easy-way glass">
       <b>The easy way:</b> open the project in Claude Code and say
       <em>"run the scraper loop and push."</em> It runs all of this, checks the results, and deploys.
       Every listing was found on a public job board, cleaned and fact-checked by AI, and its apply
-      link tested — the machine only adds, verifies, and retires; it never invents.
+      link tested. The machine only adds, verifies, and retires listings; it never invents them.
     </div>
   </section>
 
   <section id="changes" class="wrap">
     <div class="sec-head">
       <h2>Making a change</h2>
-      <p>You never need to touch code.</p>
+      <p>No code required.</p>
     </div>
     <div class="steps">
       <div class="step glass"><span class="step-n"></span><div>
@@ -431,7 +431,7 @@
       </div></div>
       <div class="step glass"><span class="step-n"></span><div>
         <h4>It edits, tests, and pushes</h4>
-        <p>The change is saved to GitHub — the permanent record of every version of the site.</p>
+        <p>The change is saved to GitHub, the permanent record of every version of the site.</p>
       </div></div>
       <div class="step glass"><span class="step-n"></span><div>
         <h4>Vercel publishes automatically</h4>
@@ -447,13 +447,13 @@
       <table>
         <thead><tr><th>Service</th><th>What you pay</th><th>Notes</th></tr></thead>
         <tbody>
-          <tr><td>Vercel</td><td class="cost">~$20 / mo</td><td>Hosting — the only real fixed cost</td></tr>
-          <tr><td>Google Workspace</td><td class="cost">~$6 / mo</td><td>The hello@ inbox</td></tr>
-          <tr><td>GoDaddy</td><td class="cost">~$70–100 / yr</td><td>The internnest.ai domain — renew yearly!</td></tr>
+          <tr><td>Vercel</td><td class="cost">~$20 / mo</td><td>Hosting, the only real fixed cost</td></tr>
+          <tr><td>Google Workspace</td><td class="cost">$1 / mo</td><td>The hello@ inbox</td></tr>
+          <tr><td>GoDaddy</td><td class="cost">$105 / yr</td><td>The internnest.ai domain. Paid two years up front, so nothing is due until 2028</td></tr>
           <tr><td>Claude API</td><td class="cost">pay-per-use</td><td>~0.4¢ per free match · ~6¢ per premium match (vs $9.99 in) · ~$1 per 1,000-listing scrape</td></tr>
-          <tr><td>Stripe</td><td class="cost">2.9% + 30¢</td><td>Per sale, taken automatically — $9.99 → ~$9.40 net</td></tr>
+          <tr><td>Stripe</td><td class="cost">2.9% + 30¢</td><td>Per sale, taken automatically. $9.99 → ~$9.40 net</td></tr>
           <tr><td>Supabase</td><td class="cost">$0</td><td>Free tier is plenty until ~50k users</td></tr>
-          <tr><td>Resend</td><td class="cost">$0</td><td>Free tier: 100 emails/day — plenty for a contact form</td></tr>
+          <tr><td>Resend</td><td class="cost">$0</td><td>Free tier: 100 emails/day, plenty for a contact form</td></tr>
           <tr><td>GitHub · GA4 · Google Cloud</td><td class="cost">$0</td><td>Free at this scale</td></tr>
         </tbody>
       </table>
@@ -469,12 +469,12 @@
       <table>
         <thead><tr><th>Symptom</th><th>Where to look</th><th>Usual fix</th></tr></thead>
         <tbody>
-          <tr><td>Site won't load</td><td>Vercel dashboard</td><td>Check Deployments — roll back to the last good one</td></tr>
+          <tr><td>Site won't load</td><td>Vercel dashboard</td><td>Check Deployments, roll back to the last good one</td></tr>
           <tr><td>Matches fail / feel generic</td><td>Anthropic console</td><td>Check API credits &amp; that the key in Vercel is valid</td></tr>
           <tr><td>Google login fails</td><td>Supabase → Auth → Providers</td><td>Client ID + Secret must match the Google Cloud client exactly</td></tr>
           <tr><td>Payments not working</td><td>Stripe dashboard</td><td>Confirm Live mode + the keys in Vercel env vars</td></tr>
           <tr><td>Contact form emails stop</td><td>Resend dashboard</td><td>Check the API key + daily sending limit</td></tr>
-          <tr><td>Site gone entirely</td><td>GoDaddy</td><td>Domain probably expired — renew it</td></tr>
+          <tr><td>Site gone entirely</td><td>GoDaddy</td><td>Domain probably expired; renew it</td></tr>
         </tbody>
       </table>
     </div>
@@ -483,129 +483,126 @@
   <section id="keys" class="wrap">
     <div class="sec-head">
       <h2>The keys</h2>
-      <p>Every account, centralized under <b>hello@internnest.ai</b>. Guard that inbox —
+      <p>Every account, centralized under <b>hello@internnest.ai</b>. Guard that inbox:
       it's the master key to everything.</p>
     </div>
     <div class="tbl-card glass">
       <table>
         <thead><tr><th>Account</th><th>Signed up with</th><th>Status</th></tr></thead>
         <tbody>
-          <tr><td>Google Workspace</td><td>internnest.ai domain</td><td>Yours — the root of it all</td></tr>
-          <tr><td>Vercel</td><td>hello@ + your gmail</td><td>✅ yours (add a payment card)</td></tr>
-          <tr><td>Supabase</td><td>your org</td><td>✅ yours</td></tr>
-          <tr><td>Stripe</td><td>your name</td><td>✅ yours</td></tr>
-          <tr><td>GoDaddy</td><td>hello@</td><td>✅ yours</td></tr>
-          <tr><td>Resend</td><td>hello@</td><td>✅ yours</td></tr>
-          <tr><td>Google Cloud / GA4 / Search Console</td><td>hello@</td><td>✅ yours</td></tr>
-          <tr><td>GitHub (the code)</td><td>Jack's for now</td><td>🔜 transfers to you at handoff</td></tr>
-          <tr><td>Claude API key</td><td>Jack's for now</td><td>🔜 recreate under hello@ at handoff</td></tr>
+          <tr><td>Google Workspace</td><td>internnest.ai domain</td><td>✅ Dillon's, the root of it all</td></tr>
+          <tr><td>Vercel</td><td>hello@ + Dillon's gmail</td><td>✅ Dillon's (add a payment card)</td></tr>
+          <tr><td>Supabase</td><td>Dillon's org</td><td>✅ Dillon's</td></tr>
+          <tr><td>Stripe</td><td>Dillon's name</td><td>✅ Dillon's</td></tr>
+          <tr><td>GoDaddy</td><td>hello@</td><td>✅ Dillon's</td></tr>
+          <tr><td>Resend</td><td>hello@</td><td>✅ Dillon's</td></tr>
+          <tr><td>Google Cloud / GA4 / Search Console</td><td>hello@</td><td>✅ Dillon's</td></tr>
+          <tr><td>Claude API</td><td>hello@</td><td>✅ Dillon's</td></tr>
+          <tr><td>GitHub (the code)</td><td>Jack's for now</td><td>🔜 transfers to Dillon at handoff</td></tr>
         </tbody>
       </table>
     </div>
   </section>
 
-  <footer>
-    <b>InternNest</b> · owner's manual · kept current by Jack &amp; Claude ·
-    this page is unlisted and hidden from search engines
-  </footer>
+  <div style="height:64px"></div>
 
   <script>
     const SERVICES = {
       hub: {
-        name: 'internnest.ai — the site, run by Vercel',
+        name: 'internnest.ai, the site (run by Vercel)',
         what: 'Vercel is the host: it serves the website to every visitor and runs the small pieces of behind-the-scenes code (matching, checkout, contact form, account unlocks).',
-        why: "It's also the safe where the secret keys live (Claude, Stripe, Supabase, Resend) — servers can use them, the public can never see them.",
+        why: "It's also the safe where the secret keys live (Claude, Stripe, Supabase, Resend); servers can use them, the public can never see them.",
         breaks: 'No Vercel, no website. If the site is down, this dashboard is the first place to look.',
-        login: 'vercel.com — hello@ and your gmail are both on the team',
-        cost: '~$20/month (Pro) — the main fixed cost'
+        login: "vercel.com; hello@ and Dillon's gmail are both on the team",
+        cost: '~$20/month (Pro), the main fixed cost'
       },
       student: {
-        name: 'A student — your customer',
+        name: 'A student, the customer',
         what: 'Comes from ads, social, or search. Fills in the form, gets AI matches, tracks applications, hopefully pays $9.99 for premium.',
         why: 'Everything on the map exists to serve this person well enough that they pay and tell friends.',
-        breaks: "If students stop converting, it's a product/marketing question — not a technical one.",
-        login: '—',
-        cost: 'each free match costs you ~0.4¢ of AI; each premium match ~6¢ against $9.99 in'
+        breaks: "If students stop converting, it's a product and marketing question, not a technical one.",
+        login: 'n/a',
+        cost: 'each free match costs ~0.4¢ of AI; each premium match ~6¢ against $9.99 in'
       },
       dillon: {
-        name: 'You — the owner',
-        what: 'You own every account on this page, the money, and the direction of the product.',
-        why: 'Your jobs: keep the domain renewed, watch Stripe payouts, run Google Ads, and ask Claude for changes.',
-        breaks: 'Guard hello@internnest.ai above all — password resets for everything land there.',
+        name: 'Dillon, the owner',
+        what: 'Dillon owns every account on this page, the money, and the direction of the product.',
+        why: 'The owner jobs: keep the domain renewed, watch Stripe payouts, run Google Ads, and ask Claude for changes.',
+        breaks: 'Guard hello@internnest.ai above all: password resets for everything land there.',
         login: 'hello@internnest.ai is the master key',
-        cost: '—'
+        cost: 'n/a'
       },
       claude: {
-        name: 'Claude API (Anthropic) — the AI brain',
-        what: 'The AI that reads a student\'s profile and scores internships like a career counselor. Free users get Haiku (fast); premium gets Opus (smartest) — that\'s the $9.99 difference.',
+        name: 'Claude API (Anthropic), the AI brain',
+        what: 'The AI that reads a student\'s profile and scores internships like a career counselor. Free users get Haiku (fast); premium gets Opus (smartest). That\'s the $9.99 difference.',
         why: 'Also powers the data machine: cleaning scraped postings and reading full job descriptions for GPA/visa/pay facts.',
         breaks: 'Matching falls back to basic (non-AI) ranking. Fix: check credits in the Anthropic console.',
-        login: 'console.anthropic.com — moves to hello@ at handoff',
+        login: 'console.anthropic.com, under hello@',
         cost: 'pay-per-use, pennies: see the costs table'
       },
       supabase: {
-        name: 'Supabase — accounts & database',
+        name: 'Supabase, accounts & database',
         what: 'Where user accounts live. Handles "sign in with Google" and email login links, and remembers who bought Premium so it works on any device.',
-        why: 'Logging in IS signing up — first login auto-creates the account. No passwords to manage, nothing to leak.',
+        why: 'Logging in IS signing up: first login auto-creates the account. No passwords to manage, nothing to leak.',
         breaks: 'Login stops working; guests can still get matches. Check Auth → Providers.',
-        login: 'supabase.com — project lives in your org',
-        cost: 'free tier — fine until ~50,000 users'
+        login: 'supabase.com, project lives in Dillon\'s org',
+        cost: 'free tier, fine until ~50,000 users'
       },
       stripe: {
-        name: 'Stripe — the money',
+        name: 'Stripe, the money',
         what: 'Runs the secure checkout for Premium ($9.99) and the Match Report ($29). Cards are handled entirely on Stripe\'s side.',
-        why: 'The site verifies every unlock against Stripe directly, so premium can\'t be faked. Payouts to your bank are automatic.',
+        why: 'The site verifies every unlock against Stripe directly, so premium can\'t be faked. Payouts to the bank are automatic.',
         breaks: 'Buying stops but the free product keeps working. Check the Stripe dashboard is in Live mode.',
-        login: 'stripe.com — already under your name',
+        login: 'stripe.com, under Dillon\'s name',
         cost: '2.9% + 30¢ per sale'
       },
       resend: {
-        name: 'Resend — contact-form delivery',
+        name: 'Resend, contact-form delivery',
         what: 'When someone uses the contact page, Resend delivers it to hello@ within seconds, with reply-to set to the sender.',
         why: 'Without it, messages would only pile up in a server log nobody reads.',
         breaks: 'Contact form still says "sent" but nothing arrives. Check the Resend dashboard.',
-        login: 'resend.com — signed up with hello@',
-        cost: 'free — 100 emails/day'
+        login: 'resend.com, signed up with hello@',
+        cost: 'free (100 emails/day)'
       },
       google: {
-        name: 'Google Cloud — the sign-in keys',
+        name: 'Google Cloud, the sign-in keys',
         what: 'Holds the official "OAuth client" that lets InternNest offer Sign in with Google. Supabase uses these keys behind the scenes.',
-        why: 'Set-and-forget. You\'ll basically never open this unless Google login breaks.',
+        why: 'Set-and-forget. It basically never needs opening unless Google login breaks.',
         breaks: 'Google login errors. The Client ID + Secret in Supabase must exactly match this project\'s.',
-        login: 'console.cloud.google.com — under hello@',
+        login: 'console.cloud.google.com, under hello@',
         cost: 'free'
       },
       ga4: {
         name: 'Google Analytics + Search Console',
         what: 'GA4 counts visitors, where they came from, and what they do. Search Console shows how you rank on Google.',
-        why: 'This is where you\'ll measure whether Google Ads money is turning into students.',
-        breaks: 'You go blind on traffic — the site itself is unaffected.',
-        login: 'analytics.google.com — property under hello@',
+        why: 'This is where Google Ads money shows up as real students (or doesn\'t).',
+        breaks: 'Traffic reporting goes dark; the site itself is unaffected.',
+        login: 'analytics.google.com, property under hello@',
         cost: 'free'
       },
       github: {
-        name: 'GitHub — the master copy of the code',
+        name: 'GitHub, the master copy of the code',
         what: 'Every version of the site\'s code, forever. A change goes to GitHub first; Vercel notices and publishes it in ~30 seconds.',
-        why: 'It\'s also the undo button — any previous version can be restored.',
-        breaks: 'The live site keeps running; you just can\'t ship changes until access is sorted.',
-        login: 'github.com — transfers from Jack to you at handoff',
+        why: 'It\'s also the undo button: any previous version can be restored.',
+        breaks: 'The live site keeps running; changes just can\'t ship until access is sorted.',
+        login: 'github.com, transfers from Jack to Dillon at handoff',
         cost: 'free'
       },
       godaddy: {
-        name: 'GoDaddy — the domain',
+        name: 'GoDaddy, the domain',
         what: 'Where internnest.ai is registered, and where its DNS points visitors at Vercel.',
-        why: 'One job for you: keep it renewed. Everything else is set.',
+        why: 'One owner job: keep it renewed. Paid two years up front, so nothing is due until 2028.',
         breaks: 'If the domain lapses, the whole site and hello@ email vanish until renewed.',
-        login: 'godaddy.com — under hello@',
-        cost: '~$70–100/year'
+        login: 'godaddy.com, under hello@',
+        cost: '$105/year, paid through 2028'
       },
       workspace: {
-        name: 'Google Workspace — hello@internnest.ai',
-        what: 'Your business email on your own domain. Contact-form messages land here; every other account\'s password reset goes here.',
+        name: 'Google Workspace, hello@internnest.ai',
+        what: 'The business email on the InternNest domain. Contact-form messages land here; every other account\'s password reset goes here.',
         why: 'This inbox is the master key to the whole company. Protect it with a strong password + 2-step verification.',
-        breaks: 'Lose this, lose everything — recover it before anything else.',
+        breaks: 'Lose this, lose everything. Recover it before anything else.',
         login: 'gmail.com with hello@internnest.ai',
-        cost: '~$6/month'
+        cost: '$1/month'
       }
     };
 
