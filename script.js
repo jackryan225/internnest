@@ -400,9 +400,11 @@ function renderResults(matches, user) {
   const reportBtn = hasReport()
     ? `<div style="grid-column:1/-1;text-align:center;padding:8px 0 24px"><a class="btn-outline" href="#" onclick="printReport();return false;">Print / Save as PDF</a></div>`
     : '';
+  const locked = isPremium ? [] : matches.slice(shown.length);
   document.getElementById('matchCards').innerHTML = shown.map((job, i) => buildCard(job, user, i)).join('')
-    + (!isPremium && matches.length > shown.length
-      ? `<div style="grid-column:1/-1;text-align:center;padding:24px"><a href="#pricing" class="btn-primary">Unlock all ${matches.length} matches + AI outreach →</a></div>`
+    + locked.map((job, i) => buildLockedCard(job, shown.length + i)).join('')
+    + (locked.length
+      ? `<div style="grid-column:1/-1;text-align:center;padding:24px"><a href="#" class="btn-primary btn-xl" onclick="startCheckout('premium');return false;">Unlock ${locked.length} more ${locked.length === 1 ? 'match' : 'matches'} + AI outreach &middot; $9.99 launch price</a></div>`
       : '')
     + reportBtn;
   section.classList.remove('hidden');
@@ -470,6 +472,32 @@ function buildCard(job, user, index) {
     <a class="btn-primary" id="apply-${job.id}" href="${job.application_url || '#'}" target="_blank" rel="noopener" onclick="markApplied('${job.id}','${titleEsc}','${companyEsc}',${job.score})">
       Apply Now →
     </a>
+  </div>
+</div>`;
+}
+
+/* Locked teaser: the student's real remaining matches, blurred, one tap from checkout. */
+function buildLockedCard(job, index) {
+  return `
+<div class="match-card match-locked" onclick="startCheckout('premium')" title="Unlock Premium to reveal">
+  <div class="locked-blur" aria-hidden="true">
+    <div class="match-card-header">
+      <div class="match-card-info">
+        <div class="match-rank">${index + 1}</div>
+        <div>
+          <h3>${job.title}</h3>
+          <p class="match-company">${job.company} &middot; ${job.location}</p>
+        </div>
+      </div>
+      <div class="match-score" style="background:#dbeafe;color:#2563eb">${job.score}<small>/ 100</small></div>
+    </div>
+    <div class="match-section">
+      <div class="match-label">Why it matches your profile</div>
+      <p>${job.why || ''}</p>
+    </div>
+  </div>
+  <div class="locked-overlay">
+    <span class="locked-pill"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg>Match #${index + 1} &middot; unlock to reveal</span>
   </div>
 </div>`;
 }

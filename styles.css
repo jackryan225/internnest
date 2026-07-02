@@ -1123,3 +1123,23 @@ body::before {
 /* micro-type accents: tags + counters read as "data" in mono */
 .tag, .col-badge { font-family: var(--mono); font-weight: 600; }
 .col-badge { background: rgba(91,75,255,.12); color: var(--glass-accent); border-radius: 999px; }
+
+/* launch-price anchor */
+.plan-strike { font-size: 20px; font-weight: 700; color: var(--gray-500); text-decoration: line-through; margin-right: 8px; }
+.launch-chip {
+  font-family: var(--mono); font-size: 11px; font-weight: 600; color: var(--glass-accent);
+  background: rgba(91,75,255,.12); padding: 3px 9px; border-radius: 999px; margin-left: 10px;
+}
+
+/* locked match teasers: real cards, blurred, one tap from checkout */
+.match-locked { position: relative; cursor: pointer; overflow: hidden; }
+.match-locked .locked-blur { filter: blur(9px); user-select: none; pointer-events: none; }
+.locked-overlay { position: absolute; inset: 0; display: grid; place-items: center; }
+.locked-pill {
+  display: inline-flex; align-items: center; gap: 7px; font-weight: 800; font-size: 14px; color: #2c2658;
+  background: linear-gradient(150deg, rgba(255,255,255,.82), rgba(255,255,255,.55));
+  border: 1px solid rgba(255,255,255,.85); padding: 10px 18px; border-radius: 999px;
+  box-shadow: 0 10px 24px rgba(54,36,140,.18);
+  backdrop-filter: blur(6px); -webkit-backdrop-filter: blur(6px);
+}
+.match-locked:hover .locked-pill { color: var(--glass-accent); }
